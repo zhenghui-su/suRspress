@@ -1,0 +1,42 @@
+[
+  {
+    "type": "file",
+    "name": "index",
+    "label": "前言"
+  },
+  {
+    "type": "dir",
+    "name": "1-vue2基础",
+    "label": "vue2基础",
+    "collapsible": true,
+    "collapsed": true
+  },
+  {
+    "type": "dir",
+    "name": "2-vue2进阶",
+    "label": "vue2进阶",
+    "collapsible": true,
+    "collapsed": true
+  },
+  {
+    "type": "dir",
+    "name": "3-vue3基础",
+    "label": "vue3基础",
+    "collapsible": true,
+    "collapsed": true
+  },
+  {
+    "type": "dir",
+    "name": "4-vue3进阶",
+    "label": "vue3进阶",
+    "collapsible": true,
+    "collapsed": true
+  },
+  {
+    "type": "dir",
+    "name": "5-vue3+vite+ts+pinia+election",
+    "label": "vue3+vite+ts+pinia+election",
+    "collapsible": true,
+    "collapsed": true
+  }
+]

@@ -1,0 +1,122 @@
+[
+  {
+    "type": "file",
+    "name": "index",
+    "label": "Node进阶前言"
+  },
+  {
+    "type": "file",
+    "name": "1-梦开始的地方",
+    "label": "梦开始的地方"
+  },
+  {
+    "type": "file",
+    "name": "2-npm和package.json",
+    "label": "npm和package.json"
+  },
+  {
+    "type": "file",
+    "name": "3-npm install原理",
+    "label": "npm install原理"
+  },
+  {
+    "type": "file",
+    "name": "4-npm run原理",
+    "label": "npm run原理"
+  },
+  {
+    "type": "file",
+    "name": "5-npx",
+    "label": "npx"
+  },
+  {
+    "type": "file",
+    "name": "6-发布npm包",
+    "label": "发布npm包"
+  },
+  {
+    "type": "file",
+    "name": "7-搭建npm私服",
+    "label": "搭建npm私服"
+  },
+  {
+    "type": "file",
+    "name": "8-模块化(cjs、esm、源码)",
+    "label": "模块化(cjs、esm、源码)"
+  },
+  {
+    "type": "file",
+    "name": "9-全局变量和全局API",
+    "label": "全局变量 & 全局API"
+  },
+  {
+    "type": "file",
+    "name": "10-CSR  SSR  SEO",
+    "label": "CSR  SSR  SEO"
+  },
+  {
+    "type": "file",
+    "name": "11-Path Windows和posix",
+    "label": "Path Windows & posix"
+  },
+  {
+    "type": "file",
+    "name": "12-OS",
+    "label": "OS"
+  },
+  {
+    "type": "file",
+    "name": "13-process进程",
+    "label": "process进程"
+  },
+  {
+    "type": "file",
+    "name": "14-child_process 子进程 核心API",
+    "label": "child_process 子进程 核心API"
+  },
+  {
+    "type": "file",
+    "name": "15-FFmpeg",
+    "label": "FFmpeg"
+  },
+  {
+    "type": "file",
+    "name": "16-events 事件触发器",
+    "label": "events 事件触发器"
+  },
+  {
+    "type": "file",
+    "name": "17-util",
+    "label": "util"
+  },
+  {
+    "type": "file",
+    "name": "18-pngquant",
+    "label": "pngquant"
+  },
+  {
+    "type": "file",
+    "name": "19-fs(上)",
+    "label": "fs(上)"
+  },
+  {
+    "type": "file",
+    "name": "20-fs(下)",
+    "label": "fs(下)"
+  },
+  {
+    "type": "file",
+    "name": "21-crypto",
+    "label": "crypto"
+  },
+  {
+    "type": "file",
+    "name": "22-脚手架",
+    "label": "脚手架"
+  },
+  {
+    "type": "file",
+    "name": "23-Markdown 转 html",
+    "label": "Markdown 转 html"
+  }
+]

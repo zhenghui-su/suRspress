@@ -1,0 +1,14 @@
+[
+  {
+    "type": "file",
+    "name": "index",
+    "label": "手写系列前言"
+  },
+  {
+    "type": "dir",
+    "name": "create-react-app",
+    "label": "手写create-react-app",
+    "collapsible": true,
+    "collapsed": true
+  }
+]

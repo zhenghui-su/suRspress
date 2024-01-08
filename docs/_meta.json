@@ -1,0 +1,17 @@
+[
+  {
+    "text": "开始学习",
+    "link": "/guide/",
+    "activeMatch": "/guide/"
+  },
+  {
+    "text": "手写系列",
+    "link": "/handwriting/",
+    "activeMatch": "/handwriting/"
+  },
+  {
+    "text": "学习路线",
+    "link": "/study/",
+    "activeMatch": "/study/"
+  }
+]

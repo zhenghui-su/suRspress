@@ -1,0 +1,87 @@
+[
+  {
+    "type": "file",
+    "name": "1-准备工作",
+    "label": "准备工作"
+  },
+  {
+    "type": "file",
+    "name": "2-初识Vue",
+    "label": "初识Vue"
+  },
+  {
+    "type": "file",
+    "name": "3-模板语法",
+    "label": "模板语法"
+  },
+  {
+    "type": "file",
+    "name": "4-数据绑定",
+    "label": "数据绑定"
+  },
+  {
+    "type": "file",
+    "name": "5-MVVM模型",
+    "label": "MVVM模型"
+  },
+  {
+    "type": "file",
+    "name": "6-数据代理",
+    "label": "数据代理"
+  },
+  {
+    "type": "file",
+    "name": "7-事件",
+    "label": "事件"
+  },
+  {
+    "type": "file",
+    "name": "8-计算属性与监视(侦听)属性",
+    "label": "计算属性与监视(侦听)属性"
+  },
+  {
+    "type": "file",
+    "name": "9-Class与Style绑定",
+    "label": "Class与Style绑定"
+  },
+  {
+    "type": "file",
+    "name": "10-条件渲染",
+    "label": "条件渲染"
+  },
+  {
+    "type": "file",
+    "name": "11-列表渲染",
+    "label": "列表渲染"
+  },
+  {
+    "type": "file",
+    "name": "12-收集表单数据(v-model)",
+    "label": "收集表单数据(v-model)"
+  },
+  {
+    "type": "file",
+    "name": "13-过滤器",
+    "label": "过滤器"
+  },
+  {
+    "type": "file",
+    "name": "14-内置指令",
+    "label": "内置指令"
+  },
+  {
+    "type": "file",
+    "name": "15-自定义指令",
+    "label": "自定义指令"
+  },
+  {
+    "type": "file",
+    "name": "16-生命周期",
+    "label": "生命周期"
+  },
+  {
+    "type": "file",
+    "name": "17-组件",
+    "label": "组件"
+  }
+]

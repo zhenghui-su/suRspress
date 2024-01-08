@@ -1,0 +1,52 @@
+[
+  {
+    "type": "file",
+    "name": "1-创建Vue脚手架",
+    "label": "创建Vue脚手架"
+  },
+  {
+    "type": "file",
+    "name": "2-分析脚手架结构",
+    "label": "分析脚手架结构"
+  },
+  {
+    "type": "file",
+    "name": "3-render函数",
+    "label": "render函数"
+  },
+  {
+    "type": "file",
+    "name": "4-ref属性",
+    "label": "ref属性"
+  },
+  {
+    "type": "file",
+    "name": "5-props配置项",
+    "label": "props配置项"
+  },
+  {
+    "type": "file",
+    "name": "6-mixin(混入)",
+    "label": "mixin(混入)"
+  },
+  {
+    "type": "file",
+    "name": "7-插件",
+    "label": "插件"
+  },
+  {
+    "type": "file",
+    "name": "8-scoped样式",
+    "label": "scoped样式"
+  },
+  {
+    "type": "file",
+    "name": "9-Todo-list案例",
+    "label": "Todo-list案例"
+  },
+  {
+    "type": "file",
+    "name": "10-浏览器本地存储",
+    "label": "浏览器本地存储"
+  }
+]

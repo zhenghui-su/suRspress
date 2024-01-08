@@ -1,0 +1,12 @@
+[
+  {
+    "type": "file",
+    "name": "html_up",
+    "label": "html上"
+  },
+  {
+    "type": "file",
+    "name": "html_down",
+    "label": "html下"
+  }
+]
