@@ -118,5 +118,15 @@
     "type": "file",
     "name": "23-Markdown 转 html",
     "label": "Markdown 转 html"
+  },
+  {
+    "type": "file",
+    "name": "24-zlib",
+    "label": "zlib"
+  },
+  {
+    "type": "file",
+    "name": "25-http",
+    "label": "http"
   }
 ]
