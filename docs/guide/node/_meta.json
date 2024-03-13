@@ -243,5 +243,25 @@
     "type": "file",
     "name": "48-Redis( ioredis )",
     "label": "Redis( ioredis )"
+  },
+  {
+    "type": "file",
+    "name": "49-lua( 安装-介绍 )",
+    "label": "lua( 安装-介绍 )"
+  },
+  {
+    "type": "file",
+    "name": "50-lua( 基本使用 )",
+    "label": "lua( 基本使用 )"
+  },
+  {
+    "type": "file",
+    "name": "51-lua + Redis( 限流阀 )",
+    "label": "lua + Redis( 限流阀 )"
+  },
+  {
+    "type": "file",
+    "name": "52-定时任务( 自动签到 )",
+    "label": "定时任务( 自动签到 )"
   }
 ]
