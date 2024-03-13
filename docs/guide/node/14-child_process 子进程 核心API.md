@@ -20,7 +20,7 @@ Nodejs 创建子进程共有`7个`API Sync 同步 API 不加是异步 API
 
 `exec`适合执行较小的 shell 命令，有字节上限：200kb
 
-```sh
+```bash
 child_process.exec(command, [options], callback)
 ```
 
@@ -40,7 +40,7 @@ exec('node -v', (err, stdout, stderr) => {
 1. cwd <string> 子进程的当前工作目录。
 2. env <Object> 环境变量键值对。
 3. encoding <string> 默认为 'utf8'。
-4. shell <string> 用于执行命令的 shell。 在 UNIX 上默认为 '/bin/sh'，在 Windows 上默认为 process.env.ComSpec。 详见 Shell Requirements 与 Default Windows Shell。
+4. shell <string> 用于执行命令的 shell。 在 UNIX 上默认为 '/bin/bash'，在 Windows 上默认为 process.env.ComSpec。 详见 Shell Requirements 与 Default Windows Shell。
 5. timeout <number> 默认为 0。
 6. maxBuffer <number> stdout 或 stderr 允许的最大字节数。 默认为 200\*1024。 如果超过限制，则子进程会被终止。 查看警告： maxBuffer and Unicode。
 7. killSignal <string> | <integer> 默认为 'SIGTERM'。
@@ -66,7 +66,7 @@ execSync('start chrome http://www.baidu.com --incognito');
 
 `execFile`适合执行**可执行文件**，例如执行一个 node 脚本，或者 shell 文件
 
-windows 可以编写 cmd 脚本，posix 可以编写 sh 脚本
+windows 可以编写 cmd 脚本，posix 可以编写 bash 脚本
 
 > 简单示例
 

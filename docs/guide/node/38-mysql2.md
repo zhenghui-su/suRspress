@@ -6,7 +6,7 @@
 
 在终端输入如下代码，安装依赖
 
-```sh
+```bash
 npm install mysql2 express js-yaml
 ```
 

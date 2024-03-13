@@ -11,6 +11,7 @@
     "rspress": "^1.0.0"
   },
   "devDependencies": {
+    "@rspress/plugin-shiki": "^1.14.0",
     "@types/node": "^16"
   }
 }

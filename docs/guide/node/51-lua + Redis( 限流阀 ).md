@@ -6,7 +6,7 @@
 
 ### 安装依赖
 
-```sh
+```bash
 npm i ioredis express
 ```
 

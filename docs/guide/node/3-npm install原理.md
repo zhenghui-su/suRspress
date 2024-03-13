@@ -38,7 +38,7 @@
 
 npmrc 的配置可以参考下面
 
-```sh
+```bash
 registry=http://registry.npmjs.org/
 # 定义npm的registry，即npm的包下载源
 

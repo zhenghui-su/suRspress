@@ -27,7 +27,7 @@ Redis（Remote Dictionary Server）是一个开源的内存数据结构存储系
 
 - 添加到windows服务(cmd管理员模式进入到该文件夹下)
 
-```sh
+```bash
 redis-server.exe --service-install redis.conf --loglevel verbose
 ```
 
@@ -57,7 +57,7 @@ Linux：`wget https://download.redis.io/redis-stable.tar.gz`
 
 + 编译源文件
 
-  ```sh
+  ```bash
   tar -xzvf redis-stable.tar.gz
   cd redis-stable
   make
@@ -66,7 +66,7 @@ Linux：`wget https://download.redis.io/redis-stable.tar.gz`
 
 + 启动redis
 
-  ```sh
+  ```bash
   redis-server
   ```
 

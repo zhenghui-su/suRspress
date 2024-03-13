@@ -34,7 +34,7 @@ npm install verdaccio -g
 
 ### 基本命令
 
-```sh
+```bash
 #创建账号
 npm adduser --registry http://localhost:4873/
 # 账号 密码 邮箱

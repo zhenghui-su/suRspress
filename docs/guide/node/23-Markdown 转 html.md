@@ -21,7 +21,7 @@
 `<% code %>`
 里面可以写任意的 js，用于流程控制，无任何输出。如下面：会执行弹框
 
-```ejs
+```cpp
 <% alert('hello world') %>
 ```
 
@@ -33,7 +33,7 @@
 即变量如果包含 '<'、'>'、'&'等 HTML 字符，会被转义成字符实体，像`< > &`
 因此用`<%=`，最好保证里面内容不要有 HTML 字符
 
-```ejs
+```cpp
 const text = '<p>你好你好</p>'
 <h2><%= text %></h2>// 输出 &lt;p&gt;你好你好&lt;/p&gt; 插入 <h2> 标签中
 ```
@@ -44,7 +44,7 @@ const text = '<p>你好你好</p>'
 上面说到`<%=`会转义 HTML 字符，那如果我们就是想输出一段 HTML 怎么办呢？
 `<%-`不会解析 HTML 标签，也不会将字符转义后输出。像下例，就会直接把 `<p>我来啦</p>` 插入标签中
 
-```ejs
+```cpp
 const content = '<p>标签</p>'
 <h2><%- content %></h2>
 ```
@@ -55,7 +55,7 @@ const content = '<p>标签</p>'
 将相对于模板路径中的模板片段包含进来。
 用`<%- include`指令而不是`<% include`，为的是避免对输出的 HTML 代码做转义处理。
 
-```ejs
+```cpp
 // 当前模版路径：./views/tmp.ejs
 // 引入模版路径：./views/user/show.ejs
 <ul>
@@ -67,7 +67,7 @@ const content = '<p>标签</p>'
 
 #### 5. 条件判断
 
-```ejs
+```cpp
 <% if (condition1) { %>
   ...
 <% } %>
@@ -90,7 +90,7 @@ const content = '<p>标签</p>'
 
 #### 6. 循环
 
-```ejs
+```cpp
 <% for(var i = 0; i < target.length; i++){ %>
   <%= i %> <%= target[i] %>
 <% } %>
@@ -111,7 +111,7 @@ const content = '<p>标签</p>'
 
 初始化模板 到时候会转换成 html 代码
 
-```ejs
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>

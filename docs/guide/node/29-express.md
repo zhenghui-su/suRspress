@@ -121,7 +121,7 @@ app.listen(3000, () => console.log('Listening on port 3000'))
 
 + 实现一个日志中间件
 
-```sh
+```bash
 npm install log4js
 ```
 

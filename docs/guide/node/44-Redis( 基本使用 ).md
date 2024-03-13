@@ -76,7 +76,7 @@ DEL non_existing_key
 
 1. 添加成员到集合：
 
-   ```sh
+   ```bash
    SADD fruits "apple"
    SADD fruits "banana"
    SADD fruits "orange"
@@ -84,13 +84,13 @@ DEL non_existing_key
 
 2. 获取集合中的所有成员：
 
-   ```sh
+   ```bash
    SMEMBERS fruits
    ```
 
    输出结果：
 
-   ```sh
+   ```bash
    1) "apple"
    2) "banana"
    3) "orange"
@@ -98,7 +98,7 @@ DEL non_existing_key
 
 3. 检查成员是否存在于集合中：
 
-   ```sh
+   ```bash
    SISMEMBER fruits "apple"
    ```
 
@@ -110,19 +110,19 @@ DEL non_existing_key
 
 4. 从集合中移除成员：
 
-   ```sh
+   ```bash
    SREM fruits "banana"
    ```
 
    输出结果：
 
-   ```sh
+   ```bash
    (integer) 1
    ```
 
 5. 获取集合中的成员数量：
 
-   ```sh
+   ```bash
    SCARD fruits
    ```
 
@@ -134,25 +134,25 @@ DEL non_existing_key
 
 6. 获取随机成员：
 
-   ```sh
+   ```bash
    SRANDMEMBER fruits
    ```
 
    输出结果：
 
-   ```sh
+   ```bash
    "apple"
    ```
 
 7. 求多个集合的并集：
 
-   ```sh
+   ```bash
    SUNION fruits vegetables
    ```
 
    输出结果：
 
-   ```sh
+   ```bash
    1) "apple"
    2) "orange"
    3) "tomato"
@@ -161,25 +161,25 @@ DEL non_existing_key
 
 8. 求多个集合的交集：
 
-   ```sh
+   ```bash
    SINTER fruits vegetables
    ```
 
    输出结果：
 
-   ```sh
+   ```bash
    "apple"
    ```
 
 9. 求多个集合的差集：
 
-   ```sh
+   ```bash
    SDIFF fruits vegetables
    ```
 
    输出结果：
 
-   ```sh
+   ```bash
    "orange"
    ```
 
@@ -189,7 +189,7 @@ DEL non_existing_key
 
 1. 设置哈希表中的字段值：
 
-   ```sh
+   ```bash
    HSET obj name "John"
    HSET obj age 25
    HSET obj email "john@example.com"
@@ -197,19 +197,19 @@ DEL non_existing_key
 
 2. 获取哈希表中的字段值：
 
-   ```sh
+   ```bash
    HGET obj name
    ```
 
    输出结果：
 
-   ```sh
+   ```bash
    "John"
    ```
 
 3. 一次设置多个字段的值：
 
-   ```sh
+   ```bash
    HMSET obj name "John" age 25 email "john@example.com"
    ```
 
@@ -221,7 +221,7 @@ DEL non_existing_key
 
    输出结果：
 
-   ```sh
+   ```bash
    1) "John"
    2) "25"
    3) "john@example.com"
@@ -235,7 +235,7 @@ DEL non_existing_key
 
    输出结果：
 
-   ```sh
+   ```bash
    1) "name"
    2) "John"
    3) "age"
@@ -276,7 +276,7 @@ DEL non_existing_key
 
    输出结果：
 
-   ```sh
+   ```bash
    1) "name"
    ```
 
@@ -288,7 +288,7 @@ DEL non_existing_key
 
    输出结果：
 
-   ```sh
+   ```bash
    1) "John"
    ```
 

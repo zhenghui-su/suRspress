@@ -8,7 +8,7 @@
 
 > Knex支持多种数据库 如pg、sqlite3、mysql2、oracledb、tedious
 
-```sh
+```bash
 # 安装knex
 npm install knex --save
 

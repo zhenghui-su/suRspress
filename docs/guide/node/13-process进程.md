@@ -80,7 +80,7 @@ process.kill(process.pid);
 
 区分开发环境 和 生产环境
 
-```sh
+```bash
 npm install cross-env
 ```
 
@@ -95,7 +95,7 @@ npm install cross-env
 - 如果是 windows，就调用 SET 设置环境变量
 - 如果是 posix，就调用 export 设置环境变量
 
-```sh
+```bash
 set NODE_ENV=production  #windows
 export NODE_ENV=production #posix
 ```

@@ -56,7 +56,7 @@ model User {
 
 执行命令 创建表
 
-```sh
+```bash
 prisma migrate dev
 ```
 

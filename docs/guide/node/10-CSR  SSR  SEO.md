@@ -4,7 +4,7 @@
 
 在上一章的时候我们说过在 node 环境中无法操作 DOM 和 BOM，但是如果非要操作 DOM 和 BOM 也是可以的我们需要使用第三方库帮助我们`jsdom`
 
-```sh
+```bash
 npm i jsdom
 ```
 
