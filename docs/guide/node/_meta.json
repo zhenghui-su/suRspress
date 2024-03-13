@@ -128,5 +128,120 @@
     "type": "file",
     "name": "25-http",
     "label": "http"
+  },
+  {
+    "type": "file",
+    "name": "26-反向代理",
+    "label": "反向代理"
+  },
+  {
+    "type": "file",
+    "name": "27-动静分离",
+    "label": "动静分离"
+  },
+  {
+    "type": "file",
+    "name": "28-邮件服务",
+    "label": "邮件服务"
+  },
+  {
+    "type": "file",
+    "name": "29-express",
+    "label": "express"
+  },
+  {
+    "type": "file",
+    "name": "30-防盗链",
+    "label": "防盗链"
+  },
+  {
+    "type": "file",
+    "name": "31-响应头和请求头",
+    "label": "响应头和请求头"
+  },
+  {
+    "type": "file",
+    "name": "32-数据库",
+    "label": "数据库"
+  },
+  {
+    "type": "file",
+    "name": "33-SQL语句",
+    "label": "SQL语句"
+  },
+  {
+    "type": "file",
+    "name": "34-查询",
+    "label": "查询"
+  },
+  {
+    "type": "file",
+    "name": "35-增删改",
+    "label": "增删改"
+  },
+  {
+    "type": "file",
+    "name": "36-表达式和函数",
+    "label": "表达式和函数"
+  },
+  {
+    "type": "file",
+    "name": "37-子查询和连表",
+    "label": "子查询和连表"
+  },
+  {
+    "type": "file",
+    "name": "38-mysql2",
+    "label": "mysql2"
+  },
+  {
+    "type": "file",
+    "name": "39-ORM( Knex + express )",
+    "label": "ORM( Knex + express )"
+  },
+  {
+    "type": "file",
+    "name": "40-ORM( Prisma + express )",
+    "label": "ORM( Prisma + express )"
+  },
+  {
+    "type": "file",
+    "name": "41-项目架构( MVC + loC + 装饰器 )",
+    "label": "项目架构( MVC + loC + 装饰器 )"
+  },
+  {
+    "type": "file",
+    "name": "42-项目架构( JWT鉴权 )",
+    "label": "项目架构( JWT鉴权 )"
+  },
+  {
+    "type": "file",
+    "name": "43-Redis( 介绍与安装 )",
+    "label": "Redis( 介绍与安装 )"
+  },
+  {
+    "type": "file",
+    "name": "44-Redis( 基本使用 )",
+    "label": "Redis( 基本使用 )"
+  },
+  {
+    "type": "file",
+    "name": "45-Redis( 发布订阅 + 事务 )",
+    "label": "Redis( 发布订阅 + 事务 )"
+  },
+  {
+    "type": "file",
+    "name": "46-Redis( 持久化RDB AOF )",
+    "label": "Redis( 持久化RDB AOF )"
+  },
+  {
+    "type": "file",
+    "name": "47-Redis( 主从复制 )",
+    "label": "Redis( 主从复制 )"
+  },
+  {
+    "type": "file",
+    "name": "48-Redis( ioredis )",
+    "label": "Redis( ioredis )"
   }
 ]
