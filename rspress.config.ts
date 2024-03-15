@@ -24,15 +24,14 @@ export default defineConfig({
     ],
     showLineNumbers: true,
   },
-  // plugins: [pluginShiki({
-  //   langs: [
-  //     'vue', 'nginx', 'lua', 'javascript', 'js', 'json', 'http', 'tex', 'sh', 'bash', 'markdown', 'md', 'yml', 'yaml',
-  //     'ts', 'tsx', 'css', 'scss', 'less', 'html', 'jsonc', 'json5', 'graphql', 'handlebars', 'rust', 'php', 'go', 'java',
-  //     'cpp', 'c', 'csharp', 'dockerfile', 'makefile', 'ini', 'toml', 'ruby', 'python', 'rust', 'swift', 'kotlin', 'scala',
-  //     'typescript', 'sass', 'stylus'],
-  //   transformers: [
-  //     createTransformerDiff(),
-  //   ],
-  // })],
-
+  plugins: [pluginShiki({
+    langs: [
+      'vue', 'nginx', 'lua', 'javascript', 'js', 'json', 'http', 'tex', 'sh', 'bash', 'markdown', 'md', 'yml', 'yaml',
+      'ts', 'tsx', 'css', 'scss', 'less', 'html', 'jsonc', 'json5', 'graphql', 'handlebars', 'rust', 'php', 'go', 'java',
+      'cpp', 'c', 'csharp', 'dockerfile', 'makefile', 'ini', 'toml', 'ruby', 'python', 'rust', 'swift', 'kotlin', 'scala',
+      'typescript', 'sass', 'stylus'],
+    transformers: [
+      createTransformerDiff(),
+    ],
+  })],
 });
