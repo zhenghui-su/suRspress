@@ -263,5 +263,15 @@
     "type": "file",
     "name": "52-定时任务( 自动签到 )",
     "label": "定时任务( 自动签到 )"
+  },
+  {
+    "type": "file",
+    "name": "53-serverLess( 云函数 )",
+    "label":"serverLess( 云函数 )"
+  },
+  {
+    "type": "file",
+    "name": "54-net",
+    "label": "net"
   }
 ]
