@@ -1,0 +1,28 @@
+[
+	{
+		"type": "file",
+		"name": "index",
+		"label": "前言"
+	},
+	{
+		"type": "dir",
+		"name": "base",
+		"label": "入门篇",
+		"collapsible": true,
+		"collapsed": true
+	},
+	{
+		"type": "dir",
+		"name": "advance",
+		"label": "进阶篇",
+		"collapsible": true,
+		"collapsed": true
+	},
+	{
+		"type": "dir",
+		"name": "senior",
+		"label": "源码篇",
+		"collapsible": true,
+		"collapsed": true
+	}
+]

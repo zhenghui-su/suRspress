@@ -1,56 +1,63 @@
 [
-  {
-    "type": "file",
-    "name": "index",
-    "label": "前言"
-  },
-  {
-    "type": "dir",
-    "name": "studyBase",
-    "label": "基础进阶",
-    "collapsible": true,
-    "collapsed": true
-  },
-  {
-    "type": "dir",
-    "name": "js",
-    "label": "JS高级进阶",
-    "collapsible": true,
-    "collapsed": true
-  },
-  {
-    "type": "dir",
-    "name": "network",
-    "label": "计算机网络",
-    "collapsible": true,
-    "collapsed": true
-  },
-  {
-    "type": "dir",
-    "name": "vue",
-    "label": "Vue学习",
-    "collapsible": true,
-    "collapsed": true
-  },
-  {
-    "type": "dir",
-    "name": "node",
-    "label": "Node进阶",
-    "collapsible": true,
-    "collapsed": true
-  },
-  {
-    "type": "dir",
-    "name": "engineering",
-    "label": "工程化",
-    "collapsible": true,
-    "collapsed": true
-  },
-  {
-    "type": "dir",
-    "name": "v8",
-    "label": "V8引擎",
-    "collapsible": true,
-    "collapsed": true
-  }
+	{
+		"type": "file",
+		"name": "index",
+		"label": "前言"
+	},
+	{
+		"type": "dir",
+		"name": "studyBase",
+		"label": "基础进阶",
+		"collapsible": true,
+		"collapsed": true
+	},
+	{
+		"type": "dir",
+		"name": "js",
+		"label": "JS高级进阶",
+		"collapsible": true,
+		"collapsed": true
+	},
+	{
+		"type": "dir",
+		"name": "network",
+		"label": "计算机网络",
+		"collapsible": true,
+		"collapsed": true
+	},
+	{
+		"type": "dir",
+		"name": "vue",
+		"label": "Vue学习",
+		"collapsible": true,
+		"collapsed": true
+	},
+	{
+		"type": "dir",
+		"name": "react",
+		"label": "React学习",
+		"collapsible": true,
+		"collapsed": true
+	},
+	{
+		"type": "dir",
+		"name": "node",
+		"label": "Node进阶",
+		"collapsible": true,
+		"collapsed": true
+	},
+	{
+		"type": "dir",
+		"name": "engineering",
+		"label": "工程化",
+		"collapsible": true,
+		"collapsed": true
+	},
+	{
+		"type": "dir",
+		"name": "v8",
+		"label": "V8引擎",
+		"collapsible": true,
+		"collapsed": true
+	}
 ]
