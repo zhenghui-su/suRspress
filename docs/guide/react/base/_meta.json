@@ -3,5 +3,12 @@
 		"type": "file",
 		"name": "index",
 		"label": "入门篇前言"
+	},
+	{
+		"type": "dir",
+		"name": "第一章",
+		"label": "第一章",
+		"collapsible": true,
+		"collapsed": true
 	}
 ]
