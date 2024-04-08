@@ -1,0 +1,12 @@
+[
+	{
+		"type": "file",
+		"name": "index",
+		"label": "小知识前言"
+	},
+	{
+		"type": "file",
+		"name": "1-interface和type的区别",
+		"label": "interface和type的区别"
+	}
+]
