@@ -8,5 +8,10 @@
 		"type": "file",
 		"name": "2-JSX基础语法",
 		"label": "JSX基础语法"
+	},
+	{
+		"type": "file",
+		"name": "3-组件与事件绑定",
+		"label": "组件与事件绑定"
 	}
 ]
