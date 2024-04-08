@@ -66,5 +66,12 @@
 		"label": "小知识",
 		"collapsible": true,
 		"collapsed": true
+	},
+	{
+		"type": "dir",
+		"name": "Interview",
+		"label": "面试题",
+		"collapsible": true,
+		"collapsed": true
 	}
 ]
