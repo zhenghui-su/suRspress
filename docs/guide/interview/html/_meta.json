@@ -8,5 +8,40 @@
 		"type": "file",
 		"name": "1-文档声明",
 		"label": "文档声明"
+	},
+	{
+		"type": "file",
+		"name": "2-语义化",
+		"label": "语义化"
+	},
+	{
+		"type": "file",
+		"name": "3-W3C",
+		"label": "W3C"
+	},
+	{
+		"type": "file",
+		"name": "4-SEO",
+		"label": "SEO"
+	},
+	{
+		"type": "file",
+		"name": "5-iframe",
+		"label": "iframe"
+	},
+	{
+		"type": "file",
+		"name": "6-微格式",
+		"label": "微格式"
+	},
+	{
+		"type": "file",
+		"name": "7-替换元素",
+		"label": "替换元素"
+	},
+	{
+		"type": "file",
+		"name": "8-页面可见性",
+		"label": "页面可见性"
 	}
 ]

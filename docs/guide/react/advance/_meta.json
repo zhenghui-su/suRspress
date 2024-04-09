@@ -3,5 +3,15 @@
 		"type": "file",
 		"name": "index",
 		"label": "进阶篇前言"
+	},
+	{
+		"type": "file",
+		"name": "1-属性默认值和类型验证",
+		"label": "属性默认值和类型验证"
+	},
+	{
+		"type": "file",
+		"name": "2-高阶组件",
+		"label": "高阶组件"
 	}
 ]
