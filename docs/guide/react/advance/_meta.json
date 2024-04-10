@@ -13,5 +13,10 @@
 		"type": "file",
 		"name": "2-高阶组件",
 		"label": "高阶组件"
+	},
+	{
+		"type": "file",
+		"name": "3-Ref",
+		"label": "Ref"
 	}
 ]
