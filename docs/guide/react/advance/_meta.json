@@ -18,5 +18,10 @@
 		"type": "file",
 		"name": "3-Ref",
 		"label": "Ref"
+	},
+	{
+		"type": "file",
+		"name": "4-Context",
+		"label": "Context"
 	}
 ]
