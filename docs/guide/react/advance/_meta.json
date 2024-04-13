@@ -33,5 +33,10 @@
 		"type": "file",
 		"name": "6-Portals",
 		"label": "Portals"
+	},
+	{
+		"type": "file",
+		"name": "7-错误边界",
+		"label": "错误边界"
 	}
 ]
