@@ -23,5 +23,15 @@
 		"type": "file",
 		"name": "4-Context",
 		"label": "Context"
+	},
+	{
+		"type": "file",
+		"name": "5-Render Props",
+		"label": "Render Props"
+	},
+	{
+		"type": "file",
+		"name": "6-Portals",
+		"label": "Portals"
 	}
 ]
