@@ -11,7 +11,7 @@
 	},
 	{
 		"type": "file",
-		"name": "2-npm和package.json",
+		"name": "2-npm和package.json.md",
 		"label": "npm和package.json"
 	},
 	{
@@ -276,7 +276,7 @@
 	},
 	{
 		"type": "file",
-		"name": "55-socket.io",
+		"name": "55-socket.io.md",
 		"label": "socket.io"
 	}
 ]
