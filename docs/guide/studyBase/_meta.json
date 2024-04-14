@@ -1,21 +1,21 @@
 [
-  {
-    "type": "file",
-    "name": "index",
-    "label": "基础进阶前言"
-  },
-  {
-    "type": "dir",
-    "name": "HTML",
-    "label": "html",
-    "collapsible": true,
-    "collapsed": true
-  },
-  {
-    "type": "dir",
-    "name": "CSS",
-    "label": "css",
-    "collapsible": true,
-    "collapsed": true
-  }
+	{
+		"type": "file",
+		"name": "index",
+		"label": "基础进阶前言"
+	},
+	{
+		"type": "dir",
+		"name": "html",
+		"label": "html",
+		"collapsible": true,
+		"collapsed": true
+	},
+	{
+		"type": "dir",
+		"name": "css",
+		"label": "css",
+		"collapsible": true,
+		"collapsed": true
+	}
 ]
