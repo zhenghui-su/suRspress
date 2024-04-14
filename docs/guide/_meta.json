@@ -69,7 +69,7 @@
 	},
 	{
 		"type": "dir",
-		"name": "Interview",
+		"name": "interview",
 		"label": "面试题",
 		"collapsible": true,
 		"collapsed": true
