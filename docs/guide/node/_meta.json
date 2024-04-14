@@ -1,282 +1,282 @@
 [
-  {
-    "type": "file",
-    "name": "index",
-    "label": "Node进阶前言"
-  },
-  {
-    "type": "file",
-    "name": "1-梦开始的地方",
-    "label": "梦开始的地方"
-  },
-  {
-    "type": "file",
-    "name": "2-npm和package.json",
-    "label": "npm和package.json"
-  },
-  {
-    "type": "file",
-    "name": "3-npm install原理",
-    "label": "npm install原理"
-  },
-  {
-    "type": "file",
-    "name": "4-npm run原理",
-    "label": "npm run原理"
-  },
-  {
-    "type": "file",
-    "name": "5-npx",
-    "label": "npx"
-  },
-  {
-    "type": "file",
-    "name": "6-发布npm包",
-    "label": "发布npm包"
-  },
-  {
-    "type": "file",
-    "name": "7-搭建npm私服",
-    "label": "搭建npm私服"
-  },
-  {
-    "type": "file",
-    "name": "8-模块化(cjs、esm、源码)",
-    "label": "模块化(cjs、esm、源码)"
-  },
-  {
-    "type": "file",
-    "name": "9-全局变量和全局API",
-    "label": "全局变量 & 全局API"
-  },
-  {
-    "type": "file",
-    "name": "10-CSR  SSR  SEO",
-    "label": "CSR  SSR  SEO"
-  },
-  {
-    "type": "file",
-    "name": "11-Path Windows和posix",
-    "label": "Path Windows & posix"
-  },
-  {
-    "type": "file",
-    "name": "12-OS",
-    "label": "OS"
-  },
-  {
-    "type": "file",
-    "name": "13-process进程",
-    "label": "process进程"
-  },
-  {
-    "type": "file",
-    "name": "14-child_process 子进程 核心API",
-    "label": "child_process 子进程 核心API"
-  },
-  {
-    "type": "file",
-    "name": "15-FFmpeg",
-    "label": "FFmpeg"
-  },
-  {
-    "type": "file",
-    "name": "16-events 事件触发器",
-    "label": "events 事件触发器"
-  },
-  {
-    "type": "file",
-    "name": "17-util",
-    "label": "util"
-  },
-  {
-    "type": "file",
-    "name": "18-pngquant",
-    "label": "pngquant"
-  },
-  {
-    "type": "file",
-    "name": "19-fs(上)",
-    "label": "fs(上)"
-  },
-  {
-    "type": "file",
-    "name": "20-fs(下)",
-    "label": "fs(下)"
-  },
-  {
-    "type": "file",
-    "name": "21-crypto",
-    "label": "crypto"
-  },
-  {
-    "type": "file",
-    "name": "22-脚手架",
-    "label": "脚手架"
-  },
-  {
-    "type": "file",
-    "name": "23-Markdown 转 html",
-    "label": "Markdown 转 html"
-  },
-  {
-    "type": "file",
-    "name": "24-zlib",
-    "label": "zlib"
-  },
-  {
-    "type": "file",
-    "name": "25-http",
-    "label": "http"
-  },
-  {
-    "type": "file",
-    "name": "26-反向代理",
-    "label": "反向代理"
-  },
-  {
-    "type": "file",
-    "name": "27-动静分离",
-    "label": "动静分离"
-  },
-  {
-    "type": "file",
-    "name": "28-邮件服务",
-    "label": "邮件服务"
-  },
-  {
-    "type": "file",
-    "name": "29-express",
-    "label": "express"
-  },
-  {
-    "type": "file",
-    "name": "30-防盗链",
-    "label": "防盗链"
-  },
-  {
-    "type": "file",
-    "name": "31-响应头和请求头",
-    "label": "响应头和请求头"
-  },
-  {
-    "type": "file",
-    "name": "32-数据库",
-    "label": "数据库"
-  },
-  {
-    "type": "file",
-    "name": "33-SQL语句",
-    "label": "SQL语句"
-  },
-  {
-    "type": "file",
-    "name": "34-查询",
-    "label": "查询"
-  },
-  {
-    "type": "file",
-    "name": "35-增删改",
-    "label": "增删改"
-  },
-  {
-    "type": "file",
-    "name": "36-表达式和函数",
-    "label": "表达式和函数"
-  },
-  {
-    "type": "file",
-    "name": "37-子查询和连表",
-    "label": "子查询和连表"
-  },
-  {
-    "type": "file",
-    "name": "38-mysql2",
-    "label": "mysql2"
-  },
-  {
-    "type": "file",
-    "name": "39-ORM( Knex + express )",
-    "label": "ORM( Knex + express )"
-  },
-  {
-    "type": "file",
-    "name": "40-ORM( Prisma + express )",
-    "label": "ORM( Prisma + express )"
-  },
-  {
-    "type": "file",
-    "name": "41-项目架构( MVC + loC + 装饰器 )",
-    "label": "项目架构( MVC + loC + 装饰器 )"
-  },
-  {
-    "type": "file",
-    "name": "42-项目架构( JWT鉴权 )",
-    "label": "项目架构( JWT鉴权 )"
-  },
-  {
-    "type": "file",
-    "name": "43-Redis( 介绍与安装 )",
-    "label": "Redis( 介绍与安装 )"
-  },
-  {
-    "type": "file",
-    "name": "44-Redis( 基本使用 )",
-    "label": "Redis( 基本使用 )"
-  },
-  {
-    "type": "file",
-    "name": "45-Redis( 发布订阅 + 事务 )",
-    "label": "Redis( 发布订阅 + 事务 )"
-  },
-  {
-    "type": "file",
-    "name": "46-Redis( 持久化RDB AOF )",
-    "label": "Redis( 持久化RDB AOF )"
-  },
-  {
-    "type": "file",
-    "name": "47-Redis( 主从复制 )",
-    "label": "Redis( 主从复制 )"
-  },
-  {
-    "type": "file",
-    "name": "48-Redis( ioredis )",
-    "label": "Redis( ioredis )"
-  },
-  {
-    "type": "file",
-    "name": "49-lua( 安装-介绍 )",
-    "label": "lua( 安装-介绍 )"
-  },
-  {
-    "type": "file",
-    "name": "50-lua( 基本使用 )",
-    "label": "lua( 基本使用 )"
-  },
-  {
-    "type": "file",
-    "name": "51-lua + Redis( 限流阀 )",
-    "label": "lua + Redis( 限流阀 )"
-  },
-  {
-    "type": "file",
-    "name": "52-定时任务( 自动签到 )",
-    "label": "定时任务( 自动签到 )"
-  },
-  {
-    "type": "file",
-    "name": "53-serverLess( 云函数 )",
-    "label":"serverLess( 云函数 )"
-  },
-  {
-    "type": "file",
-    "name": "54-net",
-    "label": "net"
-  },
-  {
-    "type":"file",
-    "name": "55-socket.io",
-    "label": "socket.io"
-  }
+	{
+		"type": "file",
+		"name": "index",
+		"label": "Node进阶前言"
+	},
+	{
+		"type": "file",
+		"name": "1-梦开始的地方",
+		"label": "梦开始的地方"
+	},
+	{
+		"type": "file",
+		"name": "2-npm和package.json",
+		"label": "npm和package.json"
+	},
+	{
+		"type": "file",
+		"name": "3-npm install原理",
+		"label": "npm install原理"
+	},
+	{
+		"type": "file",
+		"name": "4-npm run原理",
+		"label": "npm run原理"
+	},
+	{
+		"type": "file",
+		"name": "5-npx",
+		"label": "npx"
+	},
+	{
+		"type": "file",
+		"name": "6-发布npm包",
+		"label": "发布npm包"
+	},
+	{
+		"type": "file",
+		"name": "7-搭建npm私服",
+		"label": "搭建npm私服"
+	},
+	{
+		"type": "file",
+		"name": "8-模块化(cjs、esm、源码)",
+		"label": "模块化(cjs、esm、源码)"
+	},
+	{
+		"type": "file",
+		"name": "9-全局变量和全局API",
+		"label": "全局变量 & 全局API"
+	},
+	{
+		"type": "file",
+		"name": "10-CSR  SSR  SEO",
+		"label": "CSR  SSR  SEO"
+	},
+	{
+		"type": "file",
+		"name": "11-Path Windows和posix",
+		"label": "Path Windows & posix"
+	},
+	{
+		"type": "file",
+		"name": "12-OS",
+		"label": "OS"
+	},
+	{
+		"type": "file",
+		"name": "13-process进程",
+		"label": "process进程"
+	},
+	{
+		"type": "file",
+		"name": "14-child_process 子进程 核心API",
+		"label": "child_process 子进程 核心API"
+	},
+	{
+		"type": "file",
+		"name": "15-FFmpeg",
+		"label": "FFmpeg"
+	},
+	{
+		"type": "file",
+		"name": "16-events 事件触发器",
+		"label": "events 事件触发器"
+	},
+	{
+		"type": "file",
+		"name": "17-util",
+		"label": "util"
+	},
+	{
+		"type": "file",
+		"name": "18-pngquant",
+		"label": "pngquant"
+	},
+	{
+		"type": "file",
+		"name": "19-fs(上)",
+		"label": "fs(上)"
+	},
+	{
+		"type": "file",
+		"name": "20-fs(下)",
+		"label": "fs(下)"
+	},
+	{
+		"type": "file",
+		"name": "21-crypto",
+		"label": "crypto"
+	},
+	{
+		"type": "file",
+		"name": "22-脚手架",
+		"label": "脚手架"
+	},
+	{
+		"type": "file",
+		"name": "23-Markdown 转 html",
+		"label": "Markdown 转 html"
+	},
+	{
+		"type": "file",
+		"name": "24-zlib",
+		"label": "zlib"
+	},
+	{
+		"type": "file",
+		"name": "25-http",
+		"label": "http"
+	},
+	{
+		"type": "file",
+		"name": "26-反向代理",
+		"label": "反向代理"
+	},
+	{
+		"type": "file",
+		"name": "27-动静分离",
+		"label": "动静分离"
+	},
+	{
+		"type": "file",
+		"name": "28-邮件服务",
+		"label": "邮件服务"
+	},
+	{
+		"type": "file",
+		"name": "29-express",
+		"label": "express"
+	},
+	{
+		"type": "file",
+		"name": "30-防盗链",
+		"label": "防盗链"
+	},
+	{
+		"type": "file",
+		"name": "31-响应头和请求头",
+		"label": "响应头和请求头"
+	},
+	{
+		"type": "file",
+		"name": "32-数据库",
+		"label": "数据库"
+	},
+	{
+		"type": "file",
+		"name": "33-SQL语句",
+		"label": "SQL语句"
+	},
+	{
+		"type": "file",
+		"name": "34-查询",
+		"label": "查询"
+	},
+	{
+		"type": "file",
+		"name": "35-增删改",
+		"label": "增删改"
+	},
+	{
+		"type": "file",
+		"name": "36-表达式和函数",
+		"label": "表达式和函数"
+	},
+	{
+		"type": "file",
+		"name": "37-子查询和连表",
+		"label": "子查询和连表"
+	},
+	{
+		"type": "file",
+		"name": "38-mysql2",
+		"label": "mysql2"
+	},
+	{
+		"type": "file",
+		"name": "39-ORM( Knex + express )",
+		"label": "ORM( Knex + express )"
+	},
+	{
+		"type": "file",
+		"name": "40-ORM( Prisma + express )",
+		"label": "ORM( Prisma + express )"
+	},
+	{
+		"type": "file",
+		"name": "41-项目架构( MVC + loC + 装饰器 )",
+		"label": "项目架构( MVC + loC + 装饰器 )"
+	},
+	{
+		"type": "file",
+		"name": "42-项目架构( JWT鉴权 )",
+		"label": "项目架构( JWT鉴权 )"
+	},
+	{
+		"type": "file",
+		"name": "43-Redis( 介绍与安装 )",
+		"label": "Redis( 介绍与安装 )"
+	},
+	{
+		"type": "file",
+		"name": "44-Redis( 基本使用 )",
+		"label": "Redis( 基本使用 )"
+	},
+	{
+		"type": "file",
+		"name": "45-Redis( 发布订阅 + 事务 )",
+		"label": "Redis( 发布订阅 + 事务 )"
+	},
+	{
+		"type": "file",
+		"name": "46-Redis( 持久化RDB AOF )",
+		"label": "Redis( 持久化RDB AOF )"
+	},
+	{
+		"type": "file",
+		"name": "47-Redis( 主从复制 )",
+		"label": "Redis( 主从复制 )"
+	},
+	{
+		"type": "file",
+		"name": "48-Redis( ioredis )",
+		"label": "Redis( ioredis )"
+	},
+	{
+		"type": "file",
+		"name": "49-lua( 安装-介绍 )",
+		"label": "lua( 安装-介绍 )"
+	},
+	{
+		"type": "file",
+		"name": "50-lua( 基本使用 )",
+		"label": "lua( 基本使用 )"
+	},
+	{
+		"type": "file",
+		"name": "51-lua + Redis( 限流阀 )",
+		"label": "lua + Redis( 限流阀 )"
+	},
+	{
+		"type": "file",
+		"name": "52-定时任务( 自动签到 )",
+		"label": "定时任务( 自动签到 )"
+	},
+	{
+		"type": "file",
+		"name": "53-serverLess( 云函数 )",
+		"label": "serverLess( 云函数 )"
+	},
+	{
+		"type": "file",
+		"name": "54-net",
+		"label": "net"
+	},
+	{
+		"type": "file",
+		"name": "55-socket.io",
+		"label": "socket.io"
+	}
 ]

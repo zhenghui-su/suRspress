@@ -5,38 +5,10 @@
 		"label": "进阶篇前言"
 	},
 	{
-		"type": "file",
-		"name": "1-属性默认值和类型验证",
-		"label": "属性默认值和类型验证"
-	},
-	{
-		"type": "file",
-		"name": "2-高阶组件",
-		"label": "高阶组件"
-	},
-	{
-		"type": "file",
-		"name": "3-Ref",
-		"label": "Ref"
-	},
-	{
-		"type": "file",
-		"name": "4-Context",
-		"label": "Context"
-	},
-	{
-		"type": "file",
-		"name": "5-Render Props",
-		"label": "Render Props"
-	},
-	{
-		"type": "file",
-		"name": "6-Portals",
-		"label": "Portals"
-	},
-	{
-		"type": "file",
-		"name": "7-错误边界",
-		"label": "错误边界"
+		"type": "dir",
+		"name": "第一章",
+		"label": "高级指引",
+		"collapsible": true,
+		"collapsed": true
 	}
 ]
