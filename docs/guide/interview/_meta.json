@@ -2,11 +2,11 @@
 	{
 		"type": "file",
 		"name": "index",
-		"label": "面试题前言"
+		"label": "各章总结前言"
 	},
 	{
 		"type": "dir",
 		"name": "html",
-		"label": "html面试题"
+		"label": "html总结点"
 	}
 ]

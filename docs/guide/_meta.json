@@ -70,7 +70,7 @@
 	{
 		"type": "dir",
 		"name": "interview",
-		"label": "面试题",
+		"label": "各章总结",
 		"collapsible": true,
 		"collapsed": true
 	}
