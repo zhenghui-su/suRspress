@@ -10,5 +10,12 @@
 		"label": "高级指引",
 		"collapsible": true,
 		"collapsed": true
+	},
+	{
+		"type": "dir",
+		"name": "第二章",
+		"label": "整体架构",
+		"collapsible": true,
+		"collapsed": true
 	}
 ]
