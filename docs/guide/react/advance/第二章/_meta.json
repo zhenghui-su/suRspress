@@ -8,5 +8,10 @@
 		"type": "file",
 		"name": "2-React 和 Vue 描述页面的区别",
 		"label": "React 和 Vue 描述页面的区别"
+	},
+	{
+		"type": "file",
+		"name": "3-前端框架的分类",
+		"label": "前端框架的分类"
 	}
 ]
