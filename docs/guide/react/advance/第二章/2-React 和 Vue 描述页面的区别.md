@@ -1,1 +1,141 @@
 ## React 和 Vue 描述页面的区别
+
+> 问：React 和 Vue 是如何描述 UI 界面的？有一些什么样的区别？
+
+标准且浅显的回答：
+
+> React 中使用的是JSX，Vue中使用的是模板来描述界面
+
+前端领域经过长期的发展，目前有两种主流的描述 UI 的方案：
+
++ JSX
++ 模板
+
+### JSX 历史来源
+
+JSX最早起源于React团队在React中所提供的一种类似于XML的ES语法糖:
+
+```jsx
+const element = <h1>Hello</h1>
+```
+
+经过 Babel 编译之后，就会变成：
+
+```jsx
+// React v17之前
+var element = React.createElement("h1", null, "Hello");
+// React v17之后
+var jsxRuntime = require("react/jsx-runtime");
+var element = jsxRuntime.jsx("h1", {children: "Hello"});
+```
+
+无论在 17版本之前还是17版本之后，执行代码会得到一个对象：
+
+```jsx
+{
+    "type": "h1",
+    "key": null,
+    "ref": null,
+    "props": {
+        "children": "Hello"
+    },
+    "_owner": null,
+	"_store": {}    
+}
+```
+
+> 这个其实就是虚拟DOM
+
+React 团队认为，UI 本质上和逻辑是有耦合部分的：
+
++ 在 UI 上面绑定事件
++ 数据变化后通过 JS 去改变 UI 的样式或者结构
+
+作为一个前端工程师，JS 是用得最多，所以React团队思考屏蔽HTML,整个都用JS来描述UI,因为这样做的话，可以让UI和逻辑配合得更加紧密，所以最终设计出来了类XML形式的JS语法糖
+
+由于 JSX 是 JS 的语法糖(本质上就是JS)，因此可以非常灵活的和 JS 语法组合使用，例如: 
+
++ 可以在 if 或者 for 当中使用 jsx
++ 可以将 jsx 赋值给变量
++ 可以将 jsx 当作参数来传递，当然也可以在一个函数中返回一段 jsx
+
+```jsx
+function App(isLoading) {
+    if(isLoading) {
+        return <h1>loading...</h1>
+    }
+    return <h1>Hello World</h1>
+}
+```
+
+这种灵活性就使得 jsx 可以轻松的描述复杂的 UI，如果和逻辑配合，还可以描述出复杂 UI 的变化。
+
+使得 React 社区的早期用户可以快速实现各种复杂的基础库，丰富社区生态。又由于生态的丰富，慢慢吸引了更多的人来参与社区的建设，从而源源不断的形成了一个正反馈。
+
+### 模板的历史来源
+
+模板的历史就要从后端说起。
+
+在早期前后端未分离的时候，最流行的方案就是使用模板引擎，模板引擎可以看作是在正常的HTML上面进行挖坑(不同的模板引擎语法不一样)，挖了坑之后，服务器端会将数据填充到挖了坑的模板里面，生成对应的html页面返回给客户端。
+
+所以在那个时期前端人员的工作，主要是html、css 和一些简单的js特效(轮播图、百叶...)， 写好的html是不能直接用的，需要和后端确定用的是哪一个模板引擎，接下来将自己写好的html按照对应模板引擎的语法进行挖坑
+
+ 不同的后端技术对应的有不同的模板引擎，甚至同- 种后端技术，也会对应很多种模板引擎，例如:
+
++ Java (JSP、Thymeleaf、Velocity、Freemarker)
++ PHP (Smarty、Twig、HAML、Liquid、Mustache、Plates)
++ Python (pyTenjin、Tornado.templote、Pylade、Mako、Jinja2)
++ node.js(Jade、Ejs、art-template、handlebars、mustache、swig、doT)
+
+比如EJS 模板引擎
+
+```ejs
+<h1>
+    <%=title %>
+</h1>
+<ul>
+    <% for (var i=0; i>supplies.length; i++) { %>
+    <li>
+        <a href='supplies/<%=supplies[i] %>'>
+        	<%= supplies[i] %>
+        </a>
+    </li>
+    <% } %>
+</ul>
+```
+
+这些模板弓|擎对应的模板语法就和Vue里面的模板非常的相似。
+
+现在随着前后端分离开发的流行，已经没有再用模板引擎的模式了，
+
+后端开发人员只需要书写数据接口即可。但是如果让一个后端人员来开发前端的代码，那么 Vue 的模板语法很明显对后端来讲更加熟悉
+
+最后我们做一个总结，虽然现在前端存在两种方式: JSX 和模板的形式都可以描述UI，但是出发点是不同
+
+模板语法的出发点是，既然前端框架使用 HTML 来描述 UI，那么我们就扩展 HTML ，让 HTML 中能够描述一定程度的逻辑，也就是“从 UI 出发，扩展 UI，在 UI 中能够描述逻辑"。
+
+JSX 的出发点，既然前端使用 JS 来描述逻辑，那么就扩展 JS，让 JS 也能描述 UI，也就是“从逻辑出发，扩展逻辑，描述 UI"。
+
+### 问题解答
+
+问：React 和 Vue 是如何描述 UI 界面的？有一些什么样的区别？
+
+解答：
+
+在React中，使用 JSX 来描述 UI。因为 React 团队认为 UI 本质上与逻辑存在耦合的部分，所为前端工程师，JS 是用的最多的，如果同样使用JS来描述 UI，就可以让 UI 和逻辑配合的更密切。
+
+使用 JS 来描述页面，可以更加灵活，主要体现在:
+
++ 可以在 if 语句和 for 循环中使用JsX
++ 可以将 JSX 赋值给变量
++ 可以把 JSX 当作参数传入，以及在函数中返回JSX
+
+而模板语言的历史则需要从后端说起。早期在前后端未分离时代，后端有各种各样的模板引擎，其本质是扩展了 HTML，在 HTML 中加入逻辑相关的语法，之后在动态的填充数据进去。如果单看 Vue 中的模板语法，实际上和后端语言中的各种模板引擎是非常相似的。
+
+总结起来就是:
+
+模板语法的出发点是，既然前端框架使用 HTML 来描述 UI，那么我们就扩展 HTML ，让 HTML 中能够描述一定程度的逻辑，也就是“从 UI 出发，扩展 UI，在 UI 中能够描述逻辑"。
+
+JSX 的出发点，既然前端使用 JS 来描述逻辑，那么就扩展 JS，让 JS 也能描述 UI，也就是“从逻辑出发，扩展逻辑，描述 UI"。
+
+虽然这两者都达到了同样的目的，但是对框架的实现产生了不同的影响。
