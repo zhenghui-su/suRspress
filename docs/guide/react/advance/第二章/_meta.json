@@ -18,5 +18,10 @@
 		"type": "file",
 		"name": "4-虚拟DOM",
 		"label": "虚拟DOM"
+	},
+	{
+		"type": "file",
+		"name": "5-React 整体架构",
+		"label": "React 整体架构"
 	}
 ]
