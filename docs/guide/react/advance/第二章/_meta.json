@@ -23,5 +23,10 @@
 		"type": "file",
 		"name": "5-React 整体架构",
 		"label": "React 整体架构"
+	},
+	{
+		"type": "file",
+		"name": "6-React 渲染流程",
+		"label": "React 渲染流程"
 	}
 ]
