@@ -28,5 +28,10 @@
 		"type": "file",
 		"name": "6-React 渲染流程",
 		"label": "React 渲染流程"
+	},
+	{
+		"type": "file",
+		"name": "7-Fiber双缓冲",
+		"label": "Fiber双缓冲"
 	}
 ]
