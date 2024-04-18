@@ -33,5 +33,10 @@
 		"type": "file",
 		"name": "7-Fiber双缓冲",
 		"label": "Fiber双缓冲"
+	},
+	{
+		"type": "file",
+		"name": "8-MessageChannel",
+		"label": "MessageChannel"
 	}
 ]
