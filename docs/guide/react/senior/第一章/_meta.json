@@ -3,5 +3,10 @@
 		"type": "file",
 		"name": "1-Scheduler 调度普通任务",
 		"label": "Scheduler 调度普通任务"
+	},
+	{
+		"type": "file",
+		"name": "2-Scheduler 调度延时任务",
+		"label": "Scheduler 调度延时任务"
 	}
 ]
