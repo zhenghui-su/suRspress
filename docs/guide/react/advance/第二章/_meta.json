@@ -38,10 +38,5 @@
 		"type": "file",
 		"name": "8-MessageChannel",
 		"label": "MessageChannel"
-	},
-	{
-		"type": "file",
-		"name": "9-Scheduler 调度普通任务",
-		"label": "Scheduler 调度普通任务"
 	}
 ]
