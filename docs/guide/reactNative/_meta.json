@@ -3,5 +3,10 @@
 		"type": "file",
 		"name": "index",
 		"label": "前言"
+	},
+	{
+		"type": "file",
+		"name": "1-RN 基本介绍",
+		"label": "RN 基本介绍"
 	}
 ]
