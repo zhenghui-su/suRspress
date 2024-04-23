@@ -8,5 +8,10 @@
 		"type": "file",
 		"name": "1-RN 基本介绍",
 		"label": "RN 基本介绍"
+	},
+	{
+		"type": "file",
+		"name": "2-快速搭建 RN 开发环境",
+		"label": "快速搭建 RN 开发环境"
 	}
 ]
