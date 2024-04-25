@@ -10,5 +10,12 @@
 		"label": "第一章",
 		"collapsible": true,
 		"collapsed": true
+	},
+	{
+		"type": "dir",
+		"name": "第二章",
+		"label": "第二章",
+		"collapsible": true,
+		"collapsed": true
 	}
 ]
