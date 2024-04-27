@@ -3,5 +3,10 @@
 		"type": "file",
 		"name": "1-RN 内置基础组件",
 		"label": "RN 内置基础组件"
+	},
+	{
+		"type": "file",
+		"name": "2-容器组件",
+		"label": "容器组件"
 	}
 ]

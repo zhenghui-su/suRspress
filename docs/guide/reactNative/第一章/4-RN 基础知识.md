@@ -2,22 +2,22 @@
 
 我们根据 RN 的官网，来学习最基础的操作，主要包含：
 
-+ 样式与布局
-+ 图片
-+ 文本输入与按钮
-+ 使用滚动视图
-+ 使用长列表
-+ 网络连接
+- 样式与布局
+- 图片
+- 文本输入与按钮
+- 使用滚动视图
+- 使用长列表
+- 网络连接
 
 ### 样式与布局
 
-在RN中，所有组件都接受名为 *style* 的属性，属性值为一个对象，用来书写CSS样式。
+在 RN 中，所有组件都接受名为 _style_ 的属性，属性值为一个对象，用来书写 CSS 样式。
 
-书写样式时需要注意的是要按照 *JavaScript* 语法来使用驼峰命名法，例如将 *background-color* 改为 *backgroundColor*。
+书写样式时需要注意的是要按照 _JavaScript_ 语法来使用驼峰命名法，例如将 _background-color_ 改为 _backgroundColor_。
 
-还有就是在 RN 中无法使用缩写样式，例如 *border: 1px solid* 这样的样式是无法使用的，只能分成两条样式来写 *borderWidth:1*, *borderStyle: 'solid'*
+还有就是在 RN 中无法使用缩写样式，例如 _border: 1px solid_ 这样的样式是无法使用的，只能分成两条样式来写 _borderWidth:1_, _borderStyle: 'solid'_
 
-在RN中提供了一个 *StyleSheet.create* 方法来集中定义组件的样式，如下:
+在 RN 中提供了一个 _StyleSheet.create_ 方法来集中定义组件的样式，如下:
 
 ```jsx
 import React from 'react';
@@ -26,7 +26,9 @@ import { StyleSheet, Text, View } from 'react-native';
 export default function App() {
 	return (
 		<View style={styles.container}>
-			<Text style={{ color: 'red', textDecorationLine: 'underline' }}>内嵌样式</Text>
+			<Text style={{ color: 'red', textDecorationLine: 'underline' }}>
+				内嵌样式
+			</Text>
 			<Text style={styles.red}>red</Text>
 			<Text style={styles.bigBlue}>blue</Text>
 		</View>
@@ -51,7 +53,7 @@ const styles = StyleSheet.create({
 });
 ```
 
-如果要复用 *StyleSheet.create* 中所定义的样式，可以传入一个数组，但是要注意在数组中位置居后的样式对象比居前的优先级更高，这样你可以间接实现样式的继承。
+如果要复用 _StyleSheet.create_ 中所定义的样式，可以传入一个数组，但是要注意在数组中位置居后的样式对象比居前的优先级更高，这样你可以间接实现样式的继承。
 
 ```jsx
 <Text style={[styles.bigBlue, styles.red]}>Red优先级更高</Text>
@@ -95,7 +97,7 @@ import { View } from 'react-native';
 
 export default function App() {
 	return (
-		<View style={{ flex: 1}}>
+		<View style={{ flex: 1 }}>
 			<View style={{ flex: 1, backgroundColor: 'powderblue' }} />
 			<View style={{ flex: 2, backgroundColor: 'skyblue' }} />
 			<View style={{ flex: 3, backgroundColor: 'steelblue' }} />
@@ -129,9 +131,9 @@ export default function App() {
 
 在进行移动端开发时，最推荐的布局方案就是使用 flexbox 弹性盒布局。fiexbox 可以在不同屏幕尺寸上提供一致的布局结构。
 
-RN中的 flexbox 的工作原理和 Web 上的 CSS 基本一致，当然也存在少许差异。首先是默认值不同：flexDirection 的默认值是 column 而不是row，而flex也只能指定一个数字值。
+RN 中的 flexbox 的工作原理和 Web 上的 CSS 基本一致，当然也存在少许差异。首先是默认值不同：flexDirection 的默认值是 column 而不是 row，而 flex 也只能指定一个数字值。
 
-下面我们来看一个RN中 flexbox 的示例:
+下面我们来看一个 RN 中 flexbox 的示例:
 
 ```jsx
 import React from 'react';
@@ -153,9 +155,9 @@ export default function App() {
 
 ### 图片
 
-目前，我们的RN应用已经有了显示文本的能力，你能够通过弹性盒布局将文本显示到合适的位置。
+目前，我们的 RN 应用已经有了显示文本的能力，你能够通过弹性盒布局将文本显示到合适的位置。
 
-但是一个应用中不单单只有文字，还会存在图片。在RN中，提供了一个名为 Image 的组件来显示图片。例如：
+但是一个应用中不单单只有文字，还会存在图片。在 RN 中，提供了一个名为 Image 的组件来显示图片。例如：
 
 ```jsx
 <Image source={require('./assets/favicon.png')}
@@ -195,14 +197,12 @@ require 中的图片名字必须是一个静态字符串，不能使用变量！
 // 正确
 <Image source={require('./favicon.png')} />;
 // 错误
-const icon = this.props.active
-    ? 'active'
-    : 'inactive';
+const icon = this.props.active ? 'active' : 'inactive';
 <Image source={require('./' + icon + '.png')} />;
 // 正确
 const icon = this.props.active
-    ? require('./active.png')
-    : require('./inactive.png');
+	? require('./active.png')
+	: require('./inactive.png');
 <Image source={icon} />;
 ```
 
@@ -228,7 +228,7 @@ const icon = this.props.active
 
 我们先来看文本输入。
 
-RN 中提供了一个 *TextInput* 组件，该组件是一个允许用户输入文本的基础组件。它有一个名为 `onChangeText` 的属性，此属性接受一个函数，而此函数会在文本变化时被调用。另外还有一个名为 `onSubmitEditing` 的属性，会在文本被提交后(用户按下软键盘上的提交键)调用。
+RN 中提供了一个 _TextInput_ 组件，该组件是一个允许用户输入文本的基础组件。它有一个名为 `onChangeText` 的属性，此属性接受一个函数，而此函数会在文本变化时被调用。另外还有一个名为 `onSubmitEditing` 的属性，会在文本被提交后(用户按下软键盘上的提交键)调用。
 
 例如:
 
@@ -266,9 +266,9 @@ const styles = StyleSheet.create({
 
 按钮也是一个应用中最基本的需求，在 RN 中提供了 Button 组件来渲染按钮，这是一个简单的跨平台的按钮组件，会调用原生环境中对应的按钮组件。
 
-在 *Android* 设备中，Button 组件显示为一个按钮，而在 *iOS* 设备中，则显示为一行文本。
+在 _Android_ 设备中，Button 组件显示为一个按钮，而在 _iOS_ 设备中，则显示为一行文本。
 
-该组件需要传递两个必须的属性，一个是 *onPress*，对应点击后的事件，另一个是 *title*，用来指定按钮内的文本信息。
+该组件需要传递两个必须的属性，一个是 _onPress_，对应点击后的事件，另一个是 _title_，用来指定按钮内的文本信息。
 
 ![image-20240424221759559](https://chen-1320883525.cos.ap-chengdu.myqcloud.com/img/image-20240424221759559.png)
 
@@ -297,35 +297,35 @@ const styles = StyleSheet.create({
 });
 ```
 
-由于 Button 组件是调用原生代码，因此不同的平台显示的外观是不同的，如果想要各个平台显示的外观都相同，则可以使用 *Touchable* 系列组件。
+由于 Button 组件是调用原生代码，因此不同的平台显示的外观是不同的，如果想要各个平台显示的外观都相同，则可以使用 _Touchable_ 系列组件。
 
 ![image-20240424222628177](https://chen-1320883525.cos.ap-chengdu.myqcloud.com/img/image-20240424222628177.png)
 
-> 可以参考官方：[TouchableHighlight](https://reactnative.cn/docs/touchablehighlight)、[TouchableOpacity](https://reactnative.cn/docs/touchableopacity)、[TouchableWithoutFeedback](https://reactnative.cn/docs/touchablewithoutfeedback)、[TouchableNativeFeedback安卓特有](https://reactnative.cn/docs/touchablenativefeedback)
+> 可以参考官方：[TouchableHighlight](https://reactnative.cn/docs/touchablehighlight)、[TouchableOpacity](https://reactnative.cn/docs/touchableopacity)、[TouchableWithoutFeedback](https://reactnative.cn/docs/touchablewithoutfeedback)、[TouchableNativeFeedback 安卓特有](https://reactnative.cn/docs/touchablenativefeedback)
 
-Touchable 系列组件一共有4 个，其中跨平台的有3个：
+Touchable 系列组件一共有 4 个，其中跨平台的有 3 个：
 
-+ *TouchableHighlight*
-  Touchable 系列组件中比较常用的一个，它是在 *TouchableWithoutFeedback* 的基础上添加了一些 UI 上的扩展，即当手指按下的时候，该视图的不透明度会降低，同时会看到视图变暗或者变亮，该标签可以添加 style 样式属性。
+- _TouchableHighlight_
+  Touchable 系列组件中比较常用的一个，它是在 _TouchableWithoutFeedback_ 的基础上添加了一些 UI 上的扩展，即当手指按下的时候，该视图的不透明度会降低，同时会看到视图变暗或者变亮，该标签可以添加 style 样式属性。
 
 > 官方现在推荐使用 Pressable，参考[Pressable](https://reactnative.cn/docs/pressable)
 >
 > ![image-20240424223758687](https://chen-1320883525.cos.ap-chengdu.myqcloud.com/img/image-20240424223758687.png)
 
-+ *TouchableOpacity*
+- _TouchableOpacity_
 
-  完全和 *TouchabieHighlight* 相同，只是不可以修改颜色，只能修改透明度。
+  完全和 _TouchabieHighlight_ 相同，只是不可以修改颜色，只能修改透明度。
 
-+ *TouchableWithoutFeedback*
+- _TouchableWithoutFeedback_
   最基本的一个 Touchable 组件，只响应用户的点击事件，不会做任何 UI 上的改变，所以不用添加 style 样式属性，加了也没效果。
 
-另外在Android平台上支持一个叫 *TouchableNativeFeedback* 的组件:
+另外在 Android 平台上支持一个叫 _TouchableNativeFeedback_ 的组件:
 
-+ TouchableNotiveFeedback
+- TouchableNativeFeedback
 
-  为了支持 Android 5.0 的触控反馈而新增的组件。该组件在 *TouchableWithoutFeedback* 所支持的属性的基础上增加了触摸的水波纹效果。可以通过 *background* 属性来自定义原生触摸操作反馈的背景。(仅限 *Android* 平台，*iOS* 平台使用会报错)
+  为了支持 Android 5.0 的触控反馈而新增的组件。该组件在 _TouchableWithoutFeedback_ 所支持的属性的基础上增加了触摸的水波纹效果。可以通过 _background_ 属性来自定义原生触摸操作反馈的背景。(仅限 _Android_ 平台，_iOS_ 平台使用会报错)
 
-*TouchableHighlight* 示例如下：
+_TouchableHighlight_ 示例如下：
 
 ```jsx
 import React from 'react';
@@ -376,9 +376,9 @@ const styles = StyleSheet.create({
 
 到目前为止，我们的应用能显示文字、图片，也能够进行简单的互动。但还有一个很重要的需求，那就是滑屏操作。
 
-RN中，则直接为我们提供了滚动视图的组件 *ScrollView*。
+RN 中，则直接为我们提供了滚动视图的组件 _ScrollView_。
 
-*ScrollView* 是一个通用的可滚动的容器，你可以在其中放入多个组件和视图，而且这些组件并不需要是同类型的。*ScrollView* 不仅可以垂直滚动，还能水平滚动(通过 *horizontol* 属性来设置)。
+_ScrollView_ 是一个通用的可滚动的容器，你可以在其中放入多个组件和视图，而且这些组件并不需要是同类型的。_ScrollView_ 不仅可以垂直滚动，还能水平滚动(通过 _horizontol_ 属性来设置)。
 
 示例如下：
 
@@ -424,20 +424,20 @@ export default function App() {
 
 ### 使用长列表
 
-除了 *ScrollView* 滚动视图组件外，RN 中还提供了用于长列表组件。常见的长列表有两个：
+除了 _ScrollView_ 滚动视图组件外，RN 中还提供了用于长列表组件。常见的长列表有两个：
 
-+ FlatList
-+ SectionList
+- FlatList
+- SectionList
 
 #### FlatList
 
-*FlatList* 组件用于显示一个垂直的滚动列表，其中的元素之间结构近似而仅数据不同。
+_FlatList_ 组件用于显示一个垂直的滚动列表，其中的元素之间结构近似而仅数据不同。
 
-*FlatList* 更适于长列表数据，且元素个数可以增删。和 *ScrollView* 不同的是，*FlatList*  并不立即渲染所有元素，而是优先渲染屏幕上可见的元素。
+_FlatList_ 更适于长列表数据，且元素个数可以增删。和 _ScrollView_ 不同的是，_FlatList_ 并不立即渲染所有元素，而是优先渲染屏幕上可见的元素。
 
-*FlatList* 组件必须的两个属性是 *data* 和 *renderItem*。dota 是列表的数据源，而 *renderItem* 则从数据源中逐个解析数据，然后返回一个设定好格式的组件来渲染。
+_FlatList_ 组件必须的两个属性是 _data_ 和 _renderItem_。dota 是列表的数据源，而 _renderItem_ 则从数据源中逐个解析数据，然后返回一个设定好格式的组件来渲染。
 
-下面的例子创建了一个简单的 *FlatList*，并预设了一些模拟数据。首先是初始化 *FlatList* 所需的 *data*，其中的每一项(行) 数据之后都在 *renderItem* 中被渲染成了 *Text* 组件，最后构成整个*FlatList* 。
+下面的例子创建了一个简单的 _FlatList_，并预设了一些模拟数据。首先是初始化 _FlatList_ 所需的 _data_，其中的每一项(行) 数据之后都在 _renderItem_ 中被渲染成了 _Text_ 组件，最后构成整个*FlatList* 。
 
 ```jsx
 import React from 'react';
@@ -496,7 +496,7 @@ const styles = StyleSheet.create({
 
 #### SectionList
 
-如果要渲染的是一组需要分组的数据，也许还带有分组标签的，那么 *SectionList* 将是个不错的选择。
+如果要渲染的是一组需要分组的数据，也许还带有分组标签的，那么 _SectionList_ 将是个不错的选择。
 
 ```jsx
 import React from 'react';
@@ -552,31 +552,31 @@ const styles = StyleSheet.create({
 });
 ```
 
-在上面的示例中，我们使用到了 *SectionList* 组件的4个属性，分别是
+在上面的示例中，我们使用到了 _SectionList_ 组件的 4 个属性，分别是
 
-+ *sections* (必填)：用来渲染的数据，类似于 *FlatList* 中的 *data* 属性。
+- _sections_ (必填)：用来渲染的数据，类似于 _FlatList_ 中的 _data_ 属性。
 
-+ *renderItem* (必填) ：用来渲染每一个 section 中的每一个列表项的默认渲染器。必须返回一个react组件。
+- _renderItem_ (必填) ：用来渲染每一个 section 中的每一个列表项的默认渲染器。必须返回一个 react 组件。
 
-+ *renderSectionHeader*：在每个 *section* 的头部渲染。在 *iOS* 上，这些 *headers* 是默认粘接在 *ScrollView* 的顶部的。
+- _renderSectionHeader_：在每个 _section_ 的头部渲染。在 _iOS_ 上，这些 _headers_ 是默认粘接在 _ScrollView_ 的顶部的。
 
-+ *keyExtractor*：此函数用于为给定的 *item* 生成一个不重复的 key。
+- _keyExtractor_：此函数用于为给定的 _item_ 生成一个不重复的 key。
 
   key 的作用是使 react 能区分同类元素的不同个体，以便在刷新时能够确定其变化的位置，减少重新渲染的开销。
 
-  若不指定此函数，则默认抽取 *item.key* 作为key值。若 *item.key* 也不存在，则使用数组下标。注意这只设置了每行 *(item)* 的 key，对于每个组 *(section)* 仍然需要另外设置 key。
+  若不指定此函数，则默认抽取 _item.key_ 作为 key 值。若 _item.key_ 也不存在，则使用数组下标。注意这只设置了每行 _(item)_ 的 key，对于每个组 _(section)_ 仍然需要另外设置 key。
 
 ### 网络连接
 
 开发应用时，我们往往还需要从服务器上面获取数据。
 
-在RN中，支持 *fetchAPI* 以及传统的 Ajax 的形式来发送网络请求，但是这里推荐使用最新的 *fetch* 形式来发送请求。
+在 RN 中，支持 _fetchAPI_ 以及传统的 Ajax 的形式来发送网络请求，但是这里推荐使用最新的 _fetch_ 形式来发送请求。
 
 > 当然基于 XMLHttpRequest 封装的 axios 也可以使用哦，不过不能使用 JQuery，[参考官网](https://reactnative.cn/docs/network#%E4%BD%BF%E7%94%A8%E5%85%B6%E4%BB%96%E7%9A%84%E7%BD%91%E7%BB%9C%E5%BA%93)
 
-注意：默认情况下 *iOS* 会阻止所有的 *http* 的请求，以督促开发者使用 *https*。从 *Android9* 开始，也会默认阻止 *http* 请求
+注意：默认情况下 _iOS_ 会阻止所有的 _http_ 的请求，以督促开发者使用 _https_。从 _Android9_ 开始，也会默认阻止 _http_ 请求
 
-下面我们来看一个在 RN 中使用 *fetch* 发送请求的示例:
+下面我们来看一个在 RN 中使用 _fetch_ 发送请求的示例:
 
 ```jsx
 import React from 'react';
@@ -658,4 +658,3 @@ const styles = StyleSheet.create({
 依旧成功，输出如下
 
 ![image-20240424233710750](https://chen-1320883525.cos.ap-chengdu.myqcloud.com/img/image-20240424233710750.png)
-
