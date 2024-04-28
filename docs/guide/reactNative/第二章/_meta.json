@@ -13,5 +13,10 @@
 		"type": "file",
 		"name": "3-Pressable 组件",
 		"label": "Pressable 组件"
+	},
+	{
+		"type": "file",
+		"name": "4-FlatList渲染电影列表",
+		"label": "FlatList渲染电影列表"
 	}
 ]
