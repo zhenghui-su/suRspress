@@ -16,7 +16,7 @@
 	},
 	{
 		"type": "file",
-		"name": "4-FlatList渲染电影列表",
-		"label": "FlatList渲染电影列表"
+		"name": "4-列表组件",
+		"label": "列表组件"
 	}
 ]
