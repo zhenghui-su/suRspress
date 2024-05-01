@@ -17,5 +17,12 @@
 		"label": "第二章",
 		"collapsible": true,
 		"collapsed": true
+	},
+	{
+		"type": "dir",
+		"name": "第三章",
+		"label": "第三章",
+		"collapsible": true,
+		"collapsed": true
 	}
 ]
