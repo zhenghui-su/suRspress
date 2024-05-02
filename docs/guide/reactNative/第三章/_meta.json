@@ -3,5 +3,10 @@
 		"type": "file",
 		"name": "1-基础 API",
 		"label": "基础 API"
+	},
+	{
+		"type": "file",
+		"name": "2-屏幕 API",
+		"label": "屏幕 API"
 	}
 ]
