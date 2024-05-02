@@ -13,5 +13,10 @@
 		"type": "file",
 		"name": "3-设备 API",
 		"label": "设备 API"
+	},
+	{
+		"type": "file",
+		"name": "4-动画 API",
+		"label": "动画 API"
 	}
 ]
