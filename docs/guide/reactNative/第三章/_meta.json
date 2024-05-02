@@ -8,5 +8,10 @@
 		"type": "file",
 		"name": "2-屏幕 API",
 		"label": "屏幕 API"
+	},
+	{
+		"type": "file",
+		"name": "3-设备 API",
+		"label": "设备 API"
 	}
 ]
