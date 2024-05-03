@@ -18,5 +18,10 @@
 		"type": "file",
 		"name": "4-动画 API",
 		"label": "动画 API"
+	},
+	{
+		"type": "file",
+		"name": "5-Animated 实战案例",
+		"label": "Animated 实战案例"
 	}
 ]
