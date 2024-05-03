@@ -23,5 +23,10 @@
 		"type": "file",
 		"name": "5-Animated 实战案例",
 		"label": "Animated 实战案例"
+	},
+	{
+		"type": "file",
+		"name": "6-手势 API",
+		"label": "手势 API"
 	}
 ]
