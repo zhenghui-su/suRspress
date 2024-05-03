@@ -42,24 +42,24 @@ export default MyContext;
 
 ```jsx
 // App.jsx
-import ChildCom1 from './components/ChildCom1'
-import MyContext from './context'
-import { useState } from 'react'
+import ChildCom1 from './components/ChildCom1';
+import MyContext from './context';
+import { useState } from 'react';
 
 const { Provider } = MyContext;
 
 function App() {
-    // 这是我在根组件维护的状态数据
-    const [count, setCount] = useState(0)
+	// 这是我在根组件维护的状态数据
+	const [count, setCount] = useState(0);
 
-    return (
-        {/* 这里的value 相当于将数据放入到上下文环境 */}
-    	<Provider value={{ count, setCount }}>
+	return (
+		// 这里的value 相当于将数据放入到上下文环境
+		<Provider value={{ count, setCount }}>
 			<div style={{ border: '1px solid', width: '250px' }}>
-            	<ChildCom1 />
-            </div>
-        </Provider>
-    )
+				<ChildCom1 />
+			</div>
+		</Provider>
+	);
 }
 export default App;
 ```
