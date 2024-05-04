@@ -21,7 +21,7 @@
 	{
 		"type": "dir",
 		"name": "3-常用API",
-		"label": "常用 API",
+		"label": "常用API",
 		"collapsible": true,
 		"collapsed": true
 	},
