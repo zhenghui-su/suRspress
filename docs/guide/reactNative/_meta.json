@@ -20,7 +20,7 @@
 	},
 	{
 		"type": "dir",
-		"name": "3-常用 API",
+		"name": "3-常用API",
 		"label": "常用 API",
 		"collapsible": true,
 		"collapsed": true
