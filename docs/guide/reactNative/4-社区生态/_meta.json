@@ -3,5 +3,10 @@
 		"type": "file",
 		"name": "1-React Navigation 简介",
 		"label": "React Navigation 简介"
+	},
+	{
+		"type": "file",
+		"name": "2-参数传递和标题栏信息配置",
+		"label": "参数传递和标题栏信息配置"
 	}
 ]
