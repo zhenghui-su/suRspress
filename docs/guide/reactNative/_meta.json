@@ -6,22 +6,29 @@
 	},
 	{
 		"type": "dir",
-		"name": "第一章",
-		"label": "第一章",
+		"name": "1-快速入门",
+		"label": "快速入门",
 		"collapsible": true,
 		"collapsed": true
 	},
 	{
 		"type": "dir",
-		"name": "第二章",
-		"label": "第二章",
+		"name": "2-内置组件",
+		"label": "内置组件",
 		"collapsible": true,
 		"collapsed": true
 	},
 	{
 		"type": "dir",
-		"name": "第三章",
-		"label": "第三章",
+		"name": "3-常用 API",
+		"label": "常用 API",
+		"collapsible": true,
+		"collapsed": true
+	},
+	{
+		"type": "dir",
+		"name": "4-社区生态",
+		"label": "社区生态",
 		"collapsible": true,
 		"collapsed": true
 	}
