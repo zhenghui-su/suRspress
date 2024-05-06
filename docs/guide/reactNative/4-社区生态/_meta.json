@@ -23,5 +23,10 @@
 		"type": "file",
 		"name": "5-状态管理介绍",
 		"label": "状态管理介绍"
+	},
+	{
+		"type": "file",
+		"name": "6-Redux的使用",
+		"label": "Redux的使用"
 	}
 ]
