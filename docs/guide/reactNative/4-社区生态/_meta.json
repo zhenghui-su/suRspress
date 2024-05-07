@@ -33,5 +33,15 @@
 		"type": "file",
 		"name": "7-Zustand的使用",
 		"label": "Zustand的使用"
+	},
+	{
+		"type": "file",
+		"name": "8-其他第三方库",
+		"label": "其他第三方库"
+	},
+	{
+		"type": "file",
+		"name": "9-ExpoSDK",
+		"label": "ExpoSDK"
 	}
 ]
