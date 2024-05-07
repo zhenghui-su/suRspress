@@ -95,6 +95,8 @@ const increment = useCounterStore((state) => state.increment);
 const decrement = useCounterStore((state) => state.decrement);
 ```
 
+> 这里如果你取单个也可以解构, 但结果是会导致重渲染, 后续会出相关状态管理课程,这里只是了解为主
+
 至此计数器就完成了，是不是发现要简单一点，因为不需要包裹 Provider ，不需要 dispatch
 
 ### TodoList 示例
