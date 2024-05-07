@@ -28,5 +28,10 @@
 		"type": "file",
 		"name": "6-Redux的使用",
 		"label": "Redux的使用"
+	},
+	{
+		"type": "file",
+		"name": "7-Zustand的使用",
+		"label": "Zustand的使用"
 	}
 ]
