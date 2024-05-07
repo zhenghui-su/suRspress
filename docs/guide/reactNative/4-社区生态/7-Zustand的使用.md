@@ -12,7 +12,7 @@ npm i zusatnd
 
 我们来写之前 Redux 的计数器，看看 Zustand 是怎么管理呢？
 
-*App.js* 如下，是的，不需要 `Provider`！！
+_App.js_ 如下，是的，不需要 `Provider`！！
 
 ```jsx
 import Count from './views/Count';
@@ -24,9 +24,9 @@ const App = () => {
 export default App;
 ```
 
-然后我们来使用 Zustand 来创建状态管理，新建一个目录 zustand，然后创建一个 *CounterStore.tsx*
+然后我们来使用 Zustand 来创建状态管理，新建一个目录 zustand，然后创建一个 _CounterStore.ts_
 
-```tsx
+```typescript
 import { create } from 'zustand';
 
 type CounterStoreState = {
@@ -42,9 +42,9 @@ export const useCounterStore = create<CounterStoreState>()((set) => ({
 }));
 ```
 
-其中 *set* 就是更新的方法，而且我们发现 zustand 不需要扩展运算符 `...state`在前面了，因为 zustand 自动帮我们把第一层的合并了，当然如果你有更深的还是需要扩展运算符的
+其中 _set_ 就是更新的方法，而且我们发现 zustand 不需要扩展运算符 `...state`在前面了，因为 zustand 自动帮我们把第一层的合并了，当然如果你有更深的还是需要扩展运算符的
 
-然后我们来写 *Count.js*
+然后我们来写 _Count.js_
 
 ```jsx
 import React from 'react';
@@ -87,7 +87,7 @@ const styles = StyleSheet.create({
 export default Count;
 ```
 
-我们只需要通过使用我们刚刚创建的示例Store就可以解构出所有方法了，但注意这里是需要所有方法才这样，如果是单个单个取就如下：
+我们只需要通过使用我们刚刚创建的示例 Store 就可以解构出所有方法了，但注意这里是需要所有方法才这样，如果是单个单个取就如下：
 
 ```js
 const count = useCounterStore((state) => state.count);
@@ -95,15 +95,15 @@ const increment = useCounterStore((state) => state.increment);
 const decrement = useCounterStore((state) => state.decrement);
 ```
 
-至此计数器就完成了，是不是发现要简单一点，因为不需要包裹 Provider ，不需要dispatch
+至此计数器就完成了，是不是发现要简单一点，因为不需要包裹 Provider ，不需要 dispatch
 
 ### TodoList 示例
 
 我们再用 Zustand 来写一下上一节的 ToDoList
 
-先写 *ToDoListStore.tsx*
+先写 _ToDoListStore.ts_
 
-```tsx
+```typescript
 import { create } from 'zustand';
 
 type ListItem = {
@@ -156,7 +156,7 @@ export const useToDoListStore = create<ToDoListStore>()((set) => ({
 }));
 ```
 
-然后Input、List 将方法改成 Zustand 获取即可，类似如下：
+然后 Input、List 将方法改成 Zustand 获取即可，类似如下：
 
 ```js
 const increment = useToDoListStore((state) => state.increment);
