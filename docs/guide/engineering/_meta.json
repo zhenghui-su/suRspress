@@ -1,7 +1,14 @@
 [
-  {
-    "type": "file",
-    "name": "index",
-    "label": "工程化前言"
-  }
+	{
+		"type": "file",
+		"name": "index",
+		"label": "工程化前言"
+	},
+	{
+		"type": "dir",
+		"name": "vite",
+		"label": "vite指南",
+		"collapsible": true,
+		"collapsed": true
+	}
 ]
