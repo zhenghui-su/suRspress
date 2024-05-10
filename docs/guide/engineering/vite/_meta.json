@@ -3,5 +3,25 @@
 		"type": "file",
 		"name": "1-Vite系列前言",
 		"label": "Vite系列前言"
+	},
+	{
+		"type": "file",
+		"name": "2-什么是构建工具",
+		"label": "什么是构建工具"
+	},
+	{
+		"type": "file",
+		"name": "3-Vite相较于Webpack的优势",
+		"label": "Vite相较于Webpack的优势"
+	},
+	{
+		"type": "file",
+		"name": "4-Vite脚手架和Vite的区别",
+		"label": "Vite脚手架和Vite的区别"
+	},
+	{
+		"type": "file",
+		"name": "5-Vite启动项目初体验",
+		"label": "Vite启动项目初体验"
 	}
 ]
