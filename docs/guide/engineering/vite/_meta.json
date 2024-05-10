@@ -23,5 +23,10 @@
 		"type": "file",
 		"name": "5-Vite启动项目初体验",
 		"label": "Vite启动项目初体验"
+	},
+	{
+		"type": "file",
+		"name": "6-Vite的依赖预构建",
+		"label": "Vite的依赖预构建"
 	}
 ]
