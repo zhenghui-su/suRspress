@@ -33,5 +33,10 @@
 		"type": "file",
 		"name": "7-Vite配置文件处理细节",
 		"label": "Vite配置文件处理细节"
+	},
+	{
+		"type": "file",
+		"name": "8-Vite环境变量处理",
+		"label": "Vite环境变量处理"
 	}
 ]
