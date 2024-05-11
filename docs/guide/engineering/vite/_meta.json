@@ -48,5 +48,10 @@
 		"type": "file",
 		"name": "10-Vite中处理CSS",
 		"label": "Vite中处理CSS"
+	},
+	{
+		"type": "file",
+		"name": "11-Vite配置文件中CSS配置流程",
+		"label": "Vite配置文件中CSS配置流程"
 	}
 ]
