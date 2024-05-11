@@ -1,12 +1,12 @@
 # Vite 中处理 CSS
 
-## Vite 中处理原生CSS
+## Vite 中处理原生 CSS
 
 Vite 天生就支持对 CSS 文件的直接处理
 
 ```js
 // main.js
-import './index.css'
+import './index.css';
 ```
 
 上面的处理分几步：
@@ -15,13 +15,14 @@ import './index.css'
 - 直接使用 fs 模块去读取`index.css`中的文件内容
 - 然后创建一个 style 标签，将 `index.css` 中的内容 copy 到 style 标签中
 - 将 style 标签插入到 `index.html`的 head 中
-- 将该 CSS 文件中的内容直接替换为 js 脚本(方便热更新和CSS模块化)
+- 将该 CSS 文件中的内容直接替换为 js 脚本(方便热更新和 CSS 模块化)
 
 我们可以看一下是不是被替换了，随便写一点 `index.css` 的内容
 
 ```css
-html,body {
-    font-size: 18
+html,
+body {
+	font-size: 18;
 }
 ```
 
@@ -29,7 +30,7 @@ html,body {
 
 ![image-20240511162641122](https://chen-1320883525.cos.ap-chengdu.myqcloud.com/img/image-20240511162641122.png)
 
-它在替换JS的时候，会设置 Content-Type 为 js，让浏览器以 js 的方式来解析该 CSS 后缀的文件
+它在替换 JS 的时候，会设置 Content-Type 为 js，让浏览器以 js 的方式来解析该 CSS 后缀的文件
 
 ![image-20240511162808379](https://chen-1320883525.cos.ap-chengdu.myqcloud.com/img/image-20240511162808379.png)
 
@@ -46,44 +47,44 @@ html,body {
 
 为了解决这类的问题，就诞生了 CSS Module
 
-我们只需在css文件名加上module后缀，变成如`index.module.css`就代表 CSS Module，这时候就会将类名后面加上哈希值以防止重复
+我们只需在 css 文件名加上 module 后缀，变成如`index.module.css`就代表 CSS Module，这时候就会将类名后面加上哈希值以防止重复
 
-我们来一个例子，建两个css和两个js文件，如下，另一个名字换一下就好
+我们来一个例子，建两个 css 和两个 js 文件，如下，另一个名字换一下就好
 
 ```css
 /*index1.module.css*/
 .footer {
-    width: 200px;
-    height: 200px;
-    background-color: red;
+	width: 200px;
+	height: 200px;
+	background-color: red;
 }
 /*index2.module.css*/
 .footer {
-    width: 200px;
-    height: 200px;
-    background-color: blue;
+	width: 200px;
+	height: 200px;
+	background-color: blue;
 }
 ```
 
 ```js
 import index1 from './index1.module.css';
 
-console.log("index1-CSS", index1);
-const div = document.createElement("div");
+console.log('index1-CSS', index1);
+const div = document.createElement('div');
 document.body.appendChild(div);
 // CSS Module 是一个对象，我们从对象上取值就是这样
-div.className = index1.footer
+div.className = index1.footer;
 ```
 
 然后查看，就会发现两个不会覆盖，查看控制台会发现加上了哈希值：
 
 ![image-20240511164937987](https://chen-1320883525.cos.ap-chengdu.myqcloud.com/img/image-20240511164937987.png)
 
-- 在我们将文件名改为`module.css`（module 是一种约定，表示需要开启 CSS 模块化），Vite 认为你开启了CSS Module
-- Vite 会将你的所有类名进行一定规则的替换（将 footer 替换为 _footer_5nipi_1）
+- 在我们将文件名改为`module.css`（module 是一种约定，表示需要开启 CSS 模块化），Vite 认为你开启了 CSS Module
+- Vite 会将你的所有类名进行一定规则的替换（将 footer 替换为 \_footer_5nipi_1）
 - 同时创建一个映射对象 `{ footer: "_footer_5nipi_1" }`
 - 将替换过后的内容塞进 style 标签里然后放入到 head 标签中
-- 将 `index1.module.css` 内容进行全部替换为 JS 
+- 将 `index1.module.css` 内容进行全部替换为 JS
 - 将创建的映射对象在脚本中进行默认导出
 
 这就是 Vite 中如何处理 CSS Module
@@ -122,6 +123,6 @@ module.exports = {
 }
 ```
 
-这下它就会在你打包的时候自动添加兼容各个浏览器的前缀如 -webkit
+这下它就会自动添加兼容各个浏览器的前缀如 --webkit
 
 详细在后面章节会介绍
