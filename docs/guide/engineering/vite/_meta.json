@@ -43,5 +43,10 @@
 		"type": "file",
 		"name": "9-Vite开发服务器原理",
 		"label": "Vite开发服务器原理"
+	},
+	{
+		"type": "file",
+		"name": "10-Vite中处理CSS",
+		"label": "Vite中处理CSS"
 	}
 ]
