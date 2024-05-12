@@ -53,5 +53,10 @@
 		"type": "file",
 		"name": "11-Vite配置文件中CSS配置流程",
 		"label": "Vite配置文件中CSS配置流程"
+	},
+	{
+		"type": "file",
+		"name": "12-为什么要用path处理服务端路径",
+		"label": "为什么要用path处理服务端路径"
 	}
 ]
