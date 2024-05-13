@@ -1,20 +1,20 @@
-# Vite插件之vite-aliases 插件 
+# Vite 插件之 vite-aliases 插件
 
 Vite 会在不同的生命周期中去调用不同的插件以达到不同的目的
 
-> 生命周期：Vite从开始执行到执行结束，中间这个过程就是生命周期
+> 生命周期：Vite 从开始执行到执行结束，中间这个过程就是生命周期
 
-webpack 中有一个输出 HTML 文件的插件 清除输出目录：clear-webpack-plugin
+webpack 中有一个输出 HTML 文件的插件 清除输出目录：clean-webpack-plugin
 
-Vite其实和webpack的非常类似
+Vite 其实和 webpack 的非常类似
 
-## 基本使用 vite-aliases 
+## 基本使用 vite-aliases
 
 我们从一个简单的插件 vite-aliases 学起
 
-vite-aliases 可以帮助我们生成别名：它会检测你的当前目录下包括src在内的所有文件夹，并帮助我们去生成别名
+vite-aliases 可以帮助我们生成别名：它会检测你的当前目录下包括 src 在内的所有文件夹，并帮助我们去生成别名
 
-先安装它，如果node版本不对可以使用nvm切换
+先安装它，如果 node 版本不对可以使用 nvm 切换
 
 ```js
 npm i vite-aliases -D
@@ -31,7 +31,7 @@ export default defineConfig({
 });
 ```
 
-这个插件生成的别名是如何的呢？比如下面这样，**代表你的工程路径
+这个插件生成的别名是如何的呢？比如下面这样，\*\*代表你的工程路径
 
 ```js
 {
@@ -41,32 +41,34 @@ export default defineConfig({
 }
 ```
 
-它还有很多配置，可以参考[官方Github](https://github.com/Subwaytime/vite-aliases)，这里举一个即可
+它还有很多配置，可以参考[官方 Github](https://github.com/Subwaytime/vite-aliases)，这里举一个即可
 
 ```js
 import { defineConfig } from 'vite';
 import { ViteAliases } from 'vite-aliases';
 
 export default defineConfig({
-	plugins: [ViteAliases({
-		prefix: '&'
-	})],
+	plugins: [
+		ViteAliases({
+			prefix: '&',
+		}),
+	],
 });
 ```
 
 这样配置，你的别名就是以 & 开头的，如下：
 
 ```js
-import testPng from '&assets/test.png'
+import testPng from '&assets/test.png';
 ```
 
 ## 手写 vite-aliases 插件
 
 整个插件就是在 Vite 的生命周期的不同阶段去做不同的事情，我们利用官方提供的钩子来做事情
 
-比如说Vue和React官方就会提供一些生命周期函数如 created
+比如说 Vue 和 React 官方就会提供一些生命周期函数如 created
 
-我们去手写 vite-aliases 其实就是在vite执行配置文件之前将配置文件改了
+我们去手写 vite-aliases 其实就是在 vite 执行配置文件之前将配置文件改了
 
 从[官网文档地址：Vite 独有钩子](https://www.vitejs.net/guide/api-plugin.html#vite-specific-hooks)，我们可以使用 `config`来做这个事情
 
@@ -79,12 +81,12 @@ Vite 的插件必须返回给 Vite 一个配置对象，而我们看大部分插
 ```js
 // vite的插件必须返回给vite一个配置对象
 export default () => {
-  return {
-    config() {
-        return {}
-    }
-  }
-}
+	return {
+		config() {
+			return {};
+		},
+	};
+};
 ```
 
 然后我们看`config`
@@ -99,7 +101,7 @@ export default () => {
 			// config参数: 目前的一个配置对象
 			// env: mode: string, command: string
 			// mode: development 或者 production 代表环境
-            // command: 运行的命令 serve 或者 build
+			// command: 运行的命令 serve 或者 build
 			return {};
 		},
 	};
@@ -117,7 +119,7 @@ export default defineConfig({
 });
 ```
 
-我们发现打印实在Vite执行之前调用的，这没问题
+我们发现打印实在 Vite 执行之前调用的，这没问题
 
 ![image-20240513163021609](https://chen-1320883525.cos.ap-chengdu.myqcloud.com/img/image-20240513163021609.png)
 
@@ -125,7 +127,7 @@ export default defineConfig({
 
 Vite 会把这几个配置对象进行一个 **merge** 合并，类似`...`合并
 
-现在我们来写插件，这里我们要返回一个resolve出去, 将src目录下的所有文件夹进行别名控制
+现在我们来写插件，这里我们要返回一个 resolve 出去, 将 src 目录下的所有文件夹进行别名控制
 
 第一步我们先读目录
 
@@ -180,17 +182,17 @@ function diffDirAndFile(dirFilesArr = [], basePath = '') {
 }
 ```
 
-我们先调用打印一下，发现每个文件的Stat打印出来了
+我们先调用打印一下，发现每个文件的 Stat 打印出来了
 
 ![image-20240513165142615](https://chen-1320883525.cos.ap-chengdu.myqcloud.com/img/image-20240513165142615.png)
 
-然后我们调用Stat上有一个方法`isDirectory`可以识别是否是目录
+然后我们调用 Stat 上有一个方法`isDirectory`可以识别是否是目录
 
 ```js
 console.log('currentFileStat', name, currentFileStat.isDirectory());
 ```
 
-打印看看，发现不是目录的 `test.js`就变为false了，这样我们就可以识别了
+打印看看，发现不是目录的 `test.js`就变为 false 了，这样我们就可以识别了
 
 ![image-20240513165435542](https://chen-1320883525.cos.ap-chengdu.myqcloud.com/img/image-20240513165435542.png)
 
@@ -382,4 +384,3 @@ import reactSvg from '&assets/react.svg';
 照样可以运行，这就是自定义配置的实现，完整目录如下，后续插件基本都在这做：
 
 ![image-20240513171737595](https://chen-1320883525.cos.ap-chengdu.myqcloud.com/img/image-20240513171737595.png)
-
