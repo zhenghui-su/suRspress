@@ -68,5 +68,10 @@
 		"type": "file",
 		"name": "14-Vite插件之vite-aliases",
 		"label": "Vite插件之vite-aliases"
+	},
+	{
+		"type": "file",
+		"name": "15-Vite插件之vite-plugin-html",
+		"label": "Vite插件之vite-plugin-html"
 	}
 ]
