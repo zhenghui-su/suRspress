@@ -63,5 +63,10 @@
 		"type": "file",
 		"name": "13-Vite加载静态资源",
 		"label": "Vite加载静态资源"
+	},
+	{
+		"type": "file",
+		"name": "14-Vite插件之vite-aliases",
+		"label": "Vite插件之vite-aliases"
 	}
 ]
