@@ -78,5 +78,10 @@
 		"type": "file",
 		"name": "16-Vite插件之vite-plugin-mock",
 		"label": "Vite插件之vite-plugin-mock"
+	},
+	{
+		"type": "file",
+		"name": "17-Vite调用插件原理以及查缺补漏",
+		"label": "Vite调用插件原理以及查缺补漏"
 	}
 ]
