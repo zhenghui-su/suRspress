@@ -83,5 +83,10 @@
 		"type": "file",
 		"name": "17-Vite调用插件原理以及查缺补漏",
 		"label": "Vite调用插件原理以及查缺补漏"
+	},
+	{
+		"type": "file",
+		"name": "18-Vite与Ts的结合",
+		"label": "Vite与Ts的结合"
 	}
 ]
