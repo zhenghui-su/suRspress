@@ -70,7 +70,7 @@ import testPng from '&assets/test.png';
 
 我们去手写 vite-aliases 其实就是在 vite 执行配置文件之前将配置文件改了
 
-从[官网文档地址：Vite 独有钩子](https://www.vitejs.net/guide/api-plugin.html#vite-specific-hooks)，我们可以使用 `config`来做这个事情
+从[官网文档地址：Vite 独有钩子](https://cn.vitejs.dev/guide/api-plugin.html#vite-specific-hooks)，我们可以使用 `config`来做这个事情
 
 我们新建一个文件夹`plugins`，新建文件`ViteAliases.js`
 

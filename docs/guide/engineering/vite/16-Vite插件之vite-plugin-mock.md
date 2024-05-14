@@ -163,7 +163,7 @@ module.exports = [
 
 当打给本地的开发服务器的时候， viteServer 服务器接管
 
-这里我们学习一个新的钩子：[configureServer](https://www.vitejs.net/guide/api-plugin.html#configureserver)，它用来处理用户请求：
+这里我们学习一个新的钩子：[configureServer](https://cn.vitejs.dev/guide/api-plugin.html#configureserver)，它用来处理用户请求：
 
 ```js
 module.exports = (options) => {
