@@ -51,11 +51,11 @@ export default {
 
 然后我们打包看一下，这是之前的：
 
-
+![image-20240515222820014](https://chen-1320883525.cos.ap-chengdu.myqcloud.com/img/image-20240515222820014.png)
 
 这是之后的：
 
-
+![image-20240515222755116](https://chen-1320883525.cos.ap-chengdu.myqcloud.com/img/image-20240515222755116.png)
 
 这个插件还有预设的几个常用的npm包，也就是说我们可以不用写cdn地址了，比如react相关
 
