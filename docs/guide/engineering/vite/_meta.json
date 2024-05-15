@@ -88,5 +88,10 @@
 		"type": "file",
 		"name": "18-Vite与Ts的结合",
 		"label": "Vite与Ts的结合"
+	},
+	{
+		"type": "file",
+		"name": "19-Vite性能优化概述",
+		"label": "Vite性能优化概述"
 	}
 ]
