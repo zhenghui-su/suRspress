@@ -93,5 +93,10 @@
 		"type": "file",
 		"name": "19-Vite性能优化概述",
 		"label": "Vite性能优化概述"
+	},
+	{
+		"type": "file",
+		"name": "20-性能优化之分包策略",
+		"label": "性能优化之分包策略"
 	}
 ]
