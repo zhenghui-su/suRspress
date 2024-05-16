@@ -62,6 +62,13 @@
 	},
 	{
 		"type": "dir",
+		"name": "algorithm",
+		"label": "算法学习",
+		"collapsible": true,
+		"collapsed": true
+	},
+	{
+		"type": "dir",
 		"name": "v8",
 		"label": "V8引擎",
 		"collapsible": true,
