@@ -118,5 +118,10 @@
 		"type": "file",
 		"name": "24-Vite配置跨域",
 		"label": "Vite配置跨域"
+	},
+	{
+		"type": "file",
+		"name": "24-Vite完结",
+		"label": "Vite完结"
 	}
 ]
