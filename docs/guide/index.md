@@ -1,14 +1,14 @@
 ### 学习结构
 
 ```bash
-├── html,css进阶 (Html,css advanced) # 基础把控
-├── javaScript进阶 (JavaScript advanced) # 何去做防抖和节流
-├── 计算机网络 (Computer network)  # 学会基础知识，才能更好的理解下面的知识
-├── vue                          # 源码讲解，涉及3.0
-├── react                        # 源码讲解，涉及16.8hook
-├── node.js                      # koa源码
-├── 工程化 (engineering)          # 涉及cli
-├── 小程序  (Applet)              # 进阶
-├── 数据结构与算法 (Data structures and algorithms)
-├── 项目实践   (Project practice)  # react同构
+├── HTML、CSS进阶
+├── JavaScript进阶
+├── 计算机网络
+├── Vue
+├── React
+├── React Native
+├── Node.js
+├── 工程化(Vite)
+├── 数据结构与算法
+├── 项目实践
 ```
