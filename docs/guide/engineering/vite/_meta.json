@@ -113,5 +113,10 @@
 		"type": "file",
 		"name": "23-性能优化之CDN加速",
 		"label": "性能优化之CDN加速"
+	},
+	{
+		"type": "file",
+		"name": "24-Vite配置跨域",
+		"label": "Vite配置跨域"
 	}
 ]
