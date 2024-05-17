@@ -8,5 +8,10 @@
 		"type": "file",
 		"name": "2-IOC控制反转 DI依赖注入",
 		"label": "IOC控制反转 DI依赖注入"
+	},
+	{
+		"type": "file",
+		"name": "3-前置知识装饰器",
+		"label": "前置知识装饰器"
 	}
 ]
