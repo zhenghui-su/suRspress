@@ -3,5 +3,10 @@
 		"type": "file",
 		"name": "1-Nest介绍",
 		"label": "Nest介绍"
+	},
+	{
+		"type": "file",
+		"name": "2-IOC控制反转 DI依赖注入",
+		"label": "IOC控制反转 DI依赖注入"
 	}
 ]
