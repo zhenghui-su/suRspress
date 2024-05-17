@@ -69,6 +69,13 @@
 	},
 	{
 		"type": "dir",
+		"name": "nest",
+		"label": "Nest学习",
+		"collapsible": true,
+		"collapsed": true
+	},
+	{
+		"type": "dir",
 		"name": "v8",
 		"label": "V8引擎",
 		"collapsible": true,
