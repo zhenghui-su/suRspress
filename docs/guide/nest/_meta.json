@@ -18,5 +18,10 @@
 		"type": "file",
 		"name": "4-装饰器实现GET请求",
 		"label": "装饰器实现GET请求"
+	},
+	{
+		"type": "file",
+		"name": "5-认识nestjs cli",
+		"label": "认识nestjs cli"
 	}
 ]
