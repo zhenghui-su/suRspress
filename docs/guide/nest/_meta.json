@@ -38,5 +38,10 @@
 		"type": "file",
 		"name": "8-认识 nestjs 控制器",
 		"label": "认识 nestjs 控制器"
+	},
+	{
+		"type": "file",
+		"name": "9-nestjs session 案例",
+		"label": "nestjs session 案例"
 	}
 ]
