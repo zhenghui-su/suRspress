@@ -4,7 +4,7 @@
 
 session 是服务器为每个用户的浏览器创建的一个会话对象 这个 session 会记录到浏览器的 cookie 用来区分用户
 
-我们使用的是 nestjs 默认框架express 他也支持express 的插件，所以我们就可以安装 express 的 session
+我们使用的是 nestjs 默认框架 express 他也支持 express 的插件，所以我们就可以安装 express 的 session
 
 ```bash
 npm i express-session --save
@@ -16,39 +16,45 @@ npm i express-session --save
 npm i @types/express-session -D
 ```
 
-然后在main.ts 引入 通过 app.use 注册 session
+然后在 main.ts 引入 通过 app.use 注册 session
 
 ```typescript
-import * as session from 'express-session'
- 
- 
-app.use(session())
+import * as session from "express-session";
+
+app.use(session());
 ```
 
 ## 配置
 
 它的参数配置详情如下：
 
-| 参数    | 详情                                                         |
-| ------- | ------------------------------------------------------------ |
-| secrel  | 生成服务端session 签名 可以理解为加盐                        |
-| name    | 生成客户端cookie 的名字 默认 connect.sid                     |
+| 参数    | 详情                                                                                            |
+| ------- | ----------------------------------------------------------------------------------------------- |
+| secrel  | 生成服务端 session 签名 可以理解为加盐                                                          |
+| name    | 生成客户端 cookie 的名字 默认 connect.sid                                                       |
 | cookie  | 设置返回到前端 key 的属性，默认值为`{ path: ‘/’, httpOnly: true, secure: false, maxAge: null }` |
-| rolling | 在每次请求时强行设置 cookie，这将重置 cookie 过期时间(默认:false) |
+| rolling | 在每次请求时强行设置 cookie，这将重置 cookie 过期时间(默认:false)                               |
 
 nestjs 配置
 
 ```typescript
-import { NestFactory } from '@nestjs/core';
-import { VersioningType } from '@nestjs/common';
-import { AppModule } from './app.module';
-import * as session from 'express-session'
+import { NestFactory } from "@nestjs/core";
+import { VersioningType } from "@nestjs/common";
+import { AppModule } from "./app.module";
+import * as session from "express-session";
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.enableVersioning({
-    type: VersioningType.URI
-  })
-  app.use(session({ secret: "ChenChen", name: "su.session", rolling: true, cookie: { maxAge: null } }))
+    type: VersioningType.URI,
+  });
+  app.use(
+    session({
+      secret: "ChenChen",
+      name: "su.session",
+      rolling: true,
+      cookie: { maxAge: null },
+    })
+  );
   await app.listen(3000);
 }
 bootstrap();
@@ -152,71 +158,71 @@ export default App;
 
 ![image-20240519002708262](https://chen-1320883525.cos.ap-chengdu.myqcloud.com/img/image-20240519002708262.png)
 
- 我们可以看到 session 已经存到了浏览器
+我们可以看到 session 已经存到了浏览器
 
 ![image-20240519002407373](https://chen-1320883525.cos.ap-chengdu.myqcloud.com/img/image-20240519002407373.png)
 
-跨域使用Vite配置本地dev 解决的
+跨域使用 Vite 配置本地 dev 解决的
 
 ```typescript
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   server: {
     //用来配置跨域
     proxy: {
-      '/api': {
-        target: 'http://localhost:3000',//目标服务器地址
+      "/api": {
+        target: "http://localhost:3000", //目标服务器地址
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, '')
+        rewrite: (path) => path.replace(/^\/api/, ""),
       },
-    }
+    },
   },
   plugins: [react()],
-})
+});
 ```
 
-后端nestjs，我们下载一个验证码插件 svgCaptcha
+后端 nestjs，我们下载一个验证码插件 svgCaptcha
 
 ```bash
 npm install svg-captcha -S
 ```
 
 ```typescript
-import { Controller, Get, Post, Body, Res, Req, Session } from '@nestjs/common';
-import { UserService } from './user.service';
-import * as svgCaptcha from 'svg-captcha';
+import { Controller, Get, Post, Body, Res, Req, Session } from "@nestjs/common";
+import { UserService } from "./user.service";
+import * as svgCaptcha from "svg-captcha";
 
-@Controller('user')
+@Controller("user")
 export class UserController {
   constructor(private readonly userService: UserService) {}
-  @Get('code')
+  @Get("code")
   createCode(@Req() req, @Res() res, @Session() session) {
     const Captcha = svgCaptcha.create({
       size: 4, //生成几个验证码
       fontSize: 50, //文字大小
       width: 100, //宽度
       height: 34, //高度
-      background: '#cc9966', //背景颜色
+      background: "#cc9966", //背景颜色
     });
     session.code = Captcha.text; //存储验证码记录到session
-    res.type('image/svg+xml');
+    res.type("image/svg+xml");
     res.send(Captcha.data);
   }
 
-  @Post('create')
+  @Post("create")
   createUser(@Req() req, @Body() body) {
     console.log(req.session.code, body);
     if (
       req.session.code.toLocaleLowerCase() === body?.code?.toLocaleLowerCase()
     ) {
       return {
-        message: '验证码正确',
+        message: "验证码正确",
       };
     } else {
       return {
-        message: '验证码错误',
+        message: "验证码错误",
       };
     }
   }
