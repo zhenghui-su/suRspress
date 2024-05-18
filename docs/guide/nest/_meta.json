@@ -13,5 +13,10 @@
 		"type": "file",
 		"name": "3-前置知识装饰器",
 		"label": "前置知识装饰器"
+	},
+	{
+		"type": "file",
+		"name": "4-装饰器实现GET请求",
+		"label": "装饰器实现GET请求"
 	}
 ]
