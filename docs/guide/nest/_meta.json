@@ -33,5 +33,10 @@
 		"type": "file",
 		"name": "7-RESTful 风格设计",
 		"label": "RESTful 风格设计"
+	},
+	{
+		"type": "file",
+		"name": "8-认识 nestjs 控制器",
+		"label": "认识 nestjs 控制器"
 	}
 ]
