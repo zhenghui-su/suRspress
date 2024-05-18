@@ -28,5 +28,10 @@
 		"type": "file",
 		"name": "6-nest cli 常用命令",
 		"label": "nest cli 常用命令"
+	},
+	{
+		"type": "file",
+		"name": "7-RESTful 风格设计",
+		"label": "RESTful 风格设计"
 	}
 ]
