@@ -43,5 +43,10 @@
 		"type": "file",
 		"name": "9-nestjs session 案例",
 		"label": "nestjs session 案例"
+	},
+	{
+		"type": "file",
+		"name": "10-nestjs 提供者",
+		"label": "nestjs 提供者"
 	}
 ]
