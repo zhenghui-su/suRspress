@@ -53,5 +53,10 @@
 		"type": "file",
 		"name": "11-nestjs 模块",
 		"label": "nestjs 模块"
+	},
+	{
+		"type": "file",
+		"name": "12-nestjs 中间件",
+		"label": "nestjs 中间件"
 	}
 ]
