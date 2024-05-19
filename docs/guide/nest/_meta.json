@@ -48,5 +48,10 @@
 		"type": "file",
 		"name": "10-nestjs 提供者",
 		"label": "nestjs 提供者"
+	},
+	{
+		"type": "file",
+		"name": "11-nestjs 模块",
+		"label": "nestjs 模块"
 	}
 ]
