@@ -63,5 +63,10 @@
 		"type": "file",
 		"name": "13-nestjs 上传文件-静态目录",
 		"label": "nestjs 上传文件-静态目录"
+	},
+	{
+		"type": "file",
+		"name": "14-nestjs 下载文件和文件流",
+		"label": "nestjs 下载文件和文件流"
 	}
 ]
