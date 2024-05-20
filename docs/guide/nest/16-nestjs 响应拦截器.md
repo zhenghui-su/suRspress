@@ -12,7 +12,7 @@
 
 我们现在没有给我们的 Nestjs 规范返回给前端的格式现在比较乱
 
- 我们想给他返回一个标准的json 格式 就要给我们的数据做一个全局format
+我们想给他返回一个标准的 json 格式 就要给我们的数据做一个全局 format
 
 ```json
 {
@@ -31,23 +31,23 @@ import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 
 interface data<T> {
-  data: T;
+	data: T;
 }
 
 @Injectable()
 export class Response<T = any> implements NestInterceptor {
-  intercept(context, next: CallHandler): Observable<data<T>> {
-    return next.handle().pipe(
-      map((data) => {
-        return {
-          data,
-          status: 0,
-          success: true,
-          message: '牛逼',
-        };
-      }),
-    );
-  }
+	intercept(context, next: CallHandler): Observable<data<T>> {
+		return next.handle().pipe(
+			map((data) => {
+				return {
+					data,
+					status: 0,
+					success: true,
+					message: '牛逼',
+				};
+			})
+		);
+	}
 }
 ```
 
