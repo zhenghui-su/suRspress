@@ -58,5 +58,10 @@
 		"type": "file",
 		"name": "12-nestjs 中间件",
 		"label": "nestjs 中间件"
+	},
+	{
+		"type": "file",
+		"name": "13-nestjs 上传文件-静态目录",
+		"label": "nestjs 上传文件-静态目录"
 	}
 ]
