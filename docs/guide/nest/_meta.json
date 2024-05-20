@@ -83,5 +83,10 @@
 		"type": "file",
 		"name": "17-nestjs 异常拦截器",
 		"label": "nestjs 异常拦截器"
+	},
+	{
+		"type": "file",
+		"name": "18-nestjs 管道-转换",
+		"label": "nestjs 管道-转换"
 	}
 ]
