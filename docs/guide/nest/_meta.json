@@ -88,5 +88,10 @@
 		"type": "file",
 		"name": "18-nestjs 管道-转换",
 		"label": "nestjs 管道-转换"
+	},
+	{
+		"type": "file",
+		"name": "19-nestjs 管道-验证DTO",
+		"label": "nestjs 管道-验证DTO"
 	}
 ]
