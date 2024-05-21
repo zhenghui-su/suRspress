@@ -98,5 +98,10 @@
 		"type": "file",
 		"name": "20-nestjs 守卫",
 		"label": "nestjs 守卫"
+	},
+	{
+		"type": "file",
+		"name": "21-nestjs 自定义装饰器",
+		"label": "nestjs 自定义装饰器"
 	}
 ]
