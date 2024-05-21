@@ -93,5 +93,10 @@
 		"type": "file",
 		"name": "19-nestjs 管道-验证DTO",
 		"label": "nestjs 管道-验证DTO"
+	},
+	{
+		"type": "file",
+		"name": "20-nestjs 守卫",
+		"label": "nestjs 守卫"
 	}
 ]
