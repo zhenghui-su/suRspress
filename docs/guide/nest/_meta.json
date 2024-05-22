@@ -103,5 +103,10 @@
 		"type": "file",
 		"name": "21-nestjs 自定义装饰器",
 		"label": "nestjs 自定义装饰器"
+	},
+	{
+		"type": "file",
+		"name": "22-nestjs swagger接口文档",
+		"label": "nestjs swagger接口文档"
 	}
 ]
