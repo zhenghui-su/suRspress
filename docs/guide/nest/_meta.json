@@ -108,5 +108,10 @@
 		"type": "file",
 		"name": "22-nestjs swagger接口文档",
 		"label": "nestjs swagger接口文档"
+	},
+	{
+		"type": "file",
+		"name": "23-nestjs 连接数据库typeOrm",
+		"label": "nestjs 连接数据库typeOrm"
 	}
 ]
