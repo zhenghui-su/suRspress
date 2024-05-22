@@ -8,7 +8,7 @@
 
 ## 案例
 
-### 案例1—自定义权限装饰器
+### 案例 1—自定义权限装饰器
 
 我们可以把之前的 `setMetadata`封装成一个自定义权限装饰器
 
@@ -20,8 +20,8 @@
 import { SetMetadata } from '@nestjs/common';
 
 export const Role = (role: string[]) => {
-  console.log(role, 1);
-  return SetMetadata('role', role);
+	console.log(role, 1);
+	return SetMetadata('role', role);
 };
 ```
 
@@ -29,28 +29,28 @@ export const Role = (role: string[]) => {
 
 ![image-20240522012003738](https://chen-1320883525.cos.ap-chengdu.myqcloud.com/img/image-20240522012003738.png)
 
-### 案例2—自定义参数装饰器返回一个 url
+### 案例 2—自定义参数装饰器返回一个 url
 
 我们在 `role.decorator` 文件中再加一个`ReqUrl`：
 
 ```typescript
 import {
-  ExecutionContext,
-  SetMetadata,
-  createParamDecorator,
+	ExecutionContext,
+	SetMetadata,
+	createParamDecorator,
 } from '@nestjs/common';
 import type { Request } from 'express';
 
 export const Role = (role: string[]) => {
-  console.log(role, 1);
-  return SetMetadata('role', role);
+	console.log(role, 1);
+	return SetMetadata('role', role);
 };
 
 export const ReqUrl = createParamDecorator(
-  (data: string, ctx: ExecutionContext) => {
-    const req = ctx.switchToHttp().getRequest<Request>();
-    return req.url;
-  },
+	(data: string, ctx: ExecutionContext) => {
+		const req = ctx.switchToHttp().getRequest<Request>();
+		return req.url;
+	}
 );
 ```
 

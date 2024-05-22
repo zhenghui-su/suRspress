@@ -1,4 +1,4 @@
-# nestjs swagger接口文档
+# nestjs swagger 接口文档
 
 swagger 是一个用于提供给前端的接口文档生成库，安装如下：
 
@@ -17,15 +17,15 @@ import { NestExpressApplication } from '@nestjs/platform-express';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 
 async function bootstrap() {
-  const app = await NestFactory.create<NestExpressApplication>(AppModule);
-  const options = new DocumentBuilder()
-    .setTitle('晨晨接口文档')
-    .setDescription('描述如下')
-    .setVersion('1')
-    .build();
-  const document = SwaggerModule.createDocument(app, options);
-  SwaggerModule.setup('/api-docs', app, document);
-  await app.listen(3000);
+	const app = await NestFactory.create<NestExpressApplication>(AppModule);
+	const options = new DocumentBuilder()
+		.setTitle('晨晨接口文档')
+		.setDescription('描述如下')
+		.setVersion('1')
+		.build();
+	const document = SwaggerModule.createDocument(app, options);
+	SwaggerModule.setup('/api-docs', app, document);
+	await app.listen(3000);
 }
 bootstrap();
 ```
@@ -74,7 +74,7 @@ bootstrap();
 
 ## 使用 ApiQuery 修饰 get
 
-我们也可以使用`@ApiQuery()`装饰器来修饰get相关参数
+我们也可以使用`@ApiQuery()`装饰器来修饰 get 相关参数
 
 ![image-20240522180533800](https://chen-1320883525.cos.ap-chengdu.myqcloud.com/img/image-20240522180533800.png)
 
@@ -82,7 +82,7 @@ bootstrap();
 
 ![image-20240522180551168](https://chen-1320883525.cos.ap-chengdu.myqcloud.com/img/image-20240522180551168.png)
 
-## 使用 ApiProperty 定义Post
+## 使用 ApiProperty 定义 Post
 
 如果是 post 的请求，我们可以使用`@ApiProperty`来定义相关参数描述
 
@@ -145,4 +145,3 @@ bootstrap();
 如下图，自行参考：
 
 ![image-20240522182043778](https://chen-1320883525.cos.ap-chengdu.myqcloud.com/img/image-20240522182043778.png)
-
