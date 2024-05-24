@@ -1,0 +1,117 @@
+[
+	{
+		"type": "file",
+		"name": "1-Nest介绍",
+		"label": "Nest介绍"
+	},
+	{
+		"type": "file",
+		"name": "2-IOC控制反转 DI依赖注入",
+		"label": "IOC控制反转 DI依赖注入"
+	},
+	{
+		"type": "file",
+		"name": "3-前置知识装饰器",
+		"label": "前置知识装饰器"
+	},
+	{
+		"type": "file",
+		"name": "4-装饰器实现GET请求",
+		"label": "装饰器实现GET请求"
+	},
+	{
+		"type": "file",
+		"name": "5-认识nestjs cli",
+		"label": "认识nestjs cli"
+	},
+	{
+		"type": "file",
+		"name": "6-nest cli 常用命令",
+		"label": "nest cli 常用命令"
+	},
+	{
+		"type": "file",
+		"name": "7-RESTful 风格设计",
+		"label": "RESTful 风格设计"
+	},
+	{
+		"type": "file",
+		"name": "8-认识 nestjs 控制器",
+		"label": "认识 nestjs 控制器"
+	},
+	{
+		"type": "file",
+		"name": "9-nestjs session 案例",
+		"label": "nestjs session 案例"
+	},
+	{
+		"type": "file",
+		"name": "10-nestjs 提供者",
+		"label": "nestjs 提供者"
+	},
+	{
+		"type": "file",
+		"name": "11-nestjs 模块",
+		"label": "nestjs 模块"
+	},
+	{
+		"type": "file",
+		"name": "12-nestjs 中间件",
+		"label": "nestjs 中间件"
+	},
+	{
+		"type": "file",
+		"name": "13-nestjs 上传文件-静态目录",
+		"label": "nestjs 上传文件-静态目录"
+	},
+	{
+		"type": "file",
+		"name": "14-nestjs 下载文件和文件流",
+		"label": "nestjs 下载文件和文件流"
+	},
+	{
+		"type": "file",
+		"name": "15-nestjs 和 Rxjs",
+		"label": "nestjs 和 Rxjs"
+	},
+	{
+		"type": "file",
+		"name": "16-nestjs 响应拦截器",
+		"label": "nestjs 响应拦截器"
+	},
+	{
+		"type": "file",
+		"name": "17-nestjs 异常拦截器",
+		"label": "nestjs 异常拦截器"
+	},
+	{
+		"type": "file",
+		"name": "18-nestjs 管道-转换",
+		"label": "nestjs 管道-转换"
+	},
+	{
+		"type": "file",
+		"name": "19-nestjs 管道-验证DTO",
+		"label": "nestjs 管道-验证DTO"
+	},
+	{
+		"type": "file",
+		"name": "20-nestjs 守卫",
+		"label": "nestjs 守卫"
+	},
+	{
+		"type": "file",
+		"name": "21-nestjs 自定义装饰器",
+		"label": "nestjs 自定义装饰器"
+	},
+	{
+		"type": "file",
+		"name": "22-nestjs swagger接口文档",
+		"label": "nestjs swagger接口文档"
+	},
+	{
+		"type": "file",
+		"name": "23-nestjs 连接数据库typeOrm",
+		"label": "nestjs 连接数据库typeOrm"
+	}
+]
