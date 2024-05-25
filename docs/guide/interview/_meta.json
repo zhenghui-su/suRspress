@@ -8,5 +8,10 @@
 		"type": "dir",
 		"name": "html",
 		"label": "html总结点"
+	},
+	{
+		"type": "dir",
+		"name": "css",
+		"label": "css总结点"
 	}
 ]

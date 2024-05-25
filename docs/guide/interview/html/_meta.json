@@ -1,11 +1,6 @@
 [
 	{
 		"type": "file",
-		"name": "index",
-		"label": "html总结前言"
-	},
-	{
-		"type": "file",
 		"name": "1-文档声明",
 		"label": "文档声明"
 	},
