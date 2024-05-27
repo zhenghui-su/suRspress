@@ -16,19 +16,19 @@ DI
 
 ```typescript
 class A {
-  name: string;
-  constructor(name: string) {
-    this.name = name;
-  }
+	name: string;
+	constructor(name: string) {
+		this.name = name;
+	}
 }
 
 class B {
-  age: number;
-  entity: A;
-  constructor(age: number) {
-    this.age = age;
-    this.entity = new A("晨晨");
-  }
+	age: number;
+	entity: A;
+	constructor(age: number) {
+		this.age = age;
+		this.entity = new A('晨晨');
+	}
 }
 
 const c = new B(18);
@@ -38,52 +38,52 @@ c.entity.name;
 
 我们可以看到，**B** 中代码的实现是需要依赖 **A** 的，两者的**代码耦合度**非常高。当两者之间的业务逻辑复杂程度增加的情况下，维护成本与代码可读性都会随着增加，并且很难再多引入额外的模块进行功能拓展。
 
-> 比如我A改变了，那么 B 也需要更改，如果有更多的类依赖 A，那么改的就多了
+> 比如我 A 改变了，那么 B 也需要更改，如果有更多的类依赖 A，那么改的就多了
 
-为了解决这个问题可以使用IOC容器
+为了解决这个问题可以使用 IOC 容器
 
 ```typescript
 class A {
-  name: string;
-  constructor(name: string) {
-    this.name = name;
-  }
+	name: string;
+	constructor(name: string) {
+		this.name = name;
+	}
 }
 
 class C {
-  name: string;
-  constructor(name: string) {
-    this.name = name;
-  }
+	name: string;
+	constructor(name: string) {
+		this.name = name;
+	}
 }
 //中间件用于解耦 其实就是一个容器用来收集引用
 class Container {
-  modeuls: any;
-  constructor() {
-    this.modeuls = {};
-  }
-  // 收集引用
-  provide(key: string, modeuls: any) {
-    this.modeuls[key] = modeuls;
-  }
-  // 得到引用
-  get(key: string) {
-    return this.modeuls[key];
-  }
+	modeuls: any;
+	constructor() {
+		this.modeuls = {};
+	}
+	// 收集引用
+	provide(key: string, modeuls: any) {
+		this.modeuls[key] = modeuls;
+	}
+	// 得到引用
+	get(key: string) {
+		return this.modeuls[key];
+	}
 }
 
 const mo = new Container();
 // 将类注入了
-mo.provide("a", new A("晨晨1"));
-mo.provide("c", new C("晨晨2"));
+mo.provide('a', new A('晨晨1'));
+mo.provide('c', new C('晨晨2'));
 // B就可以通过容器得到a和c
 class B {
-  a: any;
-  c: any;
-  constructor(container: Container) {
-    this.a = container.get("a");
-    this.c = container.get("c");
-  }
+	a: any;
+	c: any;
+	constructor(container: Container) {
+		this.a = container.get('a');
+		this.c = container.get('c');
+	}
 }
 
 new B(mo);
