@@ -1,10 +1,10 @@
 # RESTful 风格设计
 
-RESTful 是一种风格，在RESTful中，一切都被认为是资源，每个资源有对应的URL标识.
+RESTful 是一种风格，在 RESTful 中，一切都被认为是资源，每个资源有对应的 URL 标识.
 
 不是标准也不是协议，只是一种风格。当然你也可以不按照他的风格去写。
 
-## 接口url
+## 接口 url
 
 ### 传统接口
 
@@ -18,9 +18,9 @@ http://localhost:8080/api/delete_list?id=1
 http://localhost:8080/api/update_list?id=1
 ```
 
-### RESTful接口
+### RESTful 接口
 
-而RESTful 风格的接口如下：
+而 RESTful 风格的接口如下：
 
 ```js
 http://localhost:8080/api/get_list/1/查询 删除 更新
@@ -36,7 +36,7 @@ RESTful 风格一个接口就会完成 增删改差 他是通过不同的请求�
 
 - 删除 DELETE
 
-## RESTful 版本控制 
+## RESTful 版本控制
 
 一共有三种我们一般用第一种 更加语义化
 
@@ -52,14 +52,14 @@ RESTful 风格一个接口就会完成 增删改差 他是通过不同的请求�
 import { NestFactory } from '@nestjs/core';
 import { VersioningType } from '@nestjs/common';
 import { AppModule } from './app.module';
- 
+
 async function bootstrap() {
-  const app = await NestFactory.create(AppModule);
-  // 控制版本
-  app.enableVersioning({
-    type: VersioningType.URI,
-  })
-  await app.listen(3000);
+	const app = await NestFactory.create(AppModule);
+	// 控制版本
+	app.enableVersioning({
+		type: VersioningType.URI,
+	});
+	await app.listen(3000);
 }
 bootstrap();
 ```
@@ -68,49 +68,49 @@ bootstrap();
 
 ```typescript
 import {
-  Controller,
-  Get,
-  Post,
-  Body,
-  Patch,
-  Param,
-  Delete,
+	Controller,
+	Get,
+	Post,
+	Body,
+	Patch,
+	Param,
+	Delete,
 } from '@nestjs/common';
 import { UserService } from './user.service';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
 
 @Controller({
-  path: 'user',
-  version: '1',
+	path: 'user',
+	version: '1',
 })
 export class UserController {
-  constructor(private readonly userService: UserService) {}
+	constructor(private readonly userService: UserService) {}
 
-  @Post()
-  create(@Body() createUserDto: CreateUserDto) {
-    return this.userService.create(createUserDto);
-  }
+	@Post()
+	create(@Body() createUserDto: CreateUserDto) {
+		return this.userService.create(createUserDto);
+	}
 
-  @Get()
-  findAll() {
-    return this.userService.findAll();
-  }
+	@Get()
+	findAll() {
+		return this.userService.findAll();
+	}
 
-  @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.userService.findOne(+id);
-  }
+	@Get(':id')
+	findOne(@Param('id') id: string) {
+		return this.userService.findOne(+id);
+	}
 
-  @Patch(':id')
-  update(@Param('id') id: string, @Body() updateUserDto: UpdateUserDto) {
-    return this.userService.update(+id, updateUserDto);
-  }
+	@Patch(':id')
+	update(@Param('id') id: string, @Body() updateUserDto: UpdateUserDto) {
+		return this.userService.update(+id, updateUserDto);
+	}
 
-  @Delete(':id')
-  remove(@Param('id') id: string) {
-    return this.userService.remove(+id);
-  }
+	@Delete(':id')
+	remove(@Param('id') id: string) {
+		return this.userService.remove(+id);
+	}
 }
 ```
 
@@ -133,10 +133,10 @@ findAll() {
 ## Code 状态码规范
 
 - 200 ➡ OK
-- 304 Not Modified  ➡ 协商缓存了
-- 400 Bad Request ➡  参数错误
-- 401 Unauthorized ➡  token错误
-- 403 Forbidden referer origin  ➡ 验证失败
-- 404 Not Found ➡  接口不存在
-- 500 Internal Server Error  ➡ 服务端错误
-- 502 Bad Gateway  ➡ 上游接口有问题或者服务器问题
+- 304 Not Modified ➡ 协商缓存了
+- 400 Bad Request ➡ 参数错误
+- 401 Unauthorized ➡ token 错误
+- 403 Forbidden referer origin ➡ 验证失败
+- 404 Not Found ➡ 接口不存在
+- 500 Internal Server Error ➡ 服务端错误
+- 502 Bad Gateway ➡ 上游接口有问题或者服务器问题
