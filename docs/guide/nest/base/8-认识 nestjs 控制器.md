@@ -1,6 +1,6 @@
 # 认识 nestjs 控制器
 
-## Controller Request 
+## Controller Request
 
 它用于获取前端传过来的参数，nestjs 提供了方法参数装饰器用来帮助我们快速获取参数，如下：
 
@@ -16,25 +16,25 @@
 | @Headers(name?: string) | req.headers/req.headers[name] |
 | @HttpCode               |                               |
 
-调试工具可以使用Postman、ApiPost、ApiFox等
+调试工具可以使用 Postman、ApiPost、ApiFox 等
 
 比如：[ApiFox](https://apifox.com/?utm_source=baidu_sem1)
 
 ### 1-获取 get 请求传参
 
-可以使用Request 装饰器，配合`req.query`即可获取
+可以使用 Request 装饰器，配合`req.query`即可获取
 
 ![image-20240518213455405](https://chen-1320883525.cos.ap-chengdu.myqcloud.com/img/image-20240518213455405.png)
 
-也可以使用Query 直接获取 不需要在通过req.query 了
+也可以使用 Query 直接获取 不需要在通过 req.query 了
 
 ![image-20240518213535967](https://chen-1320883525.cos.ap-chengdu.myqcloud.com/img/image-20240518213535967.png)
 
 ```typescript
-import { Controller, Get, Query } from '@nestjs/common';
-import { UserService } from './user.service';
+import { Controller, Get, Query } from "@nestjs/common";
+import { UserService } from "./user.service";
 
-@Controller('user')
+@Controller("user")
 export class UserController {
   constructor(private readonly userService: UserService) {}
 
@@ -51,23 +51,23 @@ export class UserController {
 
 ### 2-获取 post 请求参数
 
-可以使用Request装饰器，配合`req.body`即可获取
+可以使用 Request 装饰器，配合`req.body`即可获取
 
 ![image-20240518214156774](https://chen-1320883525.cos.ap-chengdu.myqcloud.com/img/image-20240518214156774.png)
 
-也可以使用Body装饰器
+也可以使用 Body 装饰器
 
 ![image-20240518214258148](https://chen-1320883525.cos.ap-chengdu.myqcloud.com/img/image-20240518214258148.png)
 
-也可以直接读取key，上面Query也可以
+也可以直接读取 key，上面 Query 也可以
 
 ![image-20240518214424422](https://chen-1320883525.cos.ap-chengdu.myqcloud.com/img/image-20240518214424422.png)
 
 ```typescript
-import { Controller, Get, Post, Query, Body } from '@nestjs/common';
-import { UserService } from './user.service';
+import { Controller, Get, Post, Query, Body } from "@nestjs/common";
+import { UserService } from "./user.service";
 
-@Controller('user')
+@Controller("user")
 export class UserController {
   constructor(private readonly userService: UserService) {}
 
@@ -93,17 +93,17 @@ export class UserController {
 
 ### 3-动态路由
 
-可以使用Request装饰器，配合`req.param`即可获取，这里就不展示了
+可以使用 Request 装饰器，配合`req.param`即可获取，这里就不展示了
 
-也可以使用 Param 装饰器，它也可以接受key来获取，它们都差不多
+也可以使用 Param 装饰器，它也可以接受 key 来获取，它们都差不多
 
 ![image-20240518214927323](https://chen-1320883525.cos.ap-chengdu.myqcloud.com/img/image-20240518214927323.png)
 
 ```typescript
-import { Controller, Get, Post, Body, Param, Query } from '@nestjs/common';
-import { UserService } from './user.service';
+import { Controller, Get, Post, Body, Param, Query } from "@nestjs/common";
+import { UserService } from "./user.service";
 
-@Controller('user')
+@Controller("user")
 export class UserController {
   constructor(private readonly userService: UserService) {}
 
@@ -114,12 +114,12 @@ export class UserController {
   }
 
   @Post()
-  create(@Body('name') body) {
+  create(@Body("name") body) {
     console.log(body);
     return { code: 200 };
   }
 
-  @Get(':id')
+  @Get(":id")
   findId(@Param() param) {
     console.log(param);
     return { code: 200 };
@@ -129,15 +129,15 @@ export class UserController {
 
 ### 4-读取 header 信息
 
-我们随便加一个Cookie，然后通过Headers装饰器就可以获取到
+我们随便加一个 Cookie，然后通过 Headers 装饰器就可以获取到
 
 ![image-20240518215309151](https://chen-1320883525.cos.ap-chengdu.myqcloud.com/img/image-20240518215309151.png)
 
 ```typescript
-import { Controller, Get, Post, Body, Headers, Query } from '@nestjs/common';
-import { UserService } from './user.service';
+import { Controller, Get, Post, Body, Headers, Query } from "@nestjs/common";
+import { UserService } from "./user.service";
 
-@Controller('user')
+@Controller("user")
 export class UserController {
   constructor(private readonly userService: UserService) {}
 
@@ -148,12 +148,12 @@ export class UserController {
   }
 
   @Post()
-  create(@Body('name') body) {
+  create(@Body("name") body) {
     console.log(body);
     return { code: 200 };
   }
 
-  @Get(':id')
+  @Get(":id")
   findId(@Headers() header) {
     console.log(header);
     return { code: 200 };
@@ -167,7 +167,7 @@ export class UserController {
 
 ![image-20240518215531904](https://chen-1320883525.cos.ap-chengdu.myqcloud.com/img/image-20240518215531904.png)
 
-我再改成200试试
+我再改成 200 试试
 
 ![image-20240518215613113](https://chen-1320883525.cos.ap-chengdu.myqcloud.com/img/image-20240518215613113.png)
 
@@ -180,10 +180,10 @@ import {
   Headers,
   Query,
   HttpCode,
-} from '@nestjs/common';
-import { UserService } from './user.service';
+} from "@nestjs/common";
+import { UserService } from "./user.service";
 
-@Controller('user')
+@Controller("user")
 export class UserController {
   constructor(private readonly userService: UserService) {}
 
@@ -194,12 +194,12 @@ export class UserController {
   }
 
   @Post()
-  create(@Body('name') body) {
+  create(@Body("name") body) {
     console.log(body);
     return { code: 200 };
   }
 
-  @Get(':id')
+  @Get(":id")
   @HttpCode(200)
   findId(@Headers() header) {
     console.log(header);
