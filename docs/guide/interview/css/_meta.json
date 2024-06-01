@@ -3,5 +3,10 @@
 		"type": "file",
 		"name": "1-CSS单位总结",
 		"label": "CSS单位总结"
+	},
+	{
+		"type": "file",
+		"name": "2-CSS居中方式总结",
+		"label": "CSS居中方式总结"
 	}
 ]
