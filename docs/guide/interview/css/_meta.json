@@ -18,5 +18,10 @@
 		"type": "file",
 		"name": "4-浮动",
 		"label": "浮动"
+	},
+	{
+		"type": "file",
+		"name": "5-定位总结",
+		"label": "定位总结"
 	}
 ]
