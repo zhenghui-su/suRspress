@@ -7,11 +7,15 @@
 	{
 		"type": "dir",
 		"name": "html",
-		"label": "html总结点"
+		"label": "html总结点",
+		"collapsible": true,
+		"collapsed": true
 	},
 	{
 		"type": "dir",
 		"name": "css",
-		"label": "css总结点"
+		"label": "css总结点",
+		"collapsible": true,
+		"collapsed": true
 	}
 ]
