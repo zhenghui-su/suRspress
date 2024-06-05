@@ -33,5 +33,10 @@
 		"type": "file",
 		"name": "7-CSS属性的计算过程",
 		"label": "CSS属性的计算过程"
+	},
+	{
+		"type": "file",
+		"name": "8-CSS层叠继承规则总结",
+		"label": "CSS层叠继承规则总结"
 	}
 ]
