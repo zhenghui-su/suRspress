@@ -28,5 +28,10 @@
 		"type": "file",
 		"name": "6-BFC",
 		"label": "BFC"
+	},
+	{
+		"type": "file",
+		"name": "7-CSS属性的计算过程",
+		"label": "CSS属性的计算过程"
 	}
 ]
