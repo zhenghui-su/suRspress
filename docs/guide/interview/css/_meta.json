@@ -38,5 +38,10 @@
 		"type": "file",
 		"name": "8-CSS层叠继承规则总结",
 		"label": "CSS层叠继承规则总结"
+	},
+	{
+		"type": "file",
+		"name": "9-import指令",
+		"label": "import指令"
 	}
 ]
