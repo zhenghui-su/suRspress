@@ -48,5 +48,10 @@
 		"type": "file",
 		"name": "10-CSS3的 calc 函数",
 		"label": "CSS3的 calc 函数"
+	},
+	{
+		"type": "file",
+		"name": "11-CSS3的媒体(media)查询",
+		"label": "CSS3的媒体(media)查询"
 	}
 ]
