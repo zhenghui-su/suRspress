@@ -73,5 +73,10 @@
 		"type": "file",
 		"name": "15-渐进式渲染",
 		"label": "渐进式渲染"
+	},
+	{
+		"type": "file",
+		"name": "16-CSS渲染性能优化",
+		"label": "CSS渲染性能优化"
 	}
 ]
