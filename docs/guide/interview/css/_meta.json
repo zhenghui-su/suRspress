@@ -68,5 +68,10 @@
 		"type": "file",
 		"name": "14-CSS3变形",
 		"label": "CSS3变形"
+	},
+	{
+		"type": "file",
+		"name": "15-渐进式渲染",
+		"label": "渐进式渲染"
 	}
 ]
