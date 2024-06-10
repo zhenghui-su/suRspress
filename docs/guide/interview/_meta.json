@@ -17,5 +17,12 @@
 		"label": "css总结点",
 		"collapsible": true,
 		"collapsed": true
+	},
+	{
+		"type": "dir",
+		"name": "js",
+		"label": "js总结点",
+		"collapsible": true,
+		"collapsed": true
 	}
 ]
