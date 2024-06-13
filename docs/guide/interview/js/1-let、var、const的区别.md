@@ -12,7 +12,7 @@ let const var 的区别？什么是块级作用域？如何用？
 - let
 - const
 
-之所以有3 种方式，这是由于历史原因造成的。最初声明变量的关键字就是 var，但是为了解决作用域的问题，所以后面新增了 let 和 const 的方式。
+之所以有 3 种方式，这是由于历史原因造成的。最初声明变量的关键字就是 var，但是为了解决作用域的问题，所以后面新增了 let 和 const 的方式。
 
 ### 作用域
 
@@ -28,29 +28,29 @@ ES5 中的作用域有：全局作用域、函数作用域，ES6 中新增了块
 
 ```js
 {
-    var a = 1;
+	var a = 1;
 }
 console.log(a); // 10
 ```
 
-上面代码中，在 Block Scope (块级作用域) `{}`中声明 a，在 Global Scope (全局作用域)中输出，a输出结果为 10，由此可以看出 var 声明的变量不存在 Block Scope 的概念
+上面代码中，在 Block Scope (块级作用域) `{}`中声明 a，在 Global Scope (全局作用域)中输出，a 输出结果为 10，由此可以看出 var 声明的变量不存在 Block Scope 的概念
 
 - 有全局作用域、函数作用域的概念
 
 ```js
 // Global Scope
 var a = 10;
-function checkscope(){
-    // Local Scope
-    var b = 20;
-    console.log(a); // 10
-    console.log(b); // 20
+function checkscope() {
+	// Local Scope
+	var b = 20;
+	console.log(a); // 10
+	console.log(b); // 20
 }
 checkscope();
 console.log(b); // 报错 ReferenceError: b is not defined
 ```
 
-上面代码中，在 Global Scope 中用 var 声明了a，在 checkscope 函数中的 Local Scope (本地作用域、函数作用域)中打印出了10，但是在 Global Scope 中打印的变量 b 报错了，因为 b 只在函数作用域中声明。
+上面代码中，在 Global Scope 中用 var 声明了 a，在 checkscope 函数中的 Local Scope (本地作用域、函数作用域)中打印出了 10，但是在 Global Scope 中打印的变量 b 报错了，因为 b 只在函数作用域中声明。
 
 - 不初始化默认为 undefined
 
@@ -70,10 +70,10 @@ console.log(a); // undefined
 var a = 10;
 
 checkscope();
-function checkscope(){
-    // Local Scope
-    console.log(a); // undefined
-    var a;
+function checkscope() {
+	// Local Scope
+	console.log(a); // undefined
+	var a;
 }
 ```
 
@@ -106,11 +106,11 @@ var a = 20;
 console.log(a); // 20
 
 checkscope();
-function checkscope(){
-    // Local Scope
-    var b = 10;
-    var b = 20;
-    console.log(b); // 20
+function checkscope() {
+	// Local Scope
+	var b = 10;
+	var b = 20;
+	console.log(b); // 20
 }
 ```
 
@@ -122,8 +122,8 @@ function checkscope(){
 
 ```js
 {
-    // Block Scope
-    let a = 1;
+	// Block Scope
+	let a = 1;
 }
 console.log(a); // ReferenceError: a is not defined
 ```
@@ -134,9 +134,9 @@ console.log(a); // ReferenceError: a is not defined
 
 ```js
 {
-    // Block Scope
-    console.log(a); // ReferenceError: Cannot access 'a' before initialization
-    let a = 1;
+	// Block Scope
+	console.log(a); // ReferenceError: Cannot access 'a' before initialization
+	let a = 1;
 }
 ```
 
@@ -146,37 +146,37 @@ console.log(a); // ReferenceError: a is not defined
 
 ```js
 {
-    // Block Scope
-    console.log(a); // ReferenceError: Cannot access 'a' before initialization
-    let a = 1;
+	// Block Scope
+	console.log(a); // ReferenceError: Cannot access 'a' before initialization
+	let a = 1;
 }
 
 if (true) {
-    // TDZ 开始
-    console.log(a); // ReferenceError: Cannot access 'a' before initialization
-    
-    let a; // TDZ 结束
-    console.log(a); // undefined
-    
-    a = 123;
-    console.log(a); // 123
+	// TDZ 开始
+	console.log(a); // ReferenceError: Cannot access 'a' before initialization
+
+	let a; // TDZ 结束
+	console.log(a); // undefined
+
+	a = 123;
+	console.log(a); // 123
 }
 ```
 
-上面代码中，使用 let 声明的变量a，导致绑定这个块级作用域，所以在 let 声明变量前，打印的变量 a 报错。
+上面代码中，使用 let 声明的变量 a，导致绑定这个块级作用域，所以在 let 声明变量前，打印的变量 a 报错。
 
 这是因为使用 let/const 所声明的变量会存在暂时性死区。
 
 什么叫做暂时性死区域呢?
 
-ES6 标准中对 let/const 声明中的解释 第13章，有如下一段文字：
+ES6 标准中对 let/const 声明中的解释 第 13 章，有如下一段文字：
 
 > The variables are created whemtheir containing Lexical Environment is instantiated but may not be accessed inany way until the variable's LexicalBinding is evaluated
 >
-> 当程序的控制流程在新的作用域(module、 function 或block作用域)进行实例化时，在此作用域中用 let/const 声明的变量会先在作用域中被创建出来，但因此时还未进行词法绑定，所以是不能被访问的，如果访问就会抛出错误。因此，在这运行流程进入作用域创建变量，到变量可以被访问之间的这一段时间，就称之为暂时死区。
+> 当程序的控制流程在新的作用域(module、 function 或 block 作用域)进行实例化时，在此作用域中用 let/const 声明的变量会先在作用域中被创建出来，但因此时还未进行词法绑定，所以是不能被访问的，如果访问就会抛出错误。因此，在这运行流程进入作用域创建变量，到变量可以被访问之间的这一段时间，就称之为暂时死区。
 
-简单理解就是：ES6规定，let/const 命令会使区块形成封闭的作用域。若在声明之前使用变量，就会报错。
-总之，在代码块内，使用 let/const 命令声明变量之前，该变量都是不可用的。这在语法上称为“**暂时性死区**”(temporal dead zone，简称TDZ)
+简单理解就是：ES6 规定，let/const 命令会使区块形成封闭的作用域。若在声明之前使用变量，就会报错。
+总之，在代码块内，使用 let/const 命令声明变量之前，该变量都是不可用的。这在语法上称为“**暂时性死区**”(temporal dead zone，简称 TDZ)
 
 其实上面不存在变量提升的例子中，其实也是暂时性死区，因为它有暂时性死区的概念，所以它压根就不存在变量提升了
 
@@ -184,16 +184,16 @@ ES6 标准中对 let/const 声明中的解释 第13章，有如下一段文字�
 
 ```js
 {
-    let A;
-    var A; // syntaxError: Identifier 'A' has already been declared
+	let A;
+	var A; // syntaxError: Identifier 'A' has already been declared
 }
 {
-    var A;
-    let A; // syntaxError: Identifier 'A' has already been declared
+	var A;
+	let A; // syntaxError: Identifier 'A' has already been declared
 }
 {
-    let A;
-    let A; // syntaxError: Identifier 'A' has already been declared
+	let A;
+	let A; // syntaxError: Identifier 'A' has already been declared
 }
 ```
 
@@ -211,8 +211,8 @@ const a; // SyntaxError: Missing initializer in const declaration
 
 ```js
 {
-    const a = 10;
-    a = 20; // TypeError: Assignment to constant variable
+	const a = 10;
+	a = 20; // TypeError: Assignment to constant variable
 }
 ```
 
@@ -242,17 +242,17 @@ const 实际上保证的，并不是变量的值不得改动，而是变量指�
 **const 关键字**
 
 - 与 let 特性一样，仅有 2 个差别
-- 区别1：必须立即初始化，不能留到以后赋值
-- 区别2：常量的值不能改变
+- 区别 1：必须立即初始化，不能留到以后赋值
+- 区别 2：常量的值不能改变
 
 ## 题目解答
 
-let const var的区别？什么是块级作用域？如何用？
+let const var 的区别？什么是块级作用域？如何用？
 
-- var定义的变量，没有块的概念，可以跨块访问，不能跨函数访问，有变量提升。
-- let定义的变量，只能在块作用域里访问，不能跨块访问，也不能跨函数访问，无变量提升，不可以重复
+- var 定义的变量，没有块的概念，可以跨块访问，不能跨函数访问，有变量提升。
+- let 定义的变量，只能在块作用域里访问，不能跨块访问，也不能跨函数访问，无变量提升，不可以重复
   声明。
-- const用来定义常量，使用时必须初始化(即必须赋值)，只能在块作用域里访问，而且不能修改，无变量
+- const 用来定义常量，使用时必须初始化(即必须赋值)，只能在块作用域里访问，而且不能修改，无变量
   提升，不可以重复声明。
 
 最初在 JS 中作用域有：全局作用域、函数作用域。没有块作用域的概念。
