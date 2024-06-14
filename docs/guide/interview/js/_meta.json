@@ -3,5 +3,10 @@
 		"type": "file",
 		"name": "1-let、var、const的区别",
 		"label": "let、var、const的区别"
+	},
+	{
+		"type": "file",
+		"name": "2-值和引用",
+		"label": "值和引用"
 	}
 ]
