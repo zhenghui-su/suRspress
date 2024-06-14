@@ -8,5 +8,10 @@
 		"type": "file",
 		"name": "2-值和引用",
 		"label": "值和引用"
+	},
+	{
+		"type": "file",
+		"name": "3-包装类型",
+		"label": "包装类型"
 	}
 ]
