@@ -24,5 +24,12 @@
 		"label": "源码篇",
 		"collapsible": true,
 		"collapsed": true
+	},
+	{
+		"type": "dir",
+		"name": "state",
+		"label": "状态管理篇",
+		"collapsible": true,
+		"collapsed": true
 	}
 ]
