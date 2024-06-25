@@ -1,5 +1,7 @@
 # 总览 React 状态管理库
 
+该篇以掘金小册《深入浅出 React 状态管理库》参考
+请支持正版 [深入浅出 React 状态管理库](https://juejin.cn/book/7311970169411567626?utm_source=course_list)
 我们以常见的 React 状态管理库为例来分析，如下表格：
 
 | 库      | GitHub                                                                    | Stars 🌟 | 推出时间 |
