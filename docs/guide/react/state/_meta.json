@@ -3,5 +3,10 @@
 		"type": "file",
 		"name": "1-总览React状态管理库",
 		"label": "总览React状态管理库"
+	},
+	{
+		"type": "file",
+		"name": "2-前置知识",
+		"label": "前置知识"
 	}
 ]
