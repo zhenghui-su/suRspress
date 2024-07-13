@@ -8,5 +8,10 @@
 		"type": "file",
 		"name": "2-前置知识",
 		"label": "前置知识"
+	},
+	{
+		"type": "file",
+		"name": "3-React Context",
+		"label": "React Context"
 	}
 ]
