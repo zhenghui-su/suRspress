@@ -13,5 +13,10 @@
 		"type": "file",
 		"name": "3-React Context",
 		"label": "React Context"
+	},
+	{
+		"type": "file",
+		"name": "4-React并发渲染机制",
+		"label": "React并发渲染机制"
 	}
 ]
