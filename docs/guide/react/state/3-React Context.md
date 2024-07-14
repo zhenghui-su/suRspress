@@ -8,7 +8,7 @@ React Context 是我们在项目中所离不开的一种技术方案，常用来
 
 诸如 React Context 与 Zustand、Jotai、Valtio 等等都是属于全局状态管理，看似它们都能解决组件之间共享状态的问题。
 
-而这些状态管理库的发明某种程度上是为了解决 React Context 的局限性以及性能问题。那本章就来讨论一下React Context 性能挑战及其优化之道。
+而这些状态管理库的发明某种程度上是为了解决 React Context 的局限性以及性能问题。那本章就来讨论一下 React Context 性能挑战及其优化之道。
 
 ## React Context
 
@@ -18,24 +18,24 @@ React Context 是我们在项目中所离不开的一种技术方案，常用来
 
 ```jsx
 function ComponentA() {
-  const count = 10;
-  return <ComponentB count={count} />
+	const count = 10;
+	return <ComponentB count={count} />;
 }
 
 function ComponentB({ count }) {
-  return <ComponentC count={count} />
+	return <ComponentC count={count} />;
 }
 
 function ComponentC({ count }) {
-  return <ComponentD count={count} />
+	return <ComponentD count={count} />;
 }
 
 function ComponentD({ count }) {
-  return <ComponentE count={count} />
+	return <ComponentE count={count} />;
 }
 
 function ComponentE({ count }) {
-  return <div>{count}</div>
+	return <div>{count}</div>;
 }
 ```
 
@@ -61,39 +61,39 @@ import { createContext, useContext, useState } from "react";
 const context = createContext(null);
 
 const Count1 = () => {
-  const { count1, setCount1 } = useContext(context);
-  console.log("Count1 render");
-  return <div onClick={() => setCount1(count1 + 1)}>count1: {count1}</div>;
+	const { count1, setCount1 } = useContext(context);
+	console.log("Count1 render");
+	return <div onClick={() => setCount1(count1 + 1)}>count1: {count1}</div>;
 };
 
 const Count2 = () => {
-  const { count2 } = useContext(context);
-  console.log("Count2 render");
-  return <div>count2: {count2}</div>;
+	const { count2 } = useContext(context);
+	console.log("Count2 render");
+	return <div>count2: {count2}</div>;
 };
 
 const StateProvider = ({ children }) => {
-  const [count1, setCount1] = useState(0);
-  const [count2, setCount2] = useState(0);
-  return (
-    <context.Provider
-      value={{
-        count1,
-        count2,
-        setCount1,
-        setCount2
-      }}
-    >
-      {children}
-    </context.Provider>
-  );
+	const [count1, setCount1] = useState(0);
+	const [count2, setCount2] = useState(0);
+	return (
+		<context.Provider
+			value={{
+				count1,
+				count2,
+				setCount1,
+				setCount2
+			}}
+		>
+			{children}
+		</context.Provider>
+	);
 };
 
 const App = () => (
-  <StateProvider>
-    <Count1 />
-    <Count2 />
-  </StateProvider>
+	<StateProvider>
+		<Count1 />
+		<Count2 />
+	</StateProvider>
 );
 
 export default App;
@@ -114,7 +114,7 @@ export default App;
 最方便的还是依靠 React 官方来直接解决这个问题，其实早在 2021 年 1 月份就有 PR 来实现这个能力：[github.com/facebook/re…](https://github.com/facebook/react/pull/20646)，使用方式如下：
 
 ```js
-const context = useContextSelector(Context, c => c.selectedField);
+const context = useContextSelector(Context, (c) => c.selectedField);
 ```
 
 也就是说，我们会**通过传入的第二个参数来选取我们需要的值，只有当这个值发生改变时才重新渲染**，可以看到其实这就是我们想要达到理想的状态。很可惜貌似 React 团队仍在忙于其他更重要的事情，直到今天这个能力也没有被支持。
@@ -138,52 +138,52 @@ const context1 = createContext(null);
 const context2 = createContext(null);
 
 const Count1 = () => {
-  const { count1, setCount1 } = useContext(context1);
-  console.log("Count1 render");
-  return <div onClick={() => setCount1(count1 + 1)}>count1: {count1}</div>;
+	const { count1, setCount1 } = useContext(context1);
+	console.log("Count1 render");
+	return <div onClick={() => setCount1(count1 + 1)}>count1: {count1}</div>;
 };
 
 const Count2 = () => {
-  const { count2 } = useContext(context2);
-  console.log("Count2 render");
-  return <div>count2: {count2}</div>;
+	const { count2 } = useContext(context2);
+	console.log("Count2 render");
+	return <div>count2: {count2}</div>;
 };
 
 const StateProvider = ({ children }) => {
-  const [count1, setCount1] = useState(0);
-  return (
-    <context1.Provider
-      value={{
-        count1,
-        setCount1
-      }}
-    >
-      {children}
-    </context1.Provider>
-  );
+	const [count1, setCount1] = useState(0);
+	return (
+		<context1.Provider
+			value={{
+				count1,
+				setCount1
+			}}
+		>
+			{children}
+		</context1.Provider>
+	);
 };
 
 const StateProvider2 = ({ children }) => {
-  const [count2, setCount2] = useState(0);
-  return (
-    <context2.Provider
-      value={{
-        count2,
-        setCount2
-      }}
-    >
-      {children}
-    </context2.Provider>
-  );
+	const [count2, setCount2] = useState(0);
+	return (
+		<context2.Provider
+			value={{
+				count2,
+				setCount2
+			}}
+		>
+			{children}
+		</context2.Provider>
+	);
 };
 
 const App = () => (
-  <StateProvider>
-    <StateProvider2>
-      <Count1 />
-      <Count2 />
-    </StateProvider2>
-  </StateProvider>
+	<StateProvider>
+		<StateProvider2>
+			<Count1 />
+			<Count2 />
+		</StateProvider2>
+	</StateProvider>
 );
 
 export default App;
@@ -220,37 +220,37 @@ import { createContext, useContext, useState, memo } from "react";
 const context = createContext(null);
 
 const Count1 = () => {
-  const { count1, setCount1 } = useContext(context);
-  console.log("Count1 render");
-  return <div onClick={() => setCount1(count1 + 1)}>count1: {count1}</div>;
+	const { count1, setCount1 } = useContext(context);
+	console.log("Count1 render");
+	return <div onClick={() => setCount1(count1 + 1)}>count1: {count1}</div>;
 };
 
 const Count2 = memo(({ count2 }) => {
-  console.log("Count2 render");
-  return <div>count2: {count2}</div>;
+	console.log("Count2 render");
+	return <div>count2: {count2}</div>;
 });
 
 const Count2Wrapper = () => {
-  const { count2 } = useContext(context);
-  return <Count2 count2={count2} />;
+	const { count2 } = useContext(context);
+	return <Count2 count2={count2} />;
 };
 
 export default function App() {
-  const [count1, setCount1] = useState(0);
-  const [count2, setCount2] = useState(0);
-  return (
-    <context.Provider
-      value={{
-        count1,
-        count2,
-        setCount1,
-        setCount2
-      }}
-    >
-      <Count1 />
-      <Count2Wrapper />
-    </context.Provider>
-  );
+	const [count1, setCount1] = useState(0);
+	const [count2, setCount2] = useState(0);
+	return (
+		<context.Provider
+			value={{
+				count1,
+				count2,
+				setCount1,
+				setCount2
+			}}
+		>
+			<Count1 />
+			<Count2Wrapper />
+		</context.Provider>
+	);
 }
 ```
 
@@ -315,42 +315,42 @@ import { createContext, useContextSelector } from "use-context-selector";
 const context = createContext(null);
 
 const Count1 = () => {
-  const { count1, setCount1 } = useContext(context);
-  const count1 = useContextSelector(context, (state) => state.count1);
-  const setCount1 = useContextSelector(context, (state) => state.setCount1);
-  console.log("Count1 render");
-  return <div onClick={() => setCount1(count1 + 1)}>count1: {count1}</div>;
+	const { count1, setCount1 } = useContext(context);
+	const count1 = useContextSelector(context, (state) => state.count1);
+	const setCount1 = useContextSelector(context, (state) => state.setCount1);
+	console.log("Count1 render");
+	return <div onClick={() => setCount1(count1 + 1)}>count1: {count1}</div>;
 };
 
 const Count2 = () => {
-  const { count2 } = useContext(context);
-  const count2 = useContextSelector(context, (state) => state.count2);
-  console.log("Count2 render");
-  return <div>count2: {count2}</div>;
+	const { count2 } = useContext(context);
+	const count2 = useContextSelector(context, (state) => state.count2);
+	console.log("Count2 render");
+	return <div>count2: {count2}</div>;
 };
 
 const StateProvider = ({ children }) => {
-  const [count1, setCount1] = useState(0);
-  const [count2, setCount2] = useState(0);
-  return (
-    <context.Provider
-      value={{
-        count1,
-        count2,
-        setCount1,
-        setCount2
-      }}
-    >
-      {children}
-    </context.Provider>
-  );
+	const [count1, setCount1] = useState(0);
+	const [count2, setCount2] = useState(0);
+	return (
+		<context.Provider
+			value={{
+				count1,
+				count2,
+				setCount1,
+				setCount2
+			}}
+		>
+			{children}
+		</context.Provider>
+	);
 };
 
 const App = () => (
-  <StateProvider>
-    <Count1 />
-    <Count2 />
-  </StateProvider>
+	<StateProvider>
+		<Count1 />
+		<Count2 />
+	</StateProvider>
 );
 
 export default App;
@@ -370,21 +370,21 @@ import { useContext, createContext } from "react";
 const context = createContext(0);
 
 const Display = () => {
-  const value = useContext(context);
-  return <span>{value}</span>;
+	const value = useContext(context);
+	return <span>{value}</span>;
 };
 
 // 展示的是 121
 const App = () => {
-  return (
-    <context.Provider value={1}>
-      <Display />
-      <context.Provider value={2}>
-        <Display />
-      </context.Provider>
-      <Display />
-    </context.Provider>
-  );
+	return (
+		<context.Provider value={1}>
+			<Display />
+			<context.Provider value={2}>
+				<Display />
+			</context.Provider>
+			<Display />
+		</context.Provider>
+	);
 };
 
 export default App;
@@ -438,8 +438,8 @@ function createContext<T>(defaultValue: T): ReactContext<T> {
 
 ```typescript
 export function useContext<T>(Context: ReactContext<T>): T {
-  const dispatcher = resolveDispatcher();
-  return dispatcher.useContext(Context);
+	const dispatcher = resolveDispatcher();
+	return dispatcher.useContext(Context);
 }
 ```
 
@@ -477,48 +477,48 @@ React 会在不同的时机，向 `ReactCurrentDispatcher.current` 挂上不同�
 ```typescript
 // mount时向ReactCurrentDispatcher.current挂上的hooks实现
 const HooksDispatcherOnMount: Dispatcher = {
-  readContext,
+	readContext,
 
-  useCallback: mountCallback,
-  useContext: readContext,
-  useEffect: mountEffect,
-  useImperativeHandle: mountImperativeHandle,
-  useLayoutEffect: mountLayoutEffect,
-  useInsertionEffect: mountInsertionEffect,
-  useMemo: mountMemo,
-  useReducer: mountReducer,
-  useRef: mountRef,
-  useState: mountState,
-  useDebugValue: mountDebugValue,
-  useDeferredValue: mountDeferredValue,
-  useTransition: mountTransition,
-  useMutableSource: mountMutableSource,
-  useSyncExternalStore: mountSyncExternalStore,
-  useId: mountId,
+	useCallback: mountCallback,
+	useContext: readContext,
+	useEffect: mountEffect,
+	useImperativeHandle: mountImperativeHandle,
+	useLayoutEffect: mountLayoutEffect,
+	useInsertionEffect: mountInsertionEffect,
+	useMemo: mountMemo,
+	useReducer: mountReducer,
+	useRef: mountRef,
+	useState: mountState,
+	useDebugValue: mountDebugValue,
+	useDeferredValue: mountDeferredValue,
+	useTransition: mountTransition,
+	useMutableSource: mountMutableSource,
+	useSyncExternalStore: mountSyncExternalStore,
+	useId: mountId
 };
 ```
 
 ```typescript
 // update时向ReactCurrentDispatcher.current挂上的hooks实现
 const HooksDispatcherOnUpdate: Dispatcher = {
-  readContext,
+	readContext,
 
-  useCallback: updateCallback,
-  useContext: readContext,
-  useEffect: updateEffect,
-  useImperativeHandle: updateImperativeHandle,
-  useInsertionEffect: updateInsertionEffect,
-  useLayoutEffect: updateLayoutEffect,
-  useMemo: updateMemo,
-  useReducer: updateReducer,
-  useRef: updateRef,
-  useState: updateState,
-  useDebugValue: updateDebugValue,
-  useDeferredValue: updateDeferredValue,
-  useTransition: updateTransition,
-  useMutableSource: updateMutableSource,
-  useSyncExternalStore: updateSyncExternalStore,
-  useId: updateId,
+	useCallback: updateCallback,
+	useContext: readContext,
+	useEffect: updateEffect,
+	useImperativeHandle: updateImperativeHandle,
+	useInsertionEffect: updateInsertionEffect,
+	useLayoutEffect: updateLayoutEffect,
+	useMemo: updateMemo,
+	useReducer: updateReducer,
+	useRef: updateRef,
+	useState: updateState,
+	useDebugValue: updateDebugValue,
+	useDeferredValue: updateDeferredValue,
+	useTransition: updateTransition,
+	useMutableSource: updateMutableSource,
+	useSyncExternalStore: updateSyncExternalStore,
+	useId: updateId
 };
 ```
 
@@ -532,8 +532,8 @@ const HooksDispatcherOnUpdate: Dispatcher = {
 
 ```typescript
 export function readContext<T>(context: ReactContext<T>): T {
-  const value = context._currentValue
-  return value;
+	const value = context._currentValue;
+	return value;
 }
 ```
 
@@ -541,7 +541,7 @@ export function readContext<T>(context: ReactContext<T>): T {
 
 > 我们第一个问题 "React Context 是如何做到跨组件传递？"就得到了解答：
 >
-> 当我们用 createContext 创建 context 时，实际上会返回一个对象，这个对象包含了 _currentValue 记录了 context 的实际值；当我们在组件中使用 useContext 时，会直接从该对象中取出 _currentValue 并返回。
+> 当我们用 createContext 创建 context 时，实际上会返回一个对象，这个对象包含了 \_currentValue 记录了 context 的实际值；当我们在组件中使用 useContext 时，会直接从该对象中取出 \_currentValue 并返回。
 
 ### React Context 如何正确读到传入的 value？
 
@@ -551,14 +551,14 @@ export function readContext<T>(context: ReactContext<T>): T {
 
 ```typescript
 function updateContextProvider(
-  current: Fiber | null,
-  workInProgress: Fiber,
-  renderLanes: Lanes,
+	current: Fiber | null,
+	workInProgress: Fiber,
+	renderLanes: Lanes
 ) {
-  // ...
-  // 核心部分，newValue就是我们向 context.Provider 传入的 value，context就是createContext返回的那个对象
-  pushProvider(workInProgress, context, newValue); 
-  // ...
+	// ...
+	// 核心部分，newValue就是我们向 context.Provider 传入的 value，context就是createContext返回的那个对象
+	pushProvider(workInProgress, context, newValue);
+	// ...
 }
 ```
 
@@ -566,9 +566,9 @@ function updateContextProvider(
 
 ```typescript
 function createCursor<T>(defaultValue: T): StackCursor<T> {
-  return {
-    current: defaultValue,
-  };
+	return {
+		current: defaultValue
+	};
 }
 
 const valueStack: Array<any> = [];
@@ -576,18 +576,18 @@ let index = -1;
 const valueCursor: StackCursor<mixed> = createCursor(null);
 
 function push<T>(cursor: StackCursor<T>, value: T, fiber: Fiber): void {
-  index++;
-  valueStack[index] = cursor.current;
-  cursor.current = value;
+	index++;
+	valueStack[index] = cursor.current;
+	cursor.current = value;
 }
 
 function pushProvider<T>(
-  providerFiber: Fiber,
-  context: ReactContext<T>,
-  nextValue: T,
+	providerFiber: Fiber,
+	context: ReactContext<T>,
+	nextValue: T
 ): void {
-  push(valueCursor, context._currentValue, providerFiber); // 在替换_currentValue之前需要保存一下当前值
-  context._currentValue = nextValue; // 将传入到context.Provider的value赋给_currentValue
+	push(valueCursor, context._currentValue, providerFiber); // 在替换_currentValue之前需要保存一下当前值
+	context._currentValue = nextValue; // 将传入到context.Provider的value赋给_currentValue
 }
 ```
 
@@ -595,21 +595,18 @@ function pushProvider<T>(
 
 ```typescript
 function pop<T>(cursor: StackCursor<T>, fiber: Fiber): void {
-  if (index < 0) {
-    return;
-  }
-  cursor.current = valueStack[index];
-  valueStack[index] = null;
-  index--;
+	if (index < 0) {
+		return;
+	}
+	cursor.current = valueStack[index];
+	valueStack[index] = null;
+	index--;
 }
 
-function popProvider(
-  context: ReactContext<any>,
-  providerFiber: Fiber,
-): void {
-  const currentValue = valueCursor.current;
-  context._currentValue = currentValue; // 从历史记录中恢复状态
-  pop(valueCursor, providerFiber);
+function popProvider(context: ReactContext<any>, providerFiber: Fiber): void {
+	const currentValue = valueCursor.current;
+	context._currentValue = currentValue; // 从历史记录中恢复状态
+	pop(valueCursor, providerFiber);
 }
 ```
 
@@ -617,7 +614,7 @@ React 会不断地从 `valueStack` 中取出历史数据并赋值给 `context._c
 
 > 第二个问题：React Context 是如何做到每次 useContext 时，都可以正确读到最近的 context.Provider 传入的 value？
 >
-> React 在内部维护了一个栈（数组），每次当渲染到 context.Provider 时，就会将历史的 _currentValue 推入栈中进行保存，并将最新传入的 value 赋值给 _currentValue；当渲染完毕后，React 会出栈，并恢复 _currentValue 的值。因此，每次调用 useContext 时都可以正确读取到最近的 context.Provider 传入的 value。
+> React 在内部维护了一个栈（数组），每次当渲染到 context.Provider 时，就会将历史的 \_currentValue 推入栈中进行保存，并将最新传入的 value 赋值给 \_currentValue；当渲染完毕后，React 会出栈，并恢复 \_currentValue 的值。因此，每次调用 useContext 时都可以正确读取到最近的 context.Provider 传入的 value。
 
 现在回过头来看开头的例子：
 
@@ -627,20 +624,20 @@ import { useContext, createContext } from "react";
 const context = createContext(0);
 
 const Display = () => {
-  const value = useContext(context);
-  return <span>{value}</span>;
+	const value = useContext(context);
+	return <span>{value}</span>;
 };
 
 const App = () => {
-  return (
-    <context.Provider value={1}>
-      <Display />
-      <context.Provider value={2}>
-        <Display />
-      </context.Provider>
-      <Display />
-    </context.Provider>
-  );
+	return (
+		<context.Provider value={1}>
+			<Display />
+			<context.Provider value={2}>
+				<Display />
+			</context.Provider>
+			<Display />
+		</context.Provider>
+	);
 };
 
 export default App;
@@ -665,27 +662,27 @@ const contextA = createContext("A0");
 const contextB = createContext("B0");
 
 const Display = () => {
-  const valueA = useContext(contextA);
-  const valueB = useContext(contextB);
-  return (
-    <div>
-      {valueA}, {valueB}
-    </div>
-  );
+	const valueA = useContext(contextA);
+	const valueB = useContext(contextB);
+	return (
+		<div>
+			{valueA}, {valueB}
+		</div>
+	);
 };
 
 const App = () => {
-  return (
-    <contextA.Provider value={"A1"}>
-      <Display />
-      <contextB.Provider value={"B1"}>
-        <Display />
-        <contextA.Provider value={"A2"}>
-          <Display />
-        </contextA.Provider>
-      </contextB.Provider>
-    </contextA.Provider>
-  );
+	return (
+		<contextA.Provider value={"A1"}>
+			<Display />
+			<contextB.Provider value={"B1"}>
+				<Display />
+				<contextA.Provider value={"A2"}>
+					<Display />
+				</contextA.Provider>
+			</contextB.Provider>
+		</contextA.Provider>
+	);
 };
 
 export default App;
@@ -707,27 +704,28 @@ export default App;
 
 ```typescript
 function updateContextProvider(
-  current: Fiber | null,
-  workInProgress: Fiber,
-  renderLanes: Lanes,
+	current: Fiber | null,
+	workInProgress: Fiber,
+	renderLanes: Lanes
 ) {
-  // ...
-  const newProps = workInProgress.pendingProps; // 本次渲染阶段传入Provider的Props
-  const oldProps = workInProgress.memoizedProps; // 上次渲染阶段传入Provider的Props
-  
-  const oldValue = oldProps.value; // 上次渲染传入Provider的value
-  const newValue = newProps.value; // 本次渲染传入Provider的value
-  
-  // 核心部分，newValue就是我们向 context.Provider 传入的 value，context就是createContext返回的那个对象
-  pushProvider(workInProgress, context, newValue); 
-  
-  // ...
-  
-  if (Object.is(oldValue, newValue)) { // 对比前后的状态是否一致
-  } else {
-    // 不一致，代表消费了当前context的组件应该被re-render
-  }
-  // ...
+	// ...
+	const newProps = workInProgress.pendingProps; // 本次渲染阶段传入Provider的Props
+	const oldProps = workInProgress.memoizedProps; // 上次渲染阶段传入Provider的Props
+
+	const oldValue = oldProps.value; // 上次渲染传入Provider的value
+	const newValue = newProps.value; // 本次渲染传入Provider的value
+
+	// 核心部分，newValue就是我们向 context.Provider 传入的 value，context就是createContext返回的那个对象
+	pushProvider(workInProgress, context, newValue);
+
+	// ...
+
+	if (Object.is(oldValue, newValue)) {
+		// 对比前后的状态是否一致
+	} else {
+		// 不一致，代表消费了当前context的组件应该被re-render
+	}
+	// ...
 }
 ```
 
@@ -742,7 +740,7 @@ function updateContextProvider(
 答案如下，你是否答对了呢？
 
 ```js
-A1, B0
-A1, B1
-A2, B1
+A1, B0;
+A1, B1;
+A2, B1;
 ```
