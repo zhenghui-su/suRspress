@@ -18,5 +18,10 @@
 		"type": "file",
 		"name": "4-React并发渲染机制",
 		"label": "React并发渲染机制"
+	},
+	{
+		"type": "file",
+		"name": "5-React状态Tearing问题",
+		"label": "React状态Tearing问题"
 	}
 ]
