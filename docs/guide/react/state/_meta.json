@@ -28,5 +28,10 @@
 		"type": "file",
 		"name": "6-状态管理库的实现方案",
 		"label": "状态管理库的实现方案"
+	},
+	{
+		"type": "file",
+		"name": "7-初识Zustand",
+		"label": "初识Zustand"
 	}
 ]
