@@ -33,5 +33,10 @@
 		"type": "file",
 		"name": "7-初识Zustand",
 		"label": "初识Zustand"
+	},
+	{
+		"type": "file",
+		"name": "8-从0~1实现Zustand核心",
+		"label": "从0~1实现Zustand核心"
 	}
 ]
