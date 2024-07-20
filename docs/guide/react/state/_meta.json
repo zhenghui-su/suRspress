@@ -38,5 +38,10 @@
 		"type": "file",
 		"name": "8-从0~1实现Zustand核心",
 		"label": "从0~1实现Zustand核心"
+	},
+	{
+		"type": "file",
+		"name": "9-深入浅出Immer",
+		"label": "深入浅出Immer"
 	}
 ]
