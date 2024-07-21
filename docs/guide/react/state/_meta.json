@@ -43,5 +43,10 @@
 		"type": "file",
 		"name": "9-深入浅出Immer",
 		"label": "深入浅出Immer"
+	},
+	{
+		"type": "file",
+		"name": "10-初识Jotai",
+		"label": "初识Jotai"
 	}
 ]
