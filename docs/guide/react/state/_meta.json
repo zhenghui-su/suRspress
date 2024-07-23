@@ -48,5 +48,10 @@
 		"type": "file",
 		"name": "10-初识Jotai",
 		"label": "初识Jotai"
+	},
+	{
+		"type": "file",
+		"name": "11-从0~1实现Jotai核心",
+		"label": "从0~1实现Jotai核心"
 	}
 ]
