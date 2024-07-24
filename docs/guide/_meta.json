@@ -62,6 +62,13 @@
 	},
 	{
 		"type": "dir",
+		"name": "docker",
+		"label": "Docker学习",
+		"collapsible": true,
+		"collapsed": true
+	},
+	{
+		"type": "dir",
 		"name": "algorithm",
 		"label": "算法学习",
 		"collapsible": true,
