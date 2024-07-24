@@ -1,5 +1,7 @@
-{
-	"type": "file",
-	"name": "index",
-	"label": "介绍"
-}
+[
+	{
+		"type": "file",
+		"name": "index",
+		"label": "介绍"
+	}
+]
