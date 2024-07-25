@@ -11,52 +11,37 @@ export default defineConfig({
 	icon: '/rspress-icon.png',
 	logo: {
 		light: '/rspress-light-logo.png',
-		dark: '/rspress-dark-logo.png',
+		dark: '/rspress-dark-logo.png'
 	},
 	themeConfig: {
 		socialLinks: [
 			{
 				icon: 'github',
 				mode: 'link',
-				content: 'https://github.com/zhenghui-su',
-			},
+				content: 'https://github.com/zhenghui-su'
+			}
 		],
 		footer: {
-			message: '© 蜀ICP备2023036139号 github.com/zhenghui-su',
+			message: '© 蜀ICP备2023036139号 github.com/zhenghui-su'
 		},
 		outlineTitle: '目录',
 		editLink: {
 			docRepoBaseUrl:
 				'https://github.com/zhenghui-su/suRspress/tree/master/docs',
-			text: '📝 在 GitHub 上编辑此页',
+			text: '📝 在 GitHub 上编辑此页'
 		},
 		prevPageText: '上一篇',
 		nextPageText: '下一篇',
-		searchPlaceholderText: '搜索',
+		searchPlaceholderText: '搜索'
 	},
 	markdown: {
 		highlightLanguages: [
-			'ejs',
-			'go',
-			'nginx',
-			'lua',
 			['js', 'javascript'],
-			'json',
-			'http',
-			'bash',
 			['ts', 'typescript'],
-			'tsx',
-			'css',
-			'scss',
-			'sass',
-			'less',
 			['md', 'markdown'],
-			'cpp',
-			'c',
-			'makefile',
-			'yaml',
+			['sh', 'shell']
 		],
-		showLineNumbers: true,
+		showLineNumbers: true
 	},
 	plugins: [
 		pluginShiki({
@@ -104,20 +89,20 @@ export default defineConfig({
 				'scala',
 				'typescript',
 				'sass',
-				'stylus',
+				'stylus'
 			],
-			transformers: [createTransformerDiff()],
+			transformers: [createTransformerDiff()]
 		}),
 		alignImage({
-			justify: 'center',
+			justify: 'center'
 		}),
 		live2d({
 			models: [
 				{
 					path: 'https://model.oml2d.com/Senko_Normals/senko.model3.json',
-					position: [-10, 20],
-				},
-			],
-		}),
-	],
+					position: [-10, 20]
+				}
+			]
+		})
+	]
 });
