@@ -1,7 +1,20 @@
 {
 	"name": "surspress",
 	"version": "1.0.0",
-	"private": true,
+	"private": "false",
+	"author": {
+		"name": "suzhenghui",
+		"email": "343196323@qq.com"
+	},
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/zhenghui-su/suRspress.git"
+	},
+	"bugs": {
+		"url": "https://github.com/zhenghui-su/surspress/issues"
+	},
+	"homepage": "https://github.com/zhenghui-su/surspress#readme",
 	"scripts": {
 		"dev": "rspress dev",
 		"build": "rspress build",
