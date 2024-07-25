@@ -8,5 +8,10 @@
 		"type": "file",
 		"name": "1-Docker概述",
 		"label": "Docker概述"
+	},
+	{
+		"type": "file",
+		"name": "2-Docker安装",
+		"label": "Docker安装"
 	}
 ]
