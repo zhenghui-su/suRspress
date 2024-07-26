@@ -214,3 +214,32 @@ sudo rm -rf /var/lib/containerd
 ```
 
 您必须手动删除任何已编辑的配置文件。
+
+## 配置阿里云镜像加速
+
+第一步: 登录到阿里云, 然后搜索容器镜像服务
+
+![image-20240726234303636](https://chen-1320883525.cos.ap-chengdu.myqcloud.com/img/image-20240726234303636.png)
+
+第二步：管理控制台，然后左下有一个镜像工具，下面有一个镜像加速器，点击
+
+![image-20240726234507469](https://chen-1320883525.cos.ap-chengdu.myqcloud.com/img/image-20240726234507469.png)
+
+第三步，根据你的系统，安装步骤设置即可
+
+![image-20240726234543217](https://chen-1320883525.cos.ap-chengdu.myqcloud.com/img/image-20240726234543217.png)
+
+命令如下：
+
+```shell
+sudo mkdir -p /etc/docker
+sudo tee /etc/docker/daemon.json <<-'EOF'
+{
+  "registry-mirrors": ["地址换成你的"]
+}
+EOF
+sudo systemctl daemon-reload
+sudo systemctl restart docker
+```
+
+这下我们下载镜像什么的就比较快啦
