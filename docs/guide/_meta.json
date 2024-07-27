@@ -7,14 +7,21 @@
 	{
 		"type": "dir",
 		"name": "studyBase",
-		"label": "基础进阶",
+		"label": "基础学习",
 		"collapsible": true,
 		"collapsed": true
 	},
 	{
 		"type": "dir",
 		"name": "js",
-		"label": "JS高级进阶",
+		"label": "JS学习",
+		"collapsible": true,
+		"collapsed": true
+	},
+	{
+		"type": "dir",
+		"name": "ts",
+		"label": "TS学习",
 		"collapsible": true,
 		"collapsed": true
 	},
