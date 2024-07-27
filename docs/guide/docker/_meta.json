@@ -18,5 +18,10 @@
 		"type": "file",
 		"name": "3-回顾HelloWorld流程",
 		"label": "回顾HelloWorld流程"
+	},
+	{
+		"type": "file",
+		"name": "4-Docker命令",
+		"label": "Docker命令"
 	}
 ]
