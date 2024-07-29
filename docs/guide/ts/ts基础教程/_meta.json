@@ -28,5 +28,10 @@
 		"type": "file",
 		"name": "6-内置对象",
 		"label": "内置对象"
+	},
+	{
+		"type": "file",
+		"name": "7-Class类",
+		"label": "Class类"
 	}
 ]
