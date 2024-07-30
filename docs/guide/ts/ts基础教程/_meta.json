@@ -33,5 +33,10 @@
 		"type": "file",
 		"name": "7-Class类",
 		"label": "Class类"
+	},
+	{
+		"type": "file",
+		"name": "8-元组类型",
+		"label": "元组类型"
 	}
 ]
