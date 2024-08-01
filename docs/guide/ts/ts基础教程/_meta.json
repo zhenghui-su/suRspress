@@ -58,5 +58,10 @@
 		"type": "file",
 		"name": "12-Symbol类型",
 		"label": "Symbol类型"
+	},
+	{
+		"type": "file",
+		"name": "13-泛型",
+		"label": "泛型"
 	}
 ]
