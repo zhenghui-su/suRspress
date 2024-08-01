@@ -53,5 +53,10 @@
 		"type": "file",
 		"name": "11-never类型",
 		"label": "never类型"
+	},
+	{
+		"type": "file",
+		"name": "12-Symbol类型",
+		"label": "Symbol类型"
 	}
 ]
