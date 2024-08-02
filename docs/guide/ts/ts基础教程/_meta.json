@@ -88,5 +88,10 @@
 		"type": "file",
 		"name": "18-mixins混入",
 		"label": "mixins混入"
+	},
+	{
+		"type": "file",
+		"name": "19-装饰器Decorator",
+		"label": "装饰器Decorator"
 	}
 ]
