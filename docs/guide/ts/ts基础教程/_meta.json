@@ -68,5 +68,10 @@
 		"type": "file",
 		"name": "14-tsconfig.json配置",
 		"label": "tsconfig.json配置"
+	},
+	{
+		"type": "file",
+		"name": "15-namespace命名空间",
+		"label": "namespace命名空间"
 	}
 ]
