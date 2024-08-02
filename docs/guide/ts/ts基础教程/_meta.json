@@ -83,5 +83,10 @@
 		"type": "file",
 		"name": "17-声明文件",
 		"label": "声明文件"
+	},
+	{
+		"type": "file",
+		"name": "18-mixins混入",
+		"label": "mixins混入"
 	}
 ]
