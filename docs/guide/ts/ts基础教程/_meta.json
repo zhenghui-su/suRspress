@@ -63,5 +63,10 @@
 		"type": "file",
 		"name": "13-泛型",
 		"label": "泛型"
+	},
+	{
+		"type": "file",
+		"name": "14-tsconfig.json配置",
+		"label": "tsconfig.json配置"
 	}
 ]
