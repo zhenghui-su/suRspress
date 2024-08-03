@@ -93,5 +93,10 @@
 		"type": "file",
 		"name": "19-装饰器Decorator",
 		"label": "装饰器Decorator"
+	},
+	{
+		"type": "file",
+		"name": "20-发布订阅模式",
+		"label": "发布订阅模式"
 	}
 ]
