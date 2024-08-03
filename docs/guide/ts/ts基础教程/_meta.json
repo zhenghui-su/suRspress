@@ -98,5 +98,10 @@
 		"type": "file",
 		"name": "20-发布订阅模式",
 		"label": "发布订阅模式"
+	},
+	{
+		"type": "file",
+		"name": "21-weakMap,weakSet,set,map",
+		"label": "weakMap,weakSet,set,map"
 	}
 ]
