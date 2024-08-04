@@ -103,5 +103,10 @@
 		"type": "file",
 		"name": "21-weakMap,weakSet,set,map",
 		"label": "weakMap,weakSet,set,map"
+	},
+	{
+		"type": "file",
+		"name": "22-Proxy和Reflect",
+		"label": "Proxy和Reflect"
 	}
 ]
