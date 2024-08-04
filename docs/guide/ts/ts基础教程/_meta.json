@@ -123,5 +123,10 @@
 		"type": "file",
 		"name": "25-泛型工具",
 		"label": "泛型工具"
+	},
+	{
+		"type": "file",
+		"name": "26-infer关键字",
+		"label": "infer关键字"
 	}
 ]
