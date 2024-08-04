@@ -108,5 +108,10 @@
 		"type": "file",
 		"name": "22-Proxy和Reflect",
 		"label": "Proxy和Reflect"
+	},
+	{
+		"type": "file",
+		"name": "23-类型守卫",
+		"label": "类型守卫"
 	}
 ]
