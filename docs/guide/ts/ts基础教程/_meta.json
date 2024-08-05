@@ -128,5 +128,10 @@
 		"type": "file",
 		"name": "26-infer关键字",
 		"label": "infer关键字"
+	},
+	{
+		"type": "file",
+		"name": "27-TS实战之封装localStorage",
+		"label": "TS实战之封装localStorage"
 	}
 ]
