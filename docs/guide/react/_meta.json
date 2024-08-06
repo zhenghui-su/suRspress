@@ -31,5 +31,12 @@
 		"label": "状态管理篇",
 		"collapsible": true,
 		"collapsed": true
+	},
+	{
+		"type": "dir",
+		"name": "design",
+		"label": "React通关秘籍",
+		"collapsible": true,
+		"collapsed": true
 	}
 ]
