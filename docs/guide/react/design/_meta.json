@@ -3,5 +3,10 @@
 		"type": "file",
 		"name": "1-Hook闭包陷阱",
 		"label": "Hook闭包陷阱"
+	},
+	{
+		"type": "file",
+		"name": "2-React中使用TypeScript类型",
+		"label": "React中使用TypeScript类型"
 	}
 ]
