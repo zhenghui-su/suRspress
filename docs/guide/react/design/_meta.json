@@ -8,5 +8,10 @@
 		"type": "file",
 		"name": "2-React中使用TypeScript类型",
 		"label": "React中使用TypeScript类型"
+	},
+	{
+		"type": "file",
+		"name": "3-React的断点调试",
+		"label": "React的断点调试"
 	}
 ]
