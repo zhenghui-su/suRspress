@@ -13,5 +13,10 @@
 		"type": "file",
 		"name": "3-React的断点调试",
 		"label": "React的断点调试"
+	},
+	{
+		"type": "file",
+		"name": "4-受控和非受控模式",
+		"label": "受控和非受控模式"
 	}
 ]
