@@ -18,5 +18,10 @@
 		"type": "file",
 		"name": "4-受控和非受控模式",
 		"label": "受控和非受控模式"
+	},
+	{
+		"type": "file",
+		"name": "5-迷你Calendar",
+		"label": "迷你Calendar"
 	}
 ]
