@@ -28,5 +28,10 @@
 		"type": "file",
 		"name": "6-组件实战之Calendar",
 		"label": "组件实战之Calendar"
+	},
+	{
+		"type": "file",
+		"name": "7-快速掌握Storybook",
+		"label": "快速掌握Storybook"
 	}
 ]
