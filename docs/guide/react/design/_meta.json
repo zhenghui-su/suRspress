@@ -38,5 +38,10 @@
 		"type": "file",
 		"name": "8-React如何写单测",
 		"label": "React如何写单测"
+	},
+	{
+		"type": "file",
+		"name": "9-深入理解Suspense和ErrorBoundary",
+		"label": "深入理解Suspense和ErrorBoundary"
 	}
 ]
