@@ -43,5 +43,10 @@
 		"type": "file",
 		"name": "9-深入理解Suspense和ErrorBoundary",
 		"label": "深入理解Suspense和ErrorBoundary"
+	},
+	{
+		"type": "file",
+		"name": "10-组件实战之Icon图标组件",
+		"label": "组件实战之Icon图标组件"
 	}
 ]
