@@ -48,5 +48,10 @@
 		"type": "file",
 		"name": "10-组件实战之Icon图标组件",
 		"label": "组件实战之Icon图标组件"
+	},
+	{
+		"type": "file",
+		"name": "11-组件实战之Space间距组件",
+		"label": "组件实战之Space间距组件"
 	}
 ]
