@@ -53,5 +53,10 @@
 		"type": "file",
 		"name": "11-组件实战之Space间距组件",
 		"label": "组件实战之Space间距组件"
+	},
+	{
+		"type": "file",
+		"name": "12-React.Children和它的替代方案",
+		"label": "React.Children和它的替代方案"
 	}
 ]
