@@ -58,5 +58,10 @@
 		"type": "file",
 		"name": "12-React.Children和它的替代方案",
 		"label": "React.Children和它的替代方案"
+	},
+	{
+		"type": "file",
+		"name": "13-三种简单组件的封装",
+		"label": "三种简单组件的封装"
 	}
 ]
