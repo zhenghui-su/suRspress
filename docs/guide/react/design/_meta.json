@@ -63,5 +63,10 @@
 		"type": "file",
 		"name": "13-三种简单组件的封装",
 		"label": "三种简单组件的封装"
+	},
+	{
+		"type": "file",
+		"name": "14-浏览器的5种Observer",
+		"label": "浏览器的5种Observer"
 	}
 ]
