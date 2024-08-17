@@ -68,5 +68,10 @@
 		"type": "file",
 		"name": "14-浏览器的5种Observer",
 		"label": "浏览器的5种Observer"
+	},
+	{
+		"type": "file",
+		"name": "15-组件实战之Watermark水印组件",
+		"label": "组件实战之Watermark水印组件"
 	}
 ]
