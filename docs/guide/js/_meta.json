@@ -1,7 +1,9 @@
 [
-  {
-    "type": "file",
-    "name": "index",
-    "label": "JS高级进阶前言"
-  }
+	{
+		"type": "dir",
+		"name": "dataType",
+		"label": "数据类型",
+		"collapsible": true,
+		"collapsed": true
+	}
 ]
