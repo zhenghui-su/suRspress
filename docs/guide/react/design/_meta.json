@@ -73,5 +73,10 @@
 		"type": "file",
 		"name": "15-组件实战之Watermark水印组件",
 		"label": "组件实战之Watermark水印组件"
+	},
+	{
+		"type": "file",
+		"name": "16-手写react-lazyload",
+		"label": "手写react-lazyload"
 	}
 ]
