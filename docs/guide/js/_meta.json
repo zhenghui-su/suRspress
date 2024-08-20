@@ -2,7 +2,14 @@
 	{
 		"type": "dir",
 		"name": "dataType",
-		"label": "数据类型",
+		"label": "数据类型篇",
+		"collapsible": true,
+		"collapsed": true
+	},
+	{
+		"type": "dir",
+		"name": "objectOriented",
+		"label": "面向对象篇",
 		"collapsible": true,
 		"collapsed": true
 	}
