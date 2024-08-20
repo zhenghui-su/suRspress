@@ -23,5 +23,10 @@
 		"type": "file",
 		"name": "5-null、undefined、NaN",
 		"label": "null、undefined、NaN"
+	},
+	{
+		"type": "file",
+		"name": "6-数组索引的类型转换",
+		"label": "数组索引的类型转换"
 	}
 ]
