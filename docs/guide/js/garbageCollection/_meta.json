@@ -1,0 +1,27 @@
+[
+	{
+		"type": "file",
+		"name": "1-什么是垃圾回收",
+		"label": "什么是垃圾回收"
+	},
+	{
+		"type": "file",
+		"name": "2-引用计数法",
+		"label": "引用计数法"
+	},
+	{
+		"type": "file",
+		"name": "3-标记清除法",
+		"label": "标记清除法"
+	},
+	{
+		"type": "file",
+		"name": "4-V8对GC的优化",
+		"label": "V8对GC的优化"
+	},
+	{
+		"type": "file",
+		"name": "5-WeakMap",
+		"label": "WeakMap"
+	}
+]

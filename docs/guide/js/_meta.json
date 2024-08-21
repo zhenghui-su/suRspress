@@ -19,5 +19,12 @@
 		"label": "this指向篇",
 		"collapsible": true,
 		"collapsed": true
+	},
+	{
+		"type": "dir",
+		"name": "garbageCollection",
+		"label": "垃圾回收机制篇",
+		"collapsible": true,
+		"collapsed": true
 	}
 ]
