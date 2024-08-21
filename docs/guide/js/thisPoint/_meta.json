@@ -1,0 +1,17 @@
+[
+	{
+		"type": "file",
+		"name": "1-this绑定",
+		"label": "this绑定"
+	},
+	{
+		"type": "file",
+		"name": "2-显式隐式和new绑定的优先级",
+		"label": "显式隐式和new绑定的优先级"
+	},
+	{
+		"type": "file",
+		"name": "3-this绑定的相关问题",
+		"label": "this绑定的相关问题"
+	}
+]

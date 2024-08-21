@@ -12,5 +12,12 @@
 		"label": "面向对象篇",
 		"collapsible": true,
 		"collapsed": true
+	},
+	{
+		"type": "dir",
+		"name": "thisPoint",
+		"label": "this指向篇",
+		"collapsible": true,
+		"collapsed": true
 	}
 ]
