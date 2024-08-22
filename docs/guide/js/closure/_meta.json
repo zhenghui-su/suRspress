@@ -1,0 +1,12 @@
+[
+	{
+		"type": "file",
+		"name": "1-闭包",
+		"label": "闭包"
+	},
+	{
+		"type": "file",
+		"name": "2-原型",
+		"label": "原型"
+	}
+]

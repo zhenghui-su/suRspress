@@ -26,5 +26,12 @@
 		"label": "垃圾回收机制篇",
 		"collapsible": true,
 		"collapsed": true
+	},
+	{
+		"type": "dir",
+		"name": "closure",
+		"label": "闭包/原型篇",
+		"collapsible": true,
+		"collapsed": true
 	}
 ]
