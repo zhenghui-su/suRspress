@@ -23,5 +23,10 @@
 		"type": "file",
 		"name": "5-const对象的属性可以被修改吗",
 		"label": "const对象的属性可以被修改吗"
+	},
+	{
+		"type": "file",
+		"name": "6-箭头函数",
+		"label": "箭头函数"
 	}
 ]
