@@ -33,5 +33,12 @@
 		"label": "闭包/原型篇",
 		"collapsible": true,
 		"collapsed": true
+	},
+	{
+		"type": "dir",
+		"name": "ES6",
+		"label": "ES6篇",
+		"collapsible": true,
+		"collapsed": true
 	}
 ]

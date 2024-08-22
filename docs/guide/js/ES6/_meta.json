@@ -1,0 +1,12 @@
+[
+	{
+		"type": "file",
+		"name": "1-Promise",
+		"label": "Promise"
+	},
+	{
+		"type": "file",
+		"name": "2-async、await的原理和优势",
+		"label": "async、await的原理和优势"
+	}
+]
