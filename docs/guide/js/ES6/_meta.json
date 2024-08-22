@@ -18,5 +18,10 @@
 		"type": "file",
 		"name": "4-异步编程的方式",
 		"label": "异步编程的方式"
+	},
+	{
+		"type": "file",
+		"name": "5-const对象的属性可以被修改吗",
+		"label": "const对象的属性可以被修改吗"
 	}
 ]
