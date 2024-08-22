@@ -8,5 +8,10 @@
 		"type": "file",
 		"name": "2-async、await的原理和优势",
 		"label": "async、await的原理和优势"
+	},
+	{
+		"type": "file",
+		"name": "3-生成器和迭代器",
+		"label": "生成器和迭代器"
 	}
 ]
