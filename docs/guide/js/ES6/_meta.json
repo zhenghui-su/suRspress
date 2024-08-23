@@ -28,5 +28,10 @@
 		"type": "file",
 		"name": "6-箭头函数",
 		"label": "箭头函数"
+	},
+	{
+		"type": "file",
+		"name": "7-class与构造函数",
+		"label": "class与构造函数"
 	}
 ]
