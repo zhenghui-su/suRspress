@@ -1,16 +1,14 @@
-# 手写实现Promise.all方法
+# 手写实现 Promise.all 方法
 
 本节我们来手写实现`Promise.all()`方法，它接收一个 Promise 对象数组，并返回一个新的 Promise 对象，只有当数组中的**所有 Promise 都成功**完成时候返回执行`then`里面的回调函数，如果**任何一个 Promise 失败**，都会执行`catch`。
 
-具体例子在之前的章节Promise已经讲过了，接下来我们来看如何实现它。
+具体例子在之前的章节 Promise 已经讲过了，接下来我们来看如何实现它。
 
 首先我们定义函数`all`，同时我们需要知道该方法会返回一个 Promise：
 
 ```js
 function all(promises) {
-  return new Promise((resolve, reject) => {
-    
-  })
+	return new Promise((resolve, reject) => {})
 }
 ```
 
@@ -18,9 +16,9 @@ function all(promises) {
 
 ```js
 function all(promises) {
-  return new Promise((resolve, reject) => {
-    let resolvedCount = 0; // 统计有多少个promise达到resolved
-  })
+	return new Promise((resolve, reject) => {
+		let resolvedCount = 0 // 统计有多少个promise达到resolved
+	})
 }
 ```
 
@@ -28,18 +26,18 @@ function all(promises) {
 
 ```js
 function all(promises) {
-  return new Promise((resolve, reject) => {
-    let resolvedCount = 0; // 统计有多少个promise达到resolved
-    let results = new Array(promises.length); // 存放所有resolved的值
-  })
+	return new Promise((resolve, reject) => {
+		let resolvedCount = 0 // 统计有多少个promise达到resolved
+		let results = new Array(promises.length) // 存放所有resolved的值
+	})
 }
 ```
 
 接下来我们就可以遍历这个数据，然后依次执行，这里两个结果：
 
-- 如果当前promise执行成功, 将resolve的值保存到results
-  - 这里还需要判断是否全部执行成功，成功后`resolve`返回results
-- 如果当前promise执行失败, 直接进入catch
+- 如果当前 promise 执行成功, 将 resolve 的值保存到 results
+  - 这里还需要判断是否全部执行成功，成功后`resolve`返回 results
+- 如果当前 promise 执行失败, 直接进入 catch
 
 ```js
 function all(promises) {
@@ -91,7 +89,7 @@ all([p1, p2])
 	})
 ```
 
-先所有的 Promise是成功的，结果如下，没问题：
+先所有的 Promise 是成功的，结果如下，没问题：
 
 ![image-20240823172355654](https://chen-1320883525.cos.ap-chengdu.myqcloud.com/img/image-20240823172355654.png)
 
