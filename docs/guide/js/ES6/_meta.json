@@ -33,5 +33,10 @@
 		"type": "file",
 		"name": "7-class与构造函数",
 		"label": "class与构造函数"
+	},
+	{
+		"type": "file",
+		"name": "8-手写实现Promise.all方法",
+		"label": "手写实现Promise.all方法"
 	}
 ]
