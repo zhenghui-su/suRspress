@@ -38,5 +38,10 @@
 		"type": "file",
 		"name": "8-手写实现Promise.all方法",
 		"label": "手写实现Promise.all方法"
+	},
+	{
+		"type": "file",
+		"name": "9-手写实现Promise.race方法",
+		"label": "手写实现Promise.race方法"
 	}
 ]
