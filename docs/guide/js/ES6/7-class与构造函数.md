@@ -280,3 +280,82 @@ console.log(isConstructor(PersonES6.prototype.sayName)) // false
 会发现 ES5 中的`sayName`具有`[[construct]]`，而 ES6 没有。
 
 因此 ES5 中这类通过`new`调用原型方法，虽然没意义，但不报错是不符合程序逻辑的，而 ES6 中通过`class`就改进了这一点，会直接报错。
+
+## constructor内部属性和外部属性的区别
+
+那么在`class`的`constructor`中内部定义的属性方法和在外部定义的有什么区别？
+
+```js
+class Person {
+    constructor(name) {
+        this.name = name;
+        this.say1 = () => {
+            console.log("内部属性", this.name)
+        }
+    }
+    say2() {
+        console.log("外部属性", this.name)
+    }
+}
+const A = new Person("A")
+A.say1()
+A.say2()
+```
+
+我们打印，会发现结果一致：
+
+![image-20240823210036741](https://chen-1320883525.cos.ap-chengdu.myqcloud.com/img/image-20240823210036741.png)
+
+### 第一个区别
+
+虽然它们看起来一致，但是还是有区别的，第一个区别如下：
+
+- 在`constructor`内部定义的方法实际上是在**每个对象实例**上创建了一个新函数
+- 在`constructor`外部定义的方法实际上是在`Person`的原型对象上创建的
+
+我们可以这样验证，打印`A`的原型上的`say1`方法和`say2`方法：
+
+```js
+console.log(A.__proto__.say1); // undefined
+console.log(A.__proto__.say2); // f say2 { ... }
+```
+
+我们发现`say1`是找不到的，因为它不是创建在原型对象上的，而`say2`则相反。
+
+### 第二个区别
+
+它们之间的第二个区别如下：
+
+- 在`constructor`内部定义的方法，是各个实例对象独有的
+- 在`constructor`外部定义的方法，所有`Person`实例共享的
+
+我们还是可以通过这个例子来说明：
+
+```js
+const A = new Person("A")
+const B = new Person("B")
+console.log(A.say1 === B.say1) // false
+console.log(A.say2 === B.say2) // true
+```
+
+`say1`方法是内部定义的，所以它们是独有的，而`say2`是所有`Person`实例共享的。
+
+### 第三个区别
+
+第三个区别如下：
+
+- 在`constructor`内部定义的方法可以被`Object.keys()`遍历
+- 在`constructor`外部定义的方法不可以被`Object.keys()`遍历
+
+我们还是可以拿刚刚的例子来说明：
+
+```js
+const A = new Person("A")
+console.log(Object.keys(A)) // ['name', 'say1']
+```
+
+我们会发现`say2`没有打印，证明只有在内部定义的才能被遍历到
+
+### 总结
+
+它们最大的区别就是第一个，即内部是实例本身上定义，外部是原型对象上定义，其他两个区别都是在这个基础上衍生出来的。
