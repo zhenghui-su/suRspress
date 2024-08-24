@@ -3,5 +3,10 @@
 		"type": "file",
 		"name": "1-DOM事件的注册和移除",
 		"label": "DOM事件的注册和移除"
+	},
+	{
+		"type": "file",
+		"name": "2-属性描述符",
+		"label": "属性描述符"
 	}
 ]
