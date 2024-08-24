@@ -13,5 +13,10 @@
 		"type": "file",
 		"name": "3-柯里化",
 		"label": "柯里化"
+	},
+	{
+		"type": "file",
+		"name": "4-bind、apply、call的区别",
+		"label": "bind、apply、call的区别"
 	}
 ]
