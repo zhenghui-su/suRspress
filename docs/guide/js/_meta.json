@@ -40,5 +40,12 @@
 		"label": "ES6篇",
 		"collapsible": true,
 		"collapsed": true
+	},
+	{
+		"type": "dir",
+		"name": "basic",
+		"label": "JS基础篇",
+		"collapsible": true,
+		"collapsed": true
 	}
 ]
