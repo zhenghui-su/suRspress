@@ -8,5 +8,10 @@
 		"type": "file",
 		"name": "2-属性描述符",
 		"label": "属性描述符"
+	},
+	{
+		"type": "file",
+		"name": "3-柯里化",
+		"label": "柯里化"
 	}
 ]
