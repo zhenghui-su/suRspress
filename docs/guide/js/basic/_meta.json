@@ -18,5 +18,10 @@
 		"type": "file",
 		"name": "4-bind、apply、call的区别",
 		"label": "bind、apply、call的区别"
+	},
+	{
+		"type": "file",
+		"name": "5-parseInt与Math.floor的区别",
+		"label": "parseInt与Math.floor的区别"
 	}
 ]
