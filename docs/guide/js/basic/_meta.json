@@ -23,5 +23,10 @@
 		"type": "file",
 		"name": "5-parseInt与Math.floor的区别",
 		"label": "parseInt与Math.floor的区别"
+	},
+	{
+		"type": "file",
+		"name": "6-手写数组扁平化",
+		"label": "手写数组扁平化"
 	}
 ]
