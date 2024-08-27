@@ -38,5 +38,10 @@
 		"type": "file",
 		"name": "8-数组解构的原理",
 		"label": "数组解构的原理"
+	},
+	{
+		"type": "file",
+		"name": "9-自增运算符和函数length",
+		"label": "自增运算符和函数length"
 	}
 ]
