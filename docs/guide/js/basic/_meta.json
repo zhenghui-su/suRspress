@@ -53,5 +53,10 @@
 		"type": "file",
 		"name": "11-纯函数和属性私有化",
 		"label": "纯函数和属性私有化"
+	},
+	{
+		"type": "file",
+		"name": "12-Object.freeze相关",
+		"label": "Object.freeze相关"
 	}
 ]
