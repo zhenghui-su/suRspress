@@ -63,5 +63,10 @@
 		"type": "file",
 		"name": "13-短路规则",
 		"label": "短路规则"
+	},
+	{
+		"type": "file",
+		"name": "14-forEach原理以及手写实现",
+		"label": "forEach原理以及手写实现"
 	}
 ]
