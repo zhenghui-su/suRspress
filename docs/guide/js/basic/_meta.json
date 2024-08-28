@@ -58,5 +58,10 @@
 		"type": "file",
 		"name": "12-Object.freeze相关",
 		"label": "Object.freeze相关"
+	},
+	{
+		"type": "file",
+		"name": "13-短路规则",
+		"label": "短路规则"
 	}
 ]
