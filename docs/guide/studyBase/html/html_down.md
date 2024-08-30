@@ -26,20 +26,20 @@
 
   ```html
   <table>
-    <thead>
-      <tr>
-        <th>表头1</th>
-        <th>表头2</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>第一行：单元格文字</td>
-      </tr>
-      <tr>
-        <td>第二行：单元格文字</td>
-      </tr>
-    </tbody>
+  	<thead>
+  		<tr>
+  			<th>表头1</th>
+  			<th>表头2</th>
+  		</tr>
+  	</thead>
+  	<tbody>
+  		<tr>
+  			<td>第一行：单元格文字</td>
+  		</tr>
+  		<tr>
+  			<td>第二行：单元格文字</td>
+  		</tr>
+  	</tbody>
   </table>
   ```
 
@@ -56,8 +56,8 @@
 
   ```html
   <ul>
-    <li>1</li>
-    <li>2</li>
+  	<li>1</li>
+  	<li>2</li>
   </ul>
   ```
 
@@ -69,8 +69,8 @@
 
   ```html
   <ol>
-    <li>1</li>
-    <li>2</li>
+  	<li>1</li>
+  	<li>2</li>
   </ol>
   ```
 
@@ -80,9 +80,9 @@
 
   ```html
   <dl>
-    <dt>关注我们</dt>
-    <dd>联系我们</dd>
-    <dd>新浪微博</dd>
+  	<dt>关注我们</dt>
+  	<dd>联系我们</dd>
+  	<dd>新浪微博</dd>
   </dl>
   ```
 
@@ -144,8 +144,8 @@
 
     ```html
     <select>
-      <option>福建</option>
-      <option>四川</option>
+    	<option>福建</option>
+    	<option>四川</option>
     </select>
     ```
 
