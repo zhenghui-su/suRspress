@@ -87,6 +87,11 @@
 	{
 		"type": "file",
 		"name": "18-自定义Hook(一)",
-		"label": "18-自定义Hook(一)"
+		"label": "自定义Hook(一)"
+	},
+	{
+		"type": "file",
+		"name": "19-自定义Hook(二)",
+		"label": "自定义Hook(二)"
 	}
 ]
