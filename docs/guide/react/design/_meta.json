@@ -98,5 +98,10 @@
 		"type": "file",
 		"name": "20-学习react-spring做弹簧动画",
 		"label": "学习react-spring做弹簧动画"
+	},
+	{
+		"type": "file",
+		"name": "21-结合use-gesture做手势交互动画",
+		"label": "结合use-gesture做手势交互动画"
 	}
 ]
