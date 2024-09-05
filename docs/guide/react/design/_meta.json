@@ -103,5 +103,10 @@
 		"type": "file",
 		"name": "21-结合use-gesture做手势交互动画",
 		"label": "结合use-gesture做手势交互动画"
+	},
+	{
+		"type": "file",
+		"name": "22-组件实战之Message",
+		"label": "组件实战之Message"
 	}
 ]
