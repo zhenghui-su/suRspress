@@ -3,5 +3,12 @@
 		"type": "file",
 		"name": "1-二分法",
 		"label": "二分法"
+	},
+	{
+		"type": "dir",
+		"name": "leetcode",
+		"label": "实际练习",
+		"collapsible": true,
+		"collapsed": true
 	}
 ]
