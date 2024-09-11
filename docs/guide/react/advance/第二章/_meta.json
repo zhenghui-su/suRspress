@@ -38,5 +38,10 @@
 		"type": "file",
 		"name": "8-MessageChannel",
 		"label": "MessageChannel"
+	},
+	{
+		"type": "file",
+		"name": "9-简易虚拟DOM,Fiber,diff",
+		"label": "简易虚拟DOM,Fiber,diff"
 	}
 ]
