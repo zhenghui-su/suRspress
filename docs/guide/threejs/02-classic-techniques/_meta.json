@@ -1,0 +1,32 @@
+[
+	{
+		"type": "file",
+		"name": "0-Lights灯光",
+		"label": "Lights灯光"
+	},
+	{
+		"type": "file",
+		"name": "1-Shadows阴影",
+		"label": "Shadows阴影"
+	},
+	{
+		"type": "file",
+		"name": "2-Haunted House 鬼屋例子制作",
+		"label": "Haunted House 鬼屋例子制作"
+	},
+	{
+		"type": "file",
+		"name": "3-Particles粒子",
+		"label": "Particles粒子"
+	},
+	{
+		"type": "file",
+		"name": "4-Galaxy Generatory 银河生成器",
+		"label": "Galaxy Generatory 银河生成器"
+	},
+	{
+		"type": "file",
+		"name": "5-Scroll based animation 滚动动画",
+		"label": "Scroll based animation 滚动动画"
+	}
+]

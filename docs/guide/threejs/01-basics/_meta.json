@@ -1,0 +1,57 @@
+[
+	{
+		"type": "file",
+		"name": "0-创建基础立方体",
+		"label": "创建基础立方体"
+	},
+	{
+		"type": "file",
+		"name": "1-基本项目",
+		"label": "基本项目"
+	},
+	{
+		"type": "file",
+		"name": "2-物体对象和组",
+		"label": "物体对象和组"
+	},
+	{
+		"type": "file",
+		"name": "3-Animation动画",
+		"label": "Animation动画"
+	},
+	{
+		"type": "file",
+		"name": "4-Cameras相机",
+		"label": "Cameras相机"
+	},
+	{
+		"type": "file",
+		"name": "5-全屏和设置大小",
+		"label": "全屏和设置大小"
+	},
+	{
+		"type": "file",
+		"name": "6-Geometries几何体",
+		"label": "Geometries几何体"
+	},
+	{
+		"type": "file",
+		"name": "7-Debug UI",
+		"label": "Debug UI"
+	},
+	{
+		"type": "file",
+		"name": "8-Textures纹理",
+		"label": "Textures纹理"
+	},
+	{
+		"type": "file",
+		"name": "9-Materials材质",
+		"label": "Materials材质"
+	},
+	{
+		"type": "file",
+		"name": "10-3D Text",
+		"label": "3D Text"
+	}
+]

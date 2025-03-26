@@ -1,0 +1,23 @@
+[
+	{
+		"type": "dir",
+		"name": "01-basics",
+		"label": "基础",
+		"collapsible": true,
+		"collapsed": true
+	},
+	{
+		"type": "dir",
+		"name": "02-classic-techniques",
+		"label": "物理技术",
+		"collapsible": true,
+		"collapsed": true
+	},
+	{
+		"type": "dir",
+		"name": "03-advanced-techniques",
+		"label": "进阶技术",
+		"collapsible": true,
+		"collapsed": true
+	}
+]

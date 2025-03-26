@@ -90,6 +90,13 @@
 	},
 	{
 		"type": "dir",
+		"name": "threejs",
+		"label": "Three.js学习",
+		"collapsible": true,
+		"collapsed": true
+	},
+	{
+		"type": "dir",
 		"name": "v8",
 		"label": "V8引擎",
 		"collapsible": true,
