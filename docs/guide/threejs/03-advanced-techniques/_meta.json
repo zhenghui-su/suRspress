@@ -23,5 +23,10 @@
 		"type": "file",
 		"name": "4-Environment Map 环境贴图",
 		"label": "Environment Map 环境贴图"
+	},
+	{
+		"type": "file",
+		"name": "5-Realistic Render 更逼真的渲染",
+		"label": "Realistic Render 更逼真的渲染"
 	}
 ]
