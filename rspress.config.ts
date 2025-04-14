@@ -1,8 +1,8 @@
-import * as path from 'path'
-import { defineConfig } from 'rspress/config'
-import { createTransformerDiff, pluginShiki } from '@rspress/plugin-shiki'
-import alignImage from 'rspress-plugin-align-image'
-import live2d from 'rspress-plugin-live2d'
+import * as path from 'path';
+import { defineConfig } from 'rspress/config';
+import { createTransformerDiff, pluginShiki } from '@rspress/plugin-shiki';
+import alignImage from 'rspress-plugin-align-image';
+import live2d from 'rspress-plugin-live2d';
 
 export default defineConfig({
 	root: path.join(__dirname, 'docs'),
@@ -41,6 +41,7 @@ export default defineConfig({
 			['ts', 'typescript'],
 			['md', 'markdown'],
 			['sh', 'shell'],
+			['glsl', 'glsl'],
 		],
 		showLineNumbers: true,
 	},
@@ -91,6 +92,7 @@ export default defineConfig({
 				'typescript',
 				'sass',
 				'stylus',
+				'glsl',
 			],
 			transformers: [createTransformerDiff()],
 		}),
@@ -108,4 +110,4 @@ export default defineConfig({
 			],
 		}),
 	],
-})
+});

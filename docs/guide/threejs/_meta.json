@@ -19,5 +19,12 @@
 		"label": "进阶技术",
 		"collapsible": true,
 		"collapsed": true
+	},
+	{
+		"type": "dir",
+		"name": "04-shaders",
+		"label": "着色器",
+		"collapsible": true,
+		"collapsed": true
 	}
 ]
