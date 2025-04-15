@@ -307,3 +307,315 @@ void main() {
  > 在我们使用ShaderMaterial，它会自动处理这个，因此我们不需要担心它。
 
 - `gl_FragColor`：已存在的变量，简单来说就是上色，需要四维向量，前三个就是RGB，第四个是透明度Alpha，当然如果要调整，记得在材质中设置`transparent`为true
+
+## 添加属性和使用变量
+
+在Three中我们需要通过`setAttribute`来添加属性，如添加一个`aRandom`随机值：
+
+```js
+const count = geometry.attributes.position.count;
+const randoms = new Float32Array(count);
+
+for (let i = 0; i < count; i++) {
+	randoms[i] = Math.random();
+}
+geometry.setAttribute('aRandom', new THREE.BufferAttribute(randoms, 1));
+```
+
+然后我们可以将其传入到glsl中，我们通过`attribute`来定义这个值，随后加到z轴：
+
+```glsl
+attribute float aRandom;
+
+void main() {
+  //...
+  modelPosition.z += aRandom * 0.1;
+  //...
+}
+```
+
+这样就会出现随机的效果：
+
+![image-20250415221509067](https://chen-1320883525.cos.ap-chengdu.myqcloud.com/img/image-20250415221509067.png)
+
+接下来让我们给这些地方上色，让其尖刺效果更明显，因此需要通过变量传递，记住Fragment中是无法使用属性的，现在vertex中定义：
+
+```glsl
+varying float vRandom;
+void main() {
+  //...
+  vRandom = aRandom;
+}
+```
+
+接下来在fragment中使用它：
+
+```glsl
+precision mediump float;
+
+varying float vRandom;
+
+void main() {
+  gl_FragColor = vec4(0.5, vRandom, 1.0, 1.0);
+}
+```
+
+直接使用即可，保存即可查看效果，你可以随意调整：
+
+![image-20250415221925651](https://chen-1320883525.cos.ap-chengdu.myqcloud.com/img/image-20250415221925651.png)
+
+## 统一uniform
+
+将代码回到原本旗帜的状态，我们通过three可以定义一个统一的uniform：
+
+```js
+const material = new THREE.RawShaderMaterial({
+	vertexShader: testVertexShader,
+	fragmentShader: testFragmentShader,
+	transparent: true,
+	uniforms: {
+		uFrequency: { value: 10 },
+	},
+});
+```
+
+然后我们可以在glsl中获取：
+
+```glsl
+uniform float uFrequency;
+void main() {
+  //...
+  modelPosition.z += sin(modelPosition.x * uFrequency) * 0.1;
+}
+```
+
+不过我们想要调整多个，因此可以传如Vector2：
+
+```js
+const material = new THREE.RawShaderMaterial({
+	vertexShader: testVertexShader,
+	fragmentShader: testFragmentShader,
+	transparent: true,
+	uniforms: {
+		uFrequency: { value: new THREE.Vector2(10, 5) },
+	},
+});
+gui.add(material.uniforms.uFrequency.value, 'x').min(0).max(20).step(0.01).name('frequencyX');
+gui.add(material.uniforms.uFrequency.value, 'y').min(0).max(20).step(0.01).name('frequencyY');
+```
+
+然后在glsl中：
+
+```glsl
+uniform vec2 uFrequency;
+void main() {
+  vec4 modelPosition = modelMatrix * vec4(position, 1.0);
+  modelPosition.z += sin(modelPosition.x * uFrequency.x) * 0.1;
+  modelPosition.z += sin(modelPosition.y * uFrequency.y) * 0.1;
+    //...
+}
+```
+
+我们再添加一个：
+
+```js
+const material = new THREE.RawShaderMaterial({
+	vertexShader: testVertexShader,
+	fragmentShader: testFragmentShader,
+	transparent: true,
+	uniforms: {
+		uFrequency: { value: new THREE.Vector2(10, 5) },
+		uTime: { value: 0 },
+	},
+});
+//...
+const tick = () => {
+	const elapsedTime = clock.getElapsedTime();
+	material.uniforms.uTime.value = elapsedTime;
+    //...
+}
+```
+
+然后获取：
+
+```glsl
+uniform float uTime;
+void main() {
+  vec4 modelPosition = modelMatrix * vec4(position, 1.0);
+  modelPosition.z += sin(modelPosition.x * uFrequency.x - uTime) * 0.1;
+  modelPosition.z += sin(modelPosition.y * uFrequency.y - uTime) * 0.1;
+	//...
+}
+```
+
+这样旗帜就会有飘动的感觉了。这个场景如果不使用自定义着色器实现还是比较困难的
+
+然后我们接下来传递一个颜色：
+
+```js
+		uColor: { value: new THREE.Color('orange') }
+//...
+```
+
+在片段的glsl使用：
+
+```glsl
+precision mediump float;
+uniform vec3 uColor;
+void main() {
+  gl_FragColor = vec4(uColor, 1.0);
+}
+```
+
+这样就可以变为橙色了：
+
+![image-20250415224853516](https://chen-1320883525.cos.ap-chengdu.myqcloud.com/img/image-20250415224853516.png)
+
+## 添加纹理
+
+接下来添加纹理，加载一下：
+
+```js
+const flagTexure = textureLoader.load('/textures/flag-french.jpg')
+//...
+		uTexture: { value: flagTexure }
+```
+
+然后在片段的glsl中去使用
+
+```glsl
+uniform sampler2D uTexture;
+void main() {
+    // todo
+  vec4 textureColor = texture2D(uTexture, )
+  gl_FragColor = vec4(uColor, 1.0);
+}
+```
+
+其中引入纹理是使用`sampler2D`，然后创建纹理颜色通过`texture2D`，第一个参数是纹理，第二个参数是你要取的纹理位置，一般就是uv坐标，但目前在片段着色器我们无法访问属性，因此需要在顶点那定义变量：
+
+```glsl
+attribute vec2 uv;
+varying vec2 vUv;
+void main() {
+    vUv = uv;
+}
+```
+
+然后在fragment中使用，这样就不会报错了：
+
+```glsl
+precision mediump float;
+uniform sampler2D uTexture;
+varying vec2 vUv;
+void main() {
+  vec4 textureColor = texture2D(uTexture, vUv);
+  gl_FragColor = textureColor;
+}
+```
+
+然后就能看到纹理效果了，看起来不错：
+
+![image-20250415225824669](https://chen-1320883525.cos.ap-chengdu.myqcloud.com/img/image-20250415225824669.png)
+
+## 添加阴影
+
+接下来我们加点阴影，让其更有立体感，先在vertex中操作：
+
+```glsl
+uniform mat4 projectionMatrix;
+uniform mat4 viewMatrix;
+uniform mat4 modelMatrix;
+uniform vec2 uFrequency;
+uniform float uTime;
+
+attribute vec3 position;
+attribute vec2 uv;
+// attribute float aRandom;
+
+// varying float vRandom;
+varying vec2 vUv;
+varying float vElevation;
+
+void main() {
+  vec4 modelPosition = modelMatrix * vec4(position, 1.0);
+ 
+  float elevation = sin(modelPosition.x * uFrequency.x - uTime) * 0.1;
+  elevation += sin(modelPosition.y * uFrequency.y - uTime) * 0.1;
+
+  modelPosition.z += elevation;
+
+  // modelPosition.z += sin(modelPosition.x * uFrequency.x - uTime) * 0.1;
+  // modelPosition.z += sin(modelPosition.y * uFrequency.y - uTime) * 0.1;
+
+  // modelPosition.z += aRandom * 0.1;
+
+  vec4 viewPosition = viewMatrix * modelPosition;
+  vec4 projectedPosition = projectionMatrix * viewPosition;
+
+  gl_Position = projectedPosition;
+
+  vUv = uv;
+  vElevation = elevation;
+  // vRandom = aRandom;
+}
+```
+
+然后在fragment中使用：
+
+```glsl
+precision mediump float;
+
+uniform vec3 uColor;
+uniform sampler2D uTexture;
+
+varying vec2 vUv;
+varying float vElevation;
+// varying float vRandom;
+
+void main() {
+  vec4 textureColor = texture2D(uTexture, vUv);
+  textureColor.rgb *= vElevation * 2.0 + 0.5;
+  gl_FragColor = textureColor;
+}
+```
+
+这样靠近就会明亮，离远就会有阴影：
+
+![image-20250415230254189](https://chen-1320883525.cos.ap-chengdu.myqcloud.com/img/image-20250415230254189.png)
+
+## ShaderMaterial
+
+接下来我们来看看`ShaderMaterial`，他其实就是预置了一部分的必要代码，我们替换一下试试：
+
+```js
+const material = new THREE.ShaderMaterial({
+	vertexShader: testVertexShader,
+	fragmentShader: testFragmentShader,
+	transparent: true,
+	uniforms: {
+		uFrequency: { value: new THREE.Vector2(10, 5) },
+		uTime: { value: 0 },
+		uColor: { value: new THREE.Color('orange') },
+		uTexture: { value: flagTexure },
+	},
+});
+```
+
+现在肯定会报错，我们需要去掉一些重复代码：
+
+```glsl
+// vertex中
+// uniform mat4 projectionMatrix;
+// uniform mat4 viewMatrix;
+// uniform mat4 modelMatrix;
+// attribute vec3 position;
+// attribute vec2 uv;
+
+// fragment中, 这个不去掉也不会报错, 不过它自带了也可以去掉
+// precision mediump float;
+```
+
+效果是一样的，`ShaderMaterial`就是预置了这部分代码。
+
+最后，在写着色器代码要多观察控制台报错，Three和WebGL提供了不错的报错机制，大部分情况你都可以定位到是哪里出现了错误。
