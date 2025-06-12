@@ -3,5 +3,10 @@
 		"type": "file",
 		"name": "0-Shaders",
 		"label": "Shaders着色器"
+	},
+	{
+		"type": "file",
+		"name": "1-Shader Pattern",
+		"label": "Shader Pattern"
 	}
 ]
